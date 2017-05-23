@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateDataTableController: function (scope, routeParams, resourceFactory, location) {
 
             scope.columns = [];
@@ -58,7 +58,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateDataTableController', ['$scope', '$routeParams', 'ResourceFactory', '$location', mifosX.controllers.CreateDataTableController]).run(function ($log) {
+	gst.ng.application.controller('CreateDataTableController', ['$scope', '$routeParams', 'ResourceFactory', '$location', gst.controllers.CreateDataTableController]).run(function ($log) {
         $log.info("CreateDataTableController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

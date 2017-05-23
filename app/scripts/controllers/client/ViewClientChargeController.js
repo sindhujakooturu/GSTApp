@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewClientChargeController: function (scope, resourceFactory, location, routeParams, route) {
             scope.clientId = routeParams.clientId;
 
@@ -26,7 +26,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('ViewClientChargeController', ['$scope', 'ResourceFactory', '$location', '$routeParams', '$route', mifosX.controllers.ViewClientChargeController]).run(function ($log) {
+	gst.ng.application.controller('ViewClientChargeController', ['$scope', 'ResourceFactory', '$location', '$routeParams', '$route', gst.controllers.ViewClientChargeController]).run(function ($log) {
         $log.info("ViewClientChargeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

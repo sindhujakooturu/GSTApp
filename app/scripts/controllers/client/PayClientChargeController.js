@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         PayClientChargeController: function (scope, resourceFactory, location, routeParams, dateFilter) {
             scope.cancelRoute = routeParams.id;
             scope.formData = {};
@@ -21,7 +21,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('PayClientChargeController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.PayClientChargeController]).run(function ($log) {
+	gst.ng.application.controller('PayClientChargeController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.PayClientChargeController]).run(function ($log) {
         $log.info("PayClientChargeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

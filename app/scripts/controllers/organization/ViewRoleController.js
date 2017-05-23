@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewRoleController: function (scope, routeParams, resourceFactory, route, $modal) {
 
             scope.permissions = [];
@@ -202,7 +202,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('ViewRoleController', ['$scope', '$routeParams', 'ResourceFactory', '$route','$modal', mifosX.controllers.ViewRoleController]).run(function ($log) {
+	gst.ng.application.controller('ViewRoleController', ['$scope', '$routeParams', 'ResourceFactory', '$route','$modal', gst.controllers.ViewRoleController]).run(function ($log) {
         $log.info("ViewRoleController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

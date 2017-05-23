@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AdHocQuerySearchController: function (scope, routeParams, dateFilter, resourceFactory) {
             scope.formData = {};
             scope.showResults = false;
@@ -193,7 +193,7 @@
 
         }
     });
-    mifosX.ng.application.controller('AdHocQuerySearchController', ['$scope', '$routeParams', 'dateFilter', 'ResourceFactory', mifosX.controllers.AdHocQuerySearchController]).run(function ($log) {
+	gst.ng.application.controller('AdHocQuerySearchController', ['$scope', '$routeParams', 'dateFilter', 'ResourceFactory', gst.controllers.AdHocQuerySearchController]).run(function ($log) {
         $log.info("AdHocQuerySearchController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

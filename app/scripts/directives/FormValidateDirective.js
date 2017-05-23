@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         FormValidateDirective: function ($compile) {
             return {
                 restrict: 'E',
@@ -17,8 +17,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("formValidate", ['$compile', mifosX.directives.FormValidateDirective]).run(function ($log) {
+gst.ng.application.directive("formValidate", ['$compile', gst.directives.FormValidateDirective]).run(function ($log) {
     $log.info("FormValidateDirective initialized");
 });

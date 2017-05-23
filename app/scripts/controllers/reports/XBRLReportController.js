@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         XBRLReportController: function (scope, resourceFactory, location, $rootScope) {
 
             scope.xmlData = $rootScope.xmlData;
@@ -24,7 +24,7 @@
 
         }
     });
-    mifosX.ng.application.controller('XBRLReportController', ['$scope', 'ResourceFactory', '$location', '$rootScope', mifosX.controllers.XBRLReportController]).run(function ($log) {
+	gst.ng.application.controller('XBRLReportController', ['$scope', 'ResourceFactory', '$location', '$rootScope', gst.controllers.XBRLReportController]).run(function ($log) {
         $log.info("XBRLReportController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

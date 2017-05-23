@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="./images/favicon.ico" ng-if="!isFaviconPath" />
     <link rel="icon" type="image/png" href="{{faviconPath}}" ng-if="isFaviconPath" />
-    <title>{{ 'label.heading.mifosxclient' | translate }}</title>
+    <title>{{ 'label.heading.gstclient' | translate }}</title>
     <style>[data-ng-cloak] { display: none !important; }</style>
 
 </head>
@@ -70,10 +70,10 @@
                 <img src="{{bigLogoPath}}" alt="Mifos X" width="150" class="img-responsive" ng-if="isBigLogoPath">
             </div>
             <div class="col-md-9">
-                <h1>{{ 'label.heading.mifosx' | translate }}</h1>
+                <h1>{{ 'label.heading.gst' | translate }}</h1>
     <span>{{ 'label.heading.version' | translate }} {{ version }}</span>
                 <br /> <span>{{ 'label.heading.uptodate' | translate }}</span>
-                <br /> <span ng-bind-html="text"></span>
+                <!-- <br /> <span ng-bind-html="text"></span> -->
             </div>
         </div>
         <div class="row">

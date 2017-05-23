@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         SearchFilter: function () {
             return function (list, searchText) {
             	var searchRegx = new RegExp(searchText, "i");
@@ -17,7 +17,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('SearchFilter', [mifosX.filters.SearchFilter]).run(function ($log) {
+	gst.ng.application.filter('SearchFilter', [gst.filters.SearchFilter]).run(function ($log) {
         $log.info("SearchFilter filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

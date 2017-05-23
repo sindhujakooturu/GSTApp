@@ -2,7 +2,7 @@
  * Created by 27 on 05-08-2015.
  */
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewExternalServicesController: function ($scope, resourceFactory, $routeParams, location) {
             $scope.Configs = [];
             $scope.externalServicesType = $routeParams.externalServicesType;
@@ -26,8 +26,8 @@
         }
 
     });
-    mifosX.ng.application.controller('ViewExternalServicesController', ['$scope', 'ResourceFactory', '$routeParams', '$location', mifosX.controllers.ViewExternalServicesController]).run(function ($log) {
+	gst.ng.application.controller('ViewExternalServicesController', ['$scope', 'ResourceFactory', '$routeParams', '$location', gst.controllers.ViewExternalServicesController]).run(function ($log) {
         $log.info("ViewExternalServicesController initialized");
     });
 
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

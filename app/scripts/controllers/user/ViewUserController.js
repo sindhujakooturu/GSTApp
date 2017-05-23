@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewUserController: function (scope, routeParams, route, location, resourceFactory, $modal) {
             scope.user = [];
             scope.formData = {};
@@ -50,7 +50,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewUserController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$modal', mifosX.controllers.ViewUserController]).run(function ($log) {
+	gst.ng.application.controller('ViewUserController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$modal', gst.controllers.ViewUserController]).run(function ($log) {
         $log.info("ViewUserController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

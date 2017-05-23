@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditAccountNumberPreferencesController: function (scope,resourceFactory, location,routeParams) {
             scope.resourceId = routeParams.id;
             scope.addPrefix = false;
@@ -24,7 +24,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('EditAccountNumberPreferencesController', ['$scope', 'ResourceFactory', '$location','$routeParams',mifosX.controllers.EditAccountNumberPreferencesController]).run(function ($log) {
+	gst.ng.application.controller('EditAccountNumberPreferencesController', ['$scope', 'ResourceFactory', '$location','$routeParams',gst.controllers.EditAccountNumberPreferencesController]).run(function ($log) {
         $log.info("EditAccountNumberPreferencesController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

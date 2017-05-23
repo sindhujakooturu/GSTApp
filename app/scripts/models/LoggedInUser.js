@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.models = _.extend(module, {
+	gst.models = _.extend(module, {
         LoggedInUser: function (data) {
             this.name = data.username;
             this.userId = data.userId;
@@ -7,12 +7,12 @@
 
             this.getHomePageIdentifier = function () {
                 var role = _.first(data.selectedRoles || data.roles);
-                if (role.id in mifosX.models.roleMap) {
-                    return mifosX.models.roleMap[role.id];
+                if (role.id in gst.models.roleMap) {
+                    return gst.models.roleMap[role.id];
                 } else {
                     return 'default';
                 }
             };
         }
     });
-}(mifosX.models || {}));
+}(gst.models || {}));

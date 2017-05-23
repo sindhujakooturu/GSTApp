@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         TaxGroupController: function (scope, resourceFactory, location) {
             scope.taxgroups = [];
 
@@ -13,7 +13,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('TaxGroupController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.TaxGroupController]).run(function ($log) {
+	gst.ng.application.controller('TaxGroupController', ['$scope', 'ResourceFactory', '$location', gst.controllers.TaxGroupController]).run(function ($log) {
         $log.info("TaxGroupController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

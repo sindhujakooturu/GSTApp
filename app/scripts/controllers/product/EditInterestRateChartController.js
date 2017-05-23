@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditInterestRateChartController: function (scope, resourceFactory, location, routeParams, dateFilter,$modal) {
             scope.formData = {};//used for update/save form data
             scope.restrictDate = new Date();
@@ -307,7 +307,7 @@
         }
 
     });
-    mifosX.ng.application.controller('EditInterestRateChartController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter','$modal', mifosX.controllers.EditInterestRateChartController]).run(function ($log) {
+	gst.ng.application.controller('EditInterestRateChartController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter','$modal', gst.controllers.EditInterestRateChartController]).run(function ($log) {
         $log.info("EditInterestRateChartController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

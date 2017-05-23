@@ -15,7 +15,7 @@ describe("LoginFormController", function () {
             return $;
         });
 
-        this.controller = new mifosX.controllers.LoginFormController(this.scope, this.authenticationService, this.resourceFactory, this.httpService, this.$timeout);
+        this.controller = new gst.controllers.LoginFormController(this.scope, this.authenticationService, this.resourceFactory, this.httpService, this.$timeout);
     });
 
     it("should initialise the login credentials", function () {

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         DefineOpeningBalancesController: function (scope, resourceFactory, location, translate, routeParams, dateFilter) {
             scope.first = {};
             scope.formData = {};
@@ -118,7 +118,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('DefineOpeningBalancesController', ['$scope', 'ResourceFactory', '$location', '$translate', '$routeParams', 'dateFilter', mifosX.controllers.DefineOpeningBalancesController]).run(function ($log) {
+	gst.ng.application.controller('DefineOpeningBalancesController', ['$scope', 'ResourceFactory', '$location', '$translate', '$routeParams', 'dateFilter', gst.controllers.DefineOpeningBalancesController]).run(function ($log) {
         $log.info("DefineOpeningBalancesController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

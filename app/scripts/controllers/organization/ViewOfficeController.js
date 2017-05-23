@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewOfficeController: function (scope, routeParams, route, location, resourceFactory) {
             scope.charges = [];
             
@@ -59,7 +59,7 @@
         }
 
     });
-    mifosX.ng.application.controller('ViewOfficeController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', mifosX.controllers.ViewOfficeController]).run(function ($log) {
+	gst.ng.application.controller('ViewOfficeController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', gst.controllers.ViewOfficeController]).run(function ($log) {
         $log.info("ViewOfficeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditWorkingDaysController: function (scope, routeParams, resourceFactory, location, dateFilter, $filter) {
             scope.workingDays = [];
             scope.selectedRepaymentType = "";
@@ -71,7 +71,7 @@
 
         }
     });
-    mifosX.ng.application.controller('EditWorkingDaysController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', '$filter',  mifosX.controllers.EditWorkingDaysController]).run(function ($log) {
+	gst.ng.application.controller('EditWorkingDaysController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', '$filter',  gst.controllers.EditWorkingDaysController]).run(function ($log) {
         $log.info("EditWorkingDaysController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

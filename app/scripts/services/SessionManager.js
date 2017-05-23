@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.services = _.extend(module, {
+	gst.services = _.extend(module, {
         SessionManager: function (webStorage, httpService, SECURITY, resourceFactory, localStorageService) {
             var EMPTY_SESSION = {};
 
@@ -23,7 +23,7 @@
                         webStorage.add("sessionData", {userId: data.userId, authenticationKey: data.base64EncodedAuthenticationKey, userPermissions: data.permissions});
                         httpService.setAuthorization(data.base64EncodedAuthenticationKey, false);
                     }
-                    return {user: new mifosX.models.LoggedInUser(data)};
+                    return {user: new gst.models.LoggedInUser(data)};
                 };
             }
 
@@ -40,7 +40,7 @@
                     httpService.setAuthorization(sessionData.authenticationKey, isOauth);
                     resourceFactory.userResource.get({userId: sessionData.userId}, function (userData) {
                         userData.userPermissions = sessionData.userPermissions;
-                        handler({user: new mifosX.models.LoggedInUser(userData)});
+                        handler({user: new gst.models.LoggedInUser(userData)});
                     });
                 } else {
                     handler(EMPTY_SESSION);
@@ -48,14 +48,14 @@
             };
         }
     });
-    mifosX.ng.services.service('SessionManager', [
+	gst.ng.services.service('SessionManager', [
             'webStorage',
             'HttpService',
             'SECURITY',
             'ResourceFactory',
             'localStorageService',
-            mifosX.services.SessionManager
+            gst.services.SessionManager
         ]).run(function ($log) {
             $log.info("SessionManager initialized");
         });
-}(mifosX.services || {}));
+}(gst.services || {}));

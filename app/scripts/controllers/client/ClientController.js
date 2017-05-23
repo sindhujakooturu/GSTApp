@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ClientController: function (scope, resourceFactory, location) {
             scope.clients = [];
             scope.actualClients = [];
@@ -89,7 +89,7 @@
 
 
 
-    mifosX.ng.application.controller('ClientController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.ClientController]).run(function ($log) {
+	gst.ng.application.controller('ClientController', ['$scope', 'ResourceFactory', '$location', gst.controllers.ClientController]).run(function ($log) {
         $log.info("ClientController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

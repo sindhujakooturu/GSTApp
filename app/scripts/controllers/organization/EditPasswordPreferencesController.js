@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditPasswordPreferencesController: function (scope, routeParams, resourceFactory, location, dateFilter) {
             scope.formData = {};
             resourceFactory.passwordPrefTemplateResource.get(function(data){
@@ -18,7 +18,7 @@
             }
         }
         });
-    mifosX.ng.application.controller('EditPasswordPreferencesController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', mifosX.controllers.EditPasswordPreferencesController]).run(function ($log) {
+	gst.ng.application.controller('EditPasswordPreferencesController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.EditPasswordPreferencesController]).run(function ($log) {
         $log.info("EditPasswordPreferencesController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

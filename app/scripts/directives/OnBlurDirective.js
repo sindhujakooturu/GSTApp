@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         OnBlurDirective: function ($parse) {
             return function (scope, elm, attrs) {
                 var onBlurFunction = $parse(attrs['ngOnBlur']);
@@ -11,8 +11,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("ngOnBlur", ['$parse', mifosX.directives.OnBlurDirective]).run(function ($log) {
+gst.ng.application.directive("ngOnBlur", ['$parse', gst.directives.OnBlurDirective]).run(function ($log) {
     $log.info("OnBlurDirective initialized");
 });

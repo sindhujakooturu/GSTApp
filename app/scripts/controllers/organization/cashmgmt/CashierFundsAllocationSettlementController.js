@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CashierFundsAllocationSettlementController: function (scope, routeParams, route, location, dateFilter, resourceFactory) {
             scope.formData = {};
             scope.formData.txnDate = new Date();
@@ -47,7 +47,7 @@
             }; 
         }
     });
-    mifosX.ng.application.controller('CashierFundsAllocationSettlementController', ['$scope', '$routeParams', '$route', '$location', 'dateFilter', 'ResourceFactory', mifosX.controllers.CashierFundsAllocationSettlementController]).run(function ($log) {
+	gst.ng.application.controller('CashierFundsAllocationSettlementController', ['$scope', '$routeParams', '$route', '$location', 'dateFilter', 'ResourceFactory', gst.controllers.CashierFundsAllocationSettlementController]).run(function ($log) {
         $log.info("CashierFundsAllocationSettlementController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

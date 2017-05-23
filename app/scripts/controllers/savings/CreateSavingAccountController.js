@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateSavingAccountController: function (scope, resourceFactory, location, routeParams, dateFilter, WizardHandler) {
             scope.products = [];
             scope.fieldOfficers = [];
@@ -255,7 +255,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('CreateSavingAccountController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', 'WizardHandler', mifosX.controllers.CreateSavingAccountController]).run(function ($log) {
+	gst.ng.application.controller('CreateSavingAccountController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', 'WizardHandler', gst.controllers.CreateSavingAccountController]).run(function ($log) {
         $log.info("CreateSavingAccountController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

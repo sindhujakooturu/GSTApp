@@ -13,7 +13,7 @@ describe("UserController", function () {
             })
         }};
 
-        this.controller = new mifosX.controllers.UserController(this.scope, this.resourceFactory);
+        this.controller = new gst.controllers.UserController(this.scope, this.resourceFactory);
     });
 
     it("should broadcast 'OpenUserFormDialog' event with the title", function () {

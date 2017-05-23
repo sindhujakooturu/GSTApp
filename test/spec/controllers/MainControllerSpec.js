@@ -23,7 +23,7 @@ describe("MainController", function () {
         this.tmhDynamicLocale = jasmine.createSpyObj("tmhDynamicLocale", ["set"]);
         this.uiConfigService = jasmine.createSpyObj("uiConfigService", ["init"]);
         
-        this.controller = new mifosX.controllers.MainController(this.scope,
+        this.controller = new gst.controllers.MainController(this.scope,
             this.location,
             this.sessionManager,
             this.translate,

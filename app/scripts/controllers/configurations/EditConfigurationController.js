@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditConfigurationController: function (scope, resourceFactory, routeParams, location) {
 
             scope.configId = routeParams.configId;
@@ -19,7 +19,7 @@
 
         }
     });
-    mifosX.ng.application.controller('EditConfigurationController', ['$scope', 'ResourceFactory', '$routeParams', '$location', mifosX.controllers.EditConfigurationController]).run(function ($log) {
+	gst.ng.application.controller('EditConfigurationController', ['$scope', 'ResourceFactory', '$routeParams', '$location', gst.controllers.EditConfigurationController]).run(function ($log) {
         $log.info("EditConfigurationController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

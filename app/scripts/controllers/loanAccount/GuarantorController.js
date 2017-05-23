@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         GuarantorController: function (scope, resourceFactory, routeParams, location, dateFilter) {
             scope.template = {};
             scope.clientview = false;
@@ -68,7 +68,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('GuarantorController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', mifosX.controllers.GuarantorController]).run(function ($log) {
+	gst.ng.application.controller('GuarantorController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', gst.controllers.GuarantorController]).run(function ($log) {
         $log.info("GuarantorController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

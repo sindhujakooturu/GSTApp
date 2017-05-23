@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         SurveyController: function (scope, resourceFactory, location, routeParams, localStorageService,$modal) {
             
             scope.clientId = routeParams.clientId;
@@ -70,7 +70,7 @@
 
         }
     });
-    mifosX.ng.application.controller('SurveyController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'localStorageService','$modal', mifosX.controllers.SurveyController]).run(function ($log) {
+	gst.ng.application.controller('SurveyController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'localStorageService','$modal', gst.controllers.SurveyController]).run(function ($log) {
         $log.info("SurveyController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditStandingInstructionController: function (scope, resourceFactory, location, routeParams, dateFilter) {
             scope.restrictDate = new Date();
             var params = {};
@@ -76,7 +76,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('EditStandingInstructionController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.EditStandingInstructionController]).run(function ($log) {
+	gst.ng.application.controller('EditStandingInstructionController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.EditStandingInstructionController]).run(function ($log) {
         $log.info("EditStandingInstructionController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

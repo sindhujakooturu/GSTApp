@@ -1,6 +1,6 @@
 
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         PeriodicAccrualAccountingController: function (scope, resourceFactory, location, translate, routeParams, dateFilter) {
             scope.first = {};
             scope.formData = {};
@@ -18,7 +18,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('PeriodicAccrualAccountingController', ['$scope', 'ResourceFactory', '$location', '$translate', '$routeParams', 'dateFilter', mifosX.controllers.PeriodicAccrualAccountingController]).run(function ($log) {
+	gst.ng.application.controller('PeriodicAccrualAccountingController', ['$scope', 'ResourceFactory', '$location', '$translate', '$routeParams', 'dateFilter', gst.controllers.PeriodicAccrualAccountingController]).run(function ($log) {
         $log.info("PeriodicAccrualAccountingController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

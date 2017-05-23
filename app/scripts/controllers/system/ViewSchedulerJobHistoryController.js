@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewSchedulerJobHistoryController: function (scope, resourceFactory, paginatorService, routeParams, $modal) {
             scope.jobhistory = [];
             var fetchFunction = function (offset, limit, callback) {
@@ -27,7 +27,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewSchedulerJobHistoryController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams', '$modal', mifosX.controllers.ViewSchedulerJobHistoryController]).run(function ($log) {
+	gst.ng.application.controller('ViewSchedulerJobHistoryController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams', '$modal', gst.controllers.ViewSchedulerJobHistoryController]).run(function ($log) {
         $log.info("ViewSchedulerJobHistoryController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

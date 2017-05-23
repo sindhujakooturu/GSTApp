@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         MemberManageController: function ($q, scope, routeParams, route, location, resourceFactory, $modal) {
             scope.group = [];
             scope.indexOfClientToBeDeleted = "";
@@ -64,7 +64,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('MemberManageController', ['$q','$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$modal', mifosX.controllers.MemberManageController]).run(function ($log) {
+	gst.ng.application.controller('MemberManageController', ['$q','$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$modal', gst.controllers.MemberManageController]).run(function ($log) {
         $log.info("MemberManageController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

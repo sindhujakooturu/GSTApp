@@ -1,9 +1,9 @@
 'use strict';
 /*global _ */
-/*global mifosX */
+/*global gst */
 
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CollectionSheetController: function (scope, resourceFactory, location, routeParams, dateFilter, localStorageService, route, $timeout) {
             scope.offices = [];
             scope.centers = [];
@@ -458,11 +458,11 @@
         }
     })
     ;
-    mifosX.ng.application.controller('CollectionSheetController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', 'localStorageService',
-            '$route', '$timeout', mifosX.controllers.CollectionSheetController]).run(function ($log) {
+	gst.ng.application.controller('CollectionSheetController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', 'localStorageService',
+            '$route', '$timeout', gst.controllers.CollectionSheetController]).run(function ($log) {
             $log.info("CollectionSheetController initialized");
         });
 }
-    (mifosX.controllers || {})
+    (gst.controllers || {})
     )
 ;

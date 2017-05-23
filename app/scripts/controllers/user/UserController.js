@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         UserController: function (scope, resourceFactory) {
             scope.users = [];
             scope.newUserFormDialog = function () {
@@ -10,7 +10,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('UserController', ['$scope', 'ResourceFactory', mifosX.controllers.UserController]).run(function ($log) {
+	gst.ng.application.controller('UserController', ['$scope', 'ResourceFactory', gst.controllers.UserController]).run(function ($log) {
         $log.info("UserController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

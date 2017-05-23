@@ -4,7 +4,7 @@
  within the wrapper controller of this directive.
 */
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         SuccessfulResponsesDirective: function ($compile, $rootScope) {
             return {
                 restrict: 'E',
@@ -65,8 +65,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("successfulResponses", ['$compile', '$rootScope', mifosX.directives.SuccessfulResponsesDirective]).run(function ($log) {
+gst.ng.application.directive("successfulResponses", ['$compile', '$rootScope', gst.directives.SuccessfulResponsesDirective]).run(function ($log) {
     $log.info("SuccessfulResponsesDirective initialized");
 });

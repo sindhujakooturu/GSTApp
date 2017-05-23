@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         dialogDirective: function () {
             return function (scope, element, attrs) {
                 var options = scope.$eval(attrs.mfDialogOptions) || {};
@@ -30,8 +30,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("mfDialog", [mifosX.directives.dialogDirective]).run(function ($log) {
+gst.ng.application.directive("mfDialog", [gst.directives.dialogDirective]).run(function ($log) {
     $log.info("dialogDirective initialized");
 });

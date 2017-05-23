@@ -1,7 +1,7 @@
 describe("HttpServiceProvider", function () {
     var http, httpService;
     beforeEach(function () {
-        this.provider = new mifosX.services.HttpServiceProvider();
+        this.provider = new gst.services.HttpServiceProvider();
     });
 
     describe("Http service", function () {

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         StatusLookup: function () {
             return function (input) {
 
@@ -44,7 +44,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('StatusLookup', [mifosX.filters.StatusLookup]).run(function ($log) {
+	gst.ng.application.filter('StatusLookup', [gst.filters.StatusLookup]).run(function ($log) {
         $log.info("StatusLookup filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

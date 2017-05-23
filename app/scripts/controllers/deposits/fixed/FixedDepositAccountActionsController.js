@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         FixedDepositAccountActionsController: function (scope, resourceFactory, location, routeParams, dateFilter) {
 
             scope.action = routeParams.action || "";
@@ -298,7 +298,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('FixedDepositAccountActionsController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.FixedDepositAccountActionsController]).run(function ($log) {
+	gst.ng.application.controller('FixedDepositAccountActionsController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.FixedDepositAccountActionsController]).run(function ($log) {
         $log.info("FixedDepositAccountActionsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.services = _.extend(module, {
+	gst.services = _.extend(module, {
         HttpServiceProvider: function () {
             var requestInterceptors = {};
 
@@ -55,9 +55,9 @@
             }];
         }
     });
-    mifosX.ng.services.config(function ($provide) {
-        $provide.provider('HttpService', mifosX.services.HttpServiceProvider);
+	gst.ng.services.config(function ($provide) {
+        $provide.provider('HttpService', gst.services.HttpServiceProvider);
     }).run(function ($log) {
         $log.info("HttpService initialized");
     });
-}(mifosX.services || {}));
+}(gst.services || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateTaxGroupController: function (scope, resourceFactory, location, dateFilter) {
             scope.taxComponents = [];
             scope.restrictDate = new Date('2025-06-22');
@@ -40,7 +40,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateTaxGroupController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', mifosX.controllers.CreateTaxGroupController]).run(function ($log) {
+	gst.ng.application.controller('CreateTaxGroupController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.CreateTaxGroupController]).run(function ($log) {
         $log.info("CreateTaxGroupController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

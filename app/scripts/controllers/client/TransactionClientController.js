@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         TransactionClientController: function (scope, resourceFactory, routeParams, location) {
 
             scope.formData = {};
@@ -19,7 +19,7 @@
 
         }
     });
-    mifosX.ng.application.controller('TransactionClientController', ['$scope', 'ResourceFactory', '$routeParams', '$location', mifosX.controllers.TransactionClientController]).run(function ($log) {
+	gst.ng.application.controller('TransactionClientController', ['$scope', 'ResourceFactory', '$routeParams', '$location', gst.controllers.TransactionClientController]).run(function ($log) {
         $log.info("TransactionClientController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

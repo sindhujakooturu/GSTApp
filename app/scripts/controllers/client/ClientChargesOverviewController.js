@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ClientChargesOverviewController: function (scope, resourceFactory, location, routeParams) {
             scope.clientId = routeParams.id
             scope.charges = [];
@@ -24,7 +24,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ClientChargesOverviewController', ['$scope', 'ResourceFactory', '$location', '$routeParams', mifosX.controllers.ClientChargesOverviewController]).run(function ($log) {
+	gst.ng.application.controller('ClientChargesOverviewController', ['$scope', 'ResourceFactory', '$location', '$routeParams', gst.controllers.ClientChargesOverviewController]).run(function ($log) {
         $log.info("ClientChargesOverviewController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

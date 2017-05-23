@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewLoanCollateralController: function (scope, resourceFactory, routeParams, location, $modal) {
 
             scope.loanId = routeParams.loanId;
@@ -27,7 +27,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewLoanCollateralController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', mifosX.controllers.ViewLoanCollateralController]).run(function ($log) {
+	gst.ng.application.controller('ViewLoanCollateralController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', gst.controllers.ViewLoanCollateralController]).run(function ($log) {
         $log.info("ViewLoanCollateralController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

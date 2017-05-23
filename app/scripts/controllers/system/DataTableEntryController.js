@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         DataTableEntryController: function (scope, location, routeParams, route, resourceFactory, $modal, dateFilter) {
 
             if (routeParams.tableName) {
@@ -199,7 +199,7 @@
 
         }
     });
-    mifosX.ng.application.controller('DataTableEntryController', ['$scope', '$location', '$routeParams', '$route', 'ResourceFactory', '$modal', 'dateFilter', mifosX.controllers.DataTableEntryController]).run(function ($log) {
+	gst.ng.application.controller('DataTableEntryController', ['$scope', '$location', '$routeParams', '$route', 'ResourceFactory', '$modal', 'dateFilter', gst.controllers.DataTableEntryController]).run(function ($log) {
         $log.info("DataTableEntryController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         ScrollbarTopDirective: function () {
             return {
                 link: function (scope, element, attrs) {
@@ -78,8 +78,8 @@
 
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("scroll", [mifosX.directives.ScrollbarTopDirective]).run(function ($log) {
+gst.ng.application.directive("scroll", [gst.directives.ScrollbarTopDirective]).run(function ($log) {
     $log.info("ScrollbarTopDirective initialized");
 });

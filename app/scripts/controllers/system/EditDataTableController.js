@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditDataTableController: function (scope, routeParams, resourceFactory, location) {
 
             scope.columns = [];
@@ -139,7 +139,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('EditDataTableController', ['$scope', '$routeParams', 'ResourceFactory', '$location', mifosX.controllers.EditDataTableController]).run(function ($log) {
+	gst.ng.application.controller('EditDataTableController', ['$scope', '$routeParams', 'ResourceFactory', '$location', gst.controllers.EditDataTableController]).run(function ($log) {
         $log.info("EditDataTableController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

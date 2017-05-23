@@ -1,12 +1,12 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         sort: function () {
             return function (input) {
                 return input.sort();
             }
         }
     });
-    mifosX.ng.application.filter('sort', ['dateFilter', mifosX.filters.sort]).run(function ($log) {
+	gst.ng.application.filter('sort', ['dateFilter', gst.filters.sort]).run(function ($log) {
         $log.info("sort filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

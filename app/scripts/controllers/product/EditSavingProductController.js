@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditSavingProductController: function (scope, resourceFactory, location, routeParams) {
             scope.formData = {};
             scope.charges = [];
@@ -224,7 +224,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('EditSavingProductController', ['$scope', 'ResourceFactory', '$location', '$routeParams', mifosX.controllers.EditSavingProductController]).run(function ($log) {
+	gst.ng.application.controller('EditSavingProductController', ['$scope', 'ResourceFactory', '$location', '$routeParams', gst.controllers.EditSavingProductController]).run(function ($log) {
         $log.info("EditSavingProductController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditHookController: function (scope, routeParams, resourceFactory, location) {
 
             scope.formData = {};
@@ -86,7 +86,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('EditHookController', ['$scope', '$routeParams', 'ResourceFactory', '$location', mifosX.controllers.EditHookController]).run(function ($log) {
+	gst.ng.application.controller('EditHookController', ['$scope', '$routeParams', 'ResourceFactory', '$location', gst.controllers.EditHookController]).run(function ($log) {
         $log.info("EditHookController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

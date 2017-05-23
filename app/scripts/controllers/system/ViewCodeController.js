@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewCodeController: function (scope, routeParams, resourceFactory, location, $modal, route) {
             scope.codevalues = [];
             scope.formData = [];
@@ -88,7 +88,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewCodeController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$modal', '$route', mifosX.controllers.ViewCodeController]).run(function ($log) {
+	gst.ng.application.controller('ViewCodeController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$modal', '$route', gst.controllers.ViewCodeController]).run(function ($log) {
         $log.info("ViewCodeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditTaxGroupController: function (scope, resourceFactory, routeParams, location, dateFilter) {
 
             scope.taxComponents = [];
@@ -72,7 +72,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('EditTaxGroupController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', mifosX.controllers.EditTaxGroupController]).run(function ($log) {
+	gst.ng.application.controller('EditTaxGroupController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', gst.controllers.EditTaxGroupController]).run(function ($log) {
         $log.info("EditTaxGroupController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

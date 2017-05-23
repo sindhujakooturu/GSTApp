@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewSavingsTransactionController: function (scope, resourceFactory, location, routeParams, dateFilter, $modal) {
             scope.flag = false;
             resourceFactory.savingsTrxnsResource.get({savingsId: routeParams.accountId, transactionId: routeParams.id}, function (data) {
@@ -40,7 +40,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewSavingsTransactionController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', '$modal', mifosX.controllers.ViewSavingsTransactionController]).run(function ($log) {
+    gst.ng.application.controller('ViewSavingsTransactionController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', '$modal', gst.controllers.ViewSavingsTransactionController]).run(function ($log) {
         $log.info("ViewSavingsTransactionController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

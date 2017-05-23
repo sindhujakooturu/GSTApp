@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         GlobalConfigurationController: function (scope, resourceFactory, location, route) {
             scope.configs = [];
             resourceFactory.configurationResource.get(function (data) {
@@ -63,7 +63,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('GlobalConfigurationController', ['$scope', 'ResourceFactory', '$location', '$route', mifosX.controllers.GlobalConfigurationController]).run(function ($log) {
+	gst.ng.application.controller('GlobalConfigurationController', ['$scope', 'ResourceFactory', '$location', '$route', gst.controllers.GlobalConfigurationController]).run(function ($log) {
         $log.info("GlobalConfigurationController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

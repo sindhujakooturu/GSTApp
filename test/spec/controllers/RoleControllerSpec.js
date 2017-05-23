@@ -9,7 +9,7 @@ describe("RoleController", function () {
             })
         }};
 
-        this.controller = new mifosX.controllers.RoleController(this.scope, this.resourceFactory);
+        this.controller = new gst.controllers.RoleController(this.scope, this.resourceFactory);
     });
 
     it("should get all roles", function () {

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         DotRemove: function () {
             return function (input) {
                 if (input) {
@@ -15,7 +15,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('DotRemove', ['dateFilter', mifosX.filters.DotRemove]).run(function ($log) {
+	gst.ng.application.filter('DotRemove', ['dateFilter', gst.filters.DotRemove]).run(function ($log) {
         $log.info("DotRemove filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

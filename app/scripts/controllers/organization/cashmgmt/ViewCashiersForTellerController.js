@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewCashiersForTellerController: function (scope, routeParams, route, location, resourceFactory) {
 
             var requestParams = {};
@@ -71,7 +71,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('ViewCashiersForTellerController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', mifosX.controllers.ViewCashiersForTellerController]).run(function ($log) {
+	gst.ng.application.controller('ViewCashiersForTellerController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', gst.controllers.ViewCashiersForTellerController]).run(function ($log) {
         $log.info("ViewCashiersForTellerController initialized");
     });
-} (mifosX.controllers || {}));
+} (gst.controllers || {}));

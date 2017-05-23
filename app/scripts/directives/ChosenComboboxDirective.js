@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         ChosenComboboxDirective: function ($compile) {
             var linker = function (scope, element, attrs) {
                 var list = attrs['chosen'];
@@ -17,8 +17,8 @@
             }
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("chosen", ['$compile', mifosX.directives.ChosenComboboxDirective]).run(function ($log) {
+gst.ng.application.directive("chosen", ['$compile', gst.directives.ChosenComboboxDirective]).run(function ($log) {
     $log.info("ChosenComboboxDirective initialized");
 });

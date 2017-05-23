@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.models = _.extend(module, {
+	gst.models = _.extend(module, {
         ClientStatus: function () {
 
             this.getStatus = function (status) {
@@ -171,4 +171,4 @@
             }
         }
     });
-}(mifosX.models || {}));
+}(gst.models || {}));

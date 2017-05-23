@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewShareProductDividendController: function (scope, routeParams, paginatorService, resourceFactory, location) {
             scope.dividendTransactions = [];
             scope.isdividendPosted = false ;
@@ -40,7 +40,7 @@
             scope.dividendTransactions = paginatorService.paginate(fetchFunction, 10);
         }
     });
-    mifosX.ng.application.controller('ViewShareProductDividendController', ['$scope', '$routeParams', 'PaginatorService', 'ResourceFactory', '$location', mifosX.controllers.ViewShareProductDividendController]).run(function ($log) {
+    gst.ng.application.controller('ViewShareProductDividendController', ['$scope', '$routeParams', 'PaginatorService', 'ResourceFactory', '$location', gst.controllers.ViewShareProductDividendController]).run(function ($log) {
         $log.info("ViewShareProductDividendController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

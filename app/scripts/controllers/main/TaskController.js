@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         TaskController: function (scope, resourceFactory, route, dateFilter, $modal, location) {
             scope.clients = [];
             scope.loans = [];
@@ -488,7 +488,7 @@
 
         }
     });
-    mifosX.ng.application.controller('TaskController', ['$scope', 'ResourceFactory', '$route', 'dateFilter', '$modal', '$location', mifosX.controllers.TaskController]).run(function ($log) {
+	gst.ng.application.controller('TaskController', ['$scope', 'ResourceFactory', '$route', 'dateFilter', '$modal', '$location', gst.controllers.TaskController]).run(function ($log) {
         $log.info("TaskController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

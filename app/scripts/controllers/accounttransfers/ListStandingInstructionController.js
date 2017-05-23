@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ListStandingInstructionController: function (scope, resourceFactory, paginatorService,routeParams, dateFilter, location,$modal) {
             scope.restrictDate = new Date();
             var params = {officeId:routeParams.officeId,clientId: routeParams.clientId};
@@ -81,7 +81,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ListStandingInstructionController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams','dateFilter', '$location','$modal', mifosX.controllers.ListStandingInstructionController]).run(function ($log) {
+	gst.ng.application.controller('ListStandingInstructionController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams','dateFilter', '$location','$modal', gst.controllers.ListStandingInstructionController]).run(function ($log) {
         $log.info("ListStandingInstructionController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

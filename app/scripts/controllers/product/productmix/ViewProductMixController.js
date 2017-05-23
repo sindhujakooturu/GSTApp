@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewProductMixController: function (scope, resourceFactory, routeParams, location, $modal) {
             scope.productmix = [];
             scope.choice = 0;
@@ -85,7 +85,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewProductMixController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', mifosX.controllers.ViewProductMixController]).run(function ($log) {
+	gst.ng.application.controller('ViewProductMixController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', gst.controllers.ViewProductMixController]).run(function ($log) {
         $log.info("ViewProductMixController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

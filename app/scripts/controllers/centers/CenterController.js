@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CenterController: function (scope, resourceFactory, location) {
             scope.centers = [];
             scope.actualCenters = [];
@@ -95,7 +95,7 @@
 
         }
     });
-    mifosX.ng.application.controller('CenterController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.CenterController]).run(function ($log) {
+	gst.ng.application.controller('CenterController', ['$scope', 'ResourceFactory', '$location', gst.controllers.CenterController]).run(function ($log) {
         $log.info("CenterController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

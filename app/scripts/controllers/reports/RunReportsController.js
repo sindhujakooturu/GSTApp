@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
 
         RunReportsController: function (scope, routeParams, resourceFactory, location, dateFilter, http, API_VERSION, $rootScope, $sce) {
             scope.isCollapsed = false; //displays options div on startup
@@ -390,7 +390,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('RunReportsController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', '$http', 'API_VERSION', '$rootScope', '$sce', mifosX.controllers.RunReportsController]).run(function ($log) {
+	gst.ng.application.controller('RunReportsController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', '$http', 'API_VERSION', '$rootScope', '$sce', gst.controllers.RunReportsController]).run(function ($log) {
         $log.info("RunReportsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

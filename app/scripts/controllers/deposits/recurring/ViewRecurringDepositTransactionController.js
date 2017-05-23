@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewRecurringDepositTransactionController: function (scope, resourceFactory, location, routeParams, dateFilter) {
             scope.flag = false;
             resourceFactory.recurringDepositTrxnsResource.get({savingsId: routeParams.accountId, transactionId: routeParams.transactionId}, function (data) {
@@ -19,7 +19,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewRecurringDepositTransactionController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.ViewRecurringDepositTransactionController]).run(function ($log) {
+	gst.ng.application.controller('ViewRecurringDepositTransactionController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.ViewRecurringDepositTransactionController]).run(function ($log) {
         $log.info("ViewRecurringDepositTransactionController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -14,7 +14,7 @@ describe("dialogDirective", function () {
             })
         };
 
-        this.linkFunction = mifosX.directives.dialogDirective();
+        this.linkFunction = gst.directives.dialogDirective();
     });
 
     describe("Event actions", function () {

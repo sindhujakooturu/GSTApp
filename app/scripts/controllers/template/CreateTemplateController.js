@@ -1,6 +1,6 @@
-/*global mifosX _  CKEDITOR */
+/*global gst _  CKEDITOR */
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateTemplateController: function (scope, resourceFactory, location, $rootScope) {
             scope.mappers = [];
             scope.formData = {};
@@ -112,7 +112,7 @@
 
         }
     });
-    mifosX.ng.application.controller('CreateTemplateController', ['$scope', 'ResourceFactory', '$location', '$rootScope', mifosX.controllers.CreateTemplateController]).run(function ($log) {
+	gst.ng.application.controller('CreateTemplateController', ['$scope', 'ResourceFactory', '$location', '$rootScope', gst.controllers.CreateTemplateController]).run(function ($log) {
         $log.info("CreateTemplateController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

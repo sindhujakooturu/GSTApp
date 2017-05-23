@@ -1,5 +1,5 @@
  (function(module) {
-  mifosX.controllers = _.extend(module, {
+	 gst.controllers = _.extend(module, {
     InterestRateChartController: function(scope, routeParams, resourceFactory, location,$modal) {
         scope.edit = function(id){
             location.path('/editinterestratechart/' + id);
@@ -52,7 +52,7 @@
 
     }
   });
-  mifosX.ng.application.controller('InterestRateChartController', ['$scope', '$routeParams', 'ResourceFactory','$location','$modal', mifosX.controllers.InterestRateChartController]).run(function($log) {
+	 gst.ng.application.controller('InterestRateChartController', ['$scope', '$routeParams', 'ResourceFactory','$location','$modal', gst.controllers.InterestRateChartController]).run(function($log) {
     $log.info("InterestRateChartController initialized");
   });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

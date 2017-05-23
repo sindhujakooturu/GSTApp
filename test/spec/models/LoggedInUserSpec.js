@@ -1,6 +1,6 @@
 describe("LoggedInUser", function () {
     it("should return the username", function () {
-        var user = new mifosX.models.LoggedInUser({username: 'test_user'});
+        var user = new gst.models.LoggedInUser({username: 'test_user'});
 
         expect(user.name).toEqual('test_user');
     });
@@ -14,7 +14,7 @@ describe("LoggedInUser", function () {
             ]
         };
 
-        var user = new mifosX.models.LoggedInUser(data);
+        var user = new gst.models.LoggedInUser(data);
 
         expect(user.name).toEqual('test_user');
         expect(user.getHomePageIdentifier()).toEqual('superuser');

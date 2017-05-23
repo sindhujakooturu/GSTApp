@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewFinancialActivityController: function (scope, resourceFactory, routeParams, location, $modal) {
             resourceFactory.officeToGLAccountMappingResource.get({mappingId: routeParams.mappingId},function (data) {
                 scope.mapping = data;
@@ -24,7 +24,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewFinancialActivityController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', mifosX.controllers.ViewFinancialActivityController]).run(function ($log) {
+	gst.ng.application.controller('ViewFinancialActivityController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', gst.controllers.ViewFinancialActivityController]).run(function ($log) {
         $log.info("ViewFinancialActivityController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

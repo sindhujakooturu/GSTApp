@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         SmsCampaignsController: function (scope, resourceFactory, location, dateFilter, translate) {
             scope.template = [];
             scope.formData = {};
@@ -51,7 +51,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('SmsCampaignsController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$translate', mifosX.controllers.SmsCampaignsController]).run(function ($log) {
+	gst.ng.application.controller('SmsCampaignsController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$translate', gst.controllers.SmsCampaignsController]).run(function ($log) {
         $log.info("SmsCampaignsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

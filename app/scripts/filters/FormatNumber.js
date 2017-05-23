@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         FormatNumber: function ($filter) {
             return function (input, fractionSize) {
                 if (isNaN(input)) {
@@ -13,7 +13,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('FormatNumber', ['$filter', mifosX.filters.FormatNumber]).run(function ($log) {
+	gst.ng.application.filter('FormatNumber', ['$filter', gst.filters.FormatNumber]).run(function ($log) {
         $log.info("FormatNumber filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

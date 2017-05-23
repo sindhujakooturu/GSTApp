@@ -10,7 +10,7 @@ describe("UserSettingController", function () {
             addToLocalStorage: jasmine.createSpy("localStorageService.addToLocalStorage()")
         };
         this.tmhDynamicLocale = jasmine.createSpyObj("tmhDynamicLocale", ["set"]);
-        this.controller = new mifosX.controllers.UserSettingController(this.scope, this.translate, this.localStorageService, this.tmhDynamicLocale);
+        this.controller = new gst.controllers.UserSettingController(this.scope, this.translate, this.localStorageService, this.tmhDynamicLocale);
     });
 
 

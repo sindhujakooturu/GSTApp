@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         prettifyDataTableColumn: function () {
             var prettifyColumnName = function (input, split) {
                 var temp = input.split(split);
@@ -27,7 +27,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('prettifyDataTableColumn', ['dateFilter', mifosX.filters.prettifyDataTableColumn]).run(function ($log) {
+	gst.ng.application.filter('prettifyDataTableColumn', ['dateFilter', gst.filters.prettifyDataTableColumn]).run(function ($log) {
         $log.info("PrettifyDataTableColumn filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         DateFormat: function (dateFilter, localStorageService) {
             return function (input) {
                 if (input) {
@@ -10,7 +10,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('DateFormat', ['dateFilter', 'localStorageService', mifosX.filters.DateFormat]).run(function ($log) {
+	gst.ng.application.filter('DateFormat', ['dateFilter', 'localStorageService', gst.filters.DateFormat]).run(function ($log) {
         $log.info("DateFormat filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

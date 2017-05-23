@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ShareProductController: function (scope, paginatorService, resourceFactory, location) {
             scope.shareproducts = [];
 
@@ -32,7 +32,7 @@
             scope.shareproducts = paginatorService.paginate(fetchFunction, 10);
         }
     });
-    mifosX.ng.application.controller('ShareProductController', ['$scope', 'PaginatorService', 'ResourceFactory', '$location', mifosX.controllers.ShareProductController]).run(function ($log) {
+	gst.ng.application.controller('ShareProductController', ['$scope', 'PaginatorService', 'ResourceFactory', '$location', gst.controllers.ShareProductController]).run(function ($log) {
         $log.info("ShareProductController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewSmsCampaignController: function (scope, routeParams, location, resourceFactory, $modal, dateFilter, route, paginatorService) {
             scope.tabsList = [{id: 'pending', name: 'Pending SMS', status: 100}, {id: 'waiting', name: 'Waiting for Delivery Report', status: 150}, {id: 'sent', name: 'Sent SMS', status: 200}, {id: 'delivered', name: 'Delivered SMS', status: 300}, {id: 'failed', name: 'Failed SMS', status: 400}];
             scope.smsList = [];
@@ -135,7 +135,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewSmsCampaignController', ['$scope', '$routeParams', '$location', 'ResourceFactory', '$modal', 'dateFilter', '$route', 'PaginatorService', mifosX.controllers.ViewSmsCampaignController]).run(function ($log) {
+	gst.ng.application.controller('ViewSmsCampaignController', ['$scope', '$routeParams', '$location', 'ResourceFactory', '$modal', 'dateFilter', '$route', 'PaginatorService', gst.controllers.ViewSmsCampaignController]).run(function ($log) {
         $log.info("ViewSmsCampaignController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));
