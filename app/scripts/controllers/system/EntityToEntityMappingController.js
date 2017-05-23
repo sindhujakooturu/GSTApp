@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EntityToEntityMappingController: function (scope, dateFilter, routeParams, route, location, resourceFactory, $modal) {
             scope.entityMappings = [];
             scope.formData = {};
@@ -216,7 +216,7 @@
 
         }
     });
-    mifosX.ng.application.controller('EntityToEntityMappingController', ['$scope','dateFilter','$routeParams', '$route', '$location', 'ResourceFactory', '$modal', mifosX.controllers.EntityToEntityMappingController]).run(function ($log) {
+	gst.ng.application.controller('EntityToEntityMappingController', ['$scope','dateFilter','$routeParams', '$route', '$location', 'ResourceFactory', '$modal', gst.controllers.EntityToEntityMappingController]).run(function ($log) {
         $log.info("EntityToEntityMappingController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

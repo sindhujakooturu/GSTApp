@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         LoanForeclosureController: function (scope, routeParams, resourceFactory, location, route, http, $modal, dateFilter, $filter) {
             scope.accountId = routeParams.id;
             scope.formData = {};
@@ -76,7 +76,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('LoanForeclosureController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$http', '$modal', 'dateFilter','$filter', mifosX.controllers.LoanForeclosureController]).run(function ($log) {
+	gst.ng.application.controller('LoanForeclosureController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$http', '$modal', 'dateFilter','$filter', gst.controllers.LoanForeclosureController]).run(function ($log) {
         $log.info("LoanForeclosureController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

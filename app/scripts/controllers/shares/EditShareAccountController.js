@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditShareAccountController: function (scope, resourceFactory, location, routeParams, dateFilter) {
             scope.products = [];
             scope.fieldOfficers = [];
@@ -84,7 +84,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('EditShareAccountController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.EditShareAccountController]).run(function ($log) {
+	gst.ng.application.controller('EditShareAccountController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.EditShareAccountController]).run(function ($log) {
         $log.info("EditShareAccountController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

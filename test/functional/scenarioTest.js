@@ -1,7 +1,7 @@
-define(['mifosX', 'angular-mocks'], {
+define(['gst', 'angular-mocks'], {
     configure: function (scenarioName) {
         require(["test/testHelper", "test/scenarios/" + scenarioName + "_scenario"], function (testHelper, scenario) {
-            mifosX.ng.application.config(function ($provide) {
+        	gst.ng.application.config(function ($provide) {
                 $provide.decorator('$httpBackend', angular.mock.e2e.$httpBackendDecorator);
                 $provide.decorator('$httpBackend', function ($delegate) {
                     function proxy(method, url, data, callback, headers) {
@@ -27,7 +27,7 @@ define(['mifosX', 'angular-mocks'], {
                     $httpBackend.when("GET", /\.html$/).passThrough();
                     scenario.stubServer(new testHelper.FakeServer($httpBackend));
                 });
-            angular.bootstrap(document, ["MifosX_Application"]);
+            angular.bootstrap(document, ["GST_Application"]);
         });
     }
 });

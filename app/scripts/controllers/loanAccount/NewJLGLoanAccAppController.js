@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         NewJLGLoanAccAppController: function (scope, rootScope, routeParams, resourceFactory, location, dateFilter, WizardHandler) {
 
             scope.response = {success:[],failed:[]};
@@ -282,7 +282,7 @@
         } // End of NewJLGLoanAccAppController
 
     });
-    mifosX.ng.application.controller('NewJLGLoanAccAppController', ['$scope', '$rootScope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', 'WizardHandler', mifosX.controllers.NewJLGLoanAccAppController]).run(function ($log) {
+	gst.ng.application.controller('NewJLGLoanAccAppController', ['$scope', '$rootScope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', 'WizardHandler', gst.controllers.NewJLGLoanAccAppController]).run(function ($log) {
         $log.info("NewJLGLoanAccAppController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

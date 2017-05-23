@@ -16,7 +16,7 @@ describe("overlayDirective", function () {
             })
         };
 
-        this.linkFunction = mifosX.directives.overlayDirective();
+        this.linkFunction = gst.directives.overlayDirective();
     });
 
     describe("Event mapping", function () {

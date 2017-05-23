@@ -2,7 +2,7 @@
  * Created by 27 on 03-08-2015.
  */
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ExternalServicesController: function (scope, resourceFactory, location, route) {
             scope.S3Configs = [];
             scope.SMTPConfigs = [];
@@ -28,10 +28,10 @@
         }
 
     });
-    mifosX.ng.application.controller('ExternalServicesController', ['$scope', 'ResourceFactory', '$location', '$route',
-        mifosX.controllers.ExternalServicesController]).run(function ($log){
+	gst.ng.application.controller('ExternalServicesController', ['$scope', 'ResourceFactory', '$location', '$route',
+		gst.controllers.ExternalServicesController]).run(function ($log){
         $log.info("ExternalServicesController initialized");
     });
 
 
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AccCoaController: function (scope,$rootScope, translate, resourceFactory, location) {
 			
 			$rootScope.tempNodeID = -100; // variable used to store nodeID (from directive), so it(nodeID) is available for detail-table
@@ -109,7 +109,7 @@
 			
         }
     });
-    mifosX.ng.application.controller('AccCoaController', ['$scope','$rootScope', '$translate', 'ResourceFactory', '$location', mifosX.controllers.AccCoaController]).run(function ($log) {
+	gst.ng.application.controller('AccCoaController', ['$scope','$rootScope', '$translate', 'ResourceFactory', '$location', gst.controllers.AccCoaController]).run(function ($log) {
         $log.info("AccCoaController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

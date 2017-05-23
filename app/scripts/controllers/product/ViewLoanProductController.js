@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewLoanProductController: function (scope, routeParams, location, anchorScroll, resourceFactory) {
             scope.loanproduct = [];
             scope.isAccountingEnabled = false;
@@ -43,7 +43,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewLoanProductController', ['$scope', '$routeParams', '$location', '$anchorScroll' , 'ResourceFactory', mifosX.controllers.ViewLoanProductController]).run(function ($log) {
+	gst.ng.application.controller('ViewLoanProductController', ['$scope', '$routeParams', '$location', '$anchorScroll' , 'ResourceFactory', gst.controllers.ViewLoanProductController]).run(function ($log) {
         $log.info("ViewLoanProductController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         HasPermissionDirective: function ($rootScope) {
             return {
                 link: function (scope, element, attrs) {
@@ -27,8 +27,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("hasPermission", ['$rootScope', mifosX.directives.HasPermissionDirective]).run(function ($log) {
+gst.ng.application.directive("hasPermission", ['$rootScope', gst.directives.HasPermissionDirective]).run(function ($log) {
     $log.info("HasPermissionDirective initialized");
 });

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         AddUpTotalFor: function () {
             return function (data, key, conditionfield, conditionvalue) {
                 if (typeof (data) === 'undefined' && typeof (key) === 'undefined') {
@@ -36,7 +36,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('AddUpTotalFor', [mifosX.filters.AddUpTotalFor]).run(function ($log) {
+	gst.ng.application.filter('AddUpTotalFor', [gst.filters.AddUpTotalFor]).run(function ($log) {
         $log.info("AddUpTotalFor filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

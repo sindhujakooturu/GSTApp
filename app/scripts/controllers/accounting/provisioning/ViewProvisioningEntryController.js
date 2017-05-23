@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewProvisioningEntryController: function (scope, routeParams, paginatorService, resourceFactory, location, $modal) {
             scope.charge = [];
             scope.choice = 0;
@@ -62,7 +62,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewProvisioningEntryController', ['$scope', '$routeParams', 'PaginatorService', 'ResourceFactory', '$location', '$modal', mifosX.controllers.ViewProvisioningEntryController]).run(function ($log) {
+	gst.ng.application.controller('ViewProvisioningEntryController', ['$scope', '$routeParams', 'PaginatorService', 'ResourceFactory', '$location', '$modal', gst.controllers.ViewProvisioningEntryController]).run(function ($log) {
         $log.info("ViewProvisioningEntryController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

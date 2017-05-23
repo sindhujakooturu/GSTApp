@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         NavigationController: function (scope, resourceFactory) {
 
             scope.offices = [];
@@ -200,7 +200,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('NavigationController', ['$scope', 'ResourceFactory', mifosX.controllers.NavigationController]).run(function ($log) {
+	gst.ng.application.controller('NavigationController', ['$scope', 'ResourceFactory', gst.controllers.NavigationController]).run(function ($log) {
         $log.info("NavigationController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

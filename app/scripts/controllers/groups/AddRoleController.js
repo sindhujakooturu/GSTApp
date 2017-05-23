@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AddRoleController: function (scope, routeParams, location, resourceFactory) {
             scope.formData = {};
             resourceFactory.groupResource.get({groupId: routeParams.id, associations: 'all', template: 'true'}, function (data) {
@@ -18,8 +18,8 @@
 
         }
     });
-    mifosX.ng.application.controller('AddRoleController', ['$scope', '$routeParams', '$location', 'ResourceFactory', mifosX.controllers.AddRoleController]).run(function ($log) {
+	gst.ng.application.controller('AddRoleController', ['$scope', '$routeParams', '$location', 'ResourceFactory', gst.controllers.AddRoleController]).run(function ($log) {
         $log.info("AddRoleController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));
 

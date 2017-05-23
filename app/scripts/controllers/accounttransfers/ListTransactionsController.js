@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ListTransactionsController: function (scope, resourceFactory, paginatorService,routeParams, dateFilter, location) {
 
             scope.standingInstructionId = routeParams.instructionId;
@@ -32,7 +32,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ListTransactionsController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams','dateFilter', '$location', mifosX.controllers.ListTransactionsController]).run(function ($log) {
+	gst.ng.application.controller('ListTransactionsController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams','dateFilter', '$location', gst.controllers.ListTransactionsController]).run(function ($log) {
         $log.info("ListTransactionsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

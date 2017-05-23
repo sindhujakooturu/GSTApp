@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         LateValidateDirective: function () {
             return {
                 restrict: 'A',
@@ -19,8 +19,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("lateValidate", [mifosX.directives.LateValidateDirective]).run(function ($log) {
+gst.ng.application.directive("lateValidate", [gst.directives.LateValidateDirective]).run(function ($log) {
     $log.info("LateValidateDirective initialized");
 });

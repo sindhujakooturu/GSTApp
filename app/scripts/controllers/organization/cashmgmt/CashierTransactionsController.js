@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CashierTransactionsController: function (scope, routeParams, route, location, resourceFactory) {
 
             scope.cashiertxns = [];
@@ -78,7 +78,7 @@
             scope.initPage();
         }
     });
-    mifosX.ng.application.controller('CashierTransactionsController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', mifosX.controllers.CashierTransactionsController]).run(function ($log) {
+	gst.ng.application.controller('CashierTransactionsController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', gst.controllers.CashierTransactionsController]).run(function ($log) {
         $log.info("CashierTransactionsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

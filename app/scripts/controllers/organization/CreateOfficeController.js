@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateOfficeController: function (scope, resourceFactory, location, dateFilter) {
             scope.offices = [];
             scope.first = {};
@@ -23,7 +23,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateOfficeController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', mifosX.controllers.CreateOfficeController]).run(function ($log) {
+	gst.ng.application.controller('CreateOfficeController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.CreateOfficeController]).run(function ($log) {
         $log.info("CreateOfficeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -11,7 +11,7 @@ describe("UserListController", function () {
             })
         }};
 
-        this.controller = new mifosX.controllers.UserListController(this.scope, this.resourceFactory);
+        this.controller = new gst.controllers.UserListController(this.scope, this.resourceFactory);
     });
 
     it("should call the userResource with the correct method", function () {

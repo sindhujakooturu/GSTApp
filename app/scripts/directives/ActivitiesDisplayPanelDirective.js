@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         ActivitiesDisplayPanelDirective: function () {
             return {
                 restrict: "E",
@@ -16,8 +16,8 @@
 
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("ngDisplaypanel", [mifosX.directives.ActivitiesDisplayPanelDirective]).run(function ($log) {
+gst.ng.application.directive("ngDisplaypanel", [gst.directives.ActivitiesDisplayPanelDirective]).run(function ($log) {
     $log.info("ActivitiesDisplayPanelDirective initialized");
 });

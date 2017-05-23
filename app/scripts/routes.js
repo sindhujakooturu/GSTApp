@@ -1,4 +1,4 @@
-(function (mifosX) {
+(function (gst) {
     var defineRoutes = function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
@@ -911,7 +911,7 @@
         ;
         $locationProvider.html5Mode(false);
     };
-    mifosX.ng.application.config(defineRoutes).run(function ($log) {
+    gst.ng.application.config(defineRoutes).run(function ($log) {
         $log.info("Routes definition completed");
     });
-}(mifosX || {}));
+}(gst || {}));

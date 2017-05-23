@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.services = _.extend(module, {
+	gst.services = _.extend(module, {
         AuthenticationService: function (scope, httpService, SECURITY, localStorageService,timeout, webStorage) {
             var onSuccess = function (data) {
                 scope.$broadcast("UserAuthenticationSuccessEvent", data);
@@ -10,7 +10,7 @@
                 scope.$broadcast("UserAuthenticationFailureEvent", data, status);
             };
 
-            var apiVer = '/fineract-provider/api/v1';
+            var apiVer = '/gstplatform/api/v1';
 
             var getUserDetails = function(data){
 
@@ -41,14 +41,14 @@
             var getAccessToken = function(){
                 var refreshToken = localStorageService.getFromLocalStorage("tokendetails").refresh_token;
                 httpService.cancelAuthorization();
-                httpService.post( "/fineract-provider/api/oauth/token?&client_id=community-app&grant_type=refresh_token&client_secret=123&refresh_token=" + refreshToken)
+                httpService.post( "/gstplatform/api/oauth/token?&client_id=community-app&grant_type=refresh_token&client_secret=123&refresh_token=" + refreshToken)
                     .success(updateAccessDetails);
             }
 
             this.authenticateWithUsernamePassword = function (credentials) {
                 scope.$broadcast("UserAuthenticationStartEvent");
         		if(SECURITY === 'oauth'){
-	                httpService.post( "/fineract-provider/api/oauth/token?username=" + credentials.username + "&password=" + credentials.password +"&client_id=community-app&grant_type=password&client_secret=123")
+	                httpService.post( "/gstplatform/api/oauth/token?username=" + credentials.username + "&password=" + credentials.password +"&client_id=community-app&grant_type=password&client_secret=123")
 	                    .success(getUserDetails)
 	                    .error(onFailure);
         		} else {
@@ -59,7 +59,7 @@
             };
         }
     });
-    mifosX.ng.services.service('AuthenticationService', ['$rootScope', 'HttpService', 'SECURITY', 'localStorageService','$timeout','webStorage', mifosX.services.AuthenticationService]).run(function ($log) {
+	gst.ng.services.service('AuthenticationService', ['$rootScope', 'HttpService', 'SECURITY', 'localStorageService','$timeout','webStorage', gst.services.AuthenticationService]).run(function ($log) {
         $log.info("AuthenticationService initialized");
     });
-}(mifosX.services || {}));
+}(gst.services || {}));

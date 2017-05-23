@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AccEditRuleController: function (scope, resourceFactory, location, routeParams) {
 
             scope.formData = {};
@@ -155,7 +155,7 @@
 
         }
     });
-    mifosX.ng.application.controller('AccEditRuleController', ['$scope', 'ResourceFactory', '$location', '$routeParams', mifosX.controllers.AccEditRuleController]).run(function ($log) {
+	gst.ng.application.controller('AccEditRuleController', ['$scope', 'ResourceFactory', '$location', '$routeParams', gst.controllers.AccEditRuleController]).run(function ($log) {
         $log.info("AccEditRuleController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -71,7 +71,7 @@ describe("ViewClientController", function () {
         this.rootScope = jasmine.createSpy();
         this.upload = jasmine.createSpy();
 
-        this.controller = new mifosX.controllers.ViewClientController(this.scope,
+        this.controller = new gst.controllers.ViewClientController(this.scope,
             this.routeParams,
             this.route,
             this.location,
@@ -88,7 +88,7 @@ describe("ViewClientController", function () {
         it("should set the value of scope buttons based on the status of the client", function () {
 
             clientResourceCallback({status: {value: clientStatus} });
-            var expectedPendingButtons = new mifosX.models.ClientStatus().getStatus(clientStatus);
+            var expectedPendingButtons = new gst.models.ClientStatus().getStatus(clientStatus);
 
             expect(this.scope.buttons[0]).toEqual(expectedPendingButtons[0]);
             expect(this.scope.buttons[1]).toEqual(expectedPendingButtons[1]);
@@ -97,7 +97,7 @@ describe("ViewClientController", function () {
 
     it("should add to the scope a button that assigns staff if the status of the client is active or pending", function () {
         clientResourceCallback({status: {value: "Transfer on hold"} });
-        var expectedPendingButtons = new mifosX.models.ClientStatus().getStatus("Transfer on hold");
+        var expectedPendingButtons = new gst.models.ClientStatus().getStatus("Transfer on hold");
 
         expect(this.scope.buttons[0]).toEqual(expectedPendingButtons[0]);
         expect(this.scope.buttons[1]).toEqual(expectedPendingButtons[1]);

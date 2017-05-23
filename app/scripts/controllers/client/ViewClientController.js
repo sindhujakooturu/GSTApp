@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewClientController: function (scope, routeParams, route, location, resourceFactory, http, $modal, API_VERSION, $rootScope, $upload) {
             scope.client = [];
             scope.identitydocuments = [];
@@ -160,7 +160,7 @@
                 }
 
 
-                var clientStatus = new mifosX.models.ClientStatus();
+                var clientStatus = new gst.models.ClientStatus();
 
                 if (clientStatus.statusKnown(data.status.value)) {
                     scope.buttons = clientStatus.getStatus(data.status.value);
@@ -723,7 +723,7 @@
         }
     });
 
-    mifosX.ng.application.controller('ViewClientController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$http', '$modal', 'API_VERSION', '$rootScope', '$upload', mifosX.controllers.ViewClientController]).run(function ($log) {
+    gst.ng.application.controller('ViewClientController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$http', '$modal', 'API_VERSION', '$rootScope', '$upload', gst.controllers.ViewClientController]).run(function ($log) {
         $log.info("ViewClientController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

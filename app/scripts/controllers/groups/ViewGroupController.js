@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewGroupController: function (scope, routeParams, route, location, resourceFactory, dateFilter, $modal) {
             scope.group = [];
             scope.template = [];
@@ -211,7 +211,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewGroupController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', 'dateFilter', '$modal', mifosX.controllers.ViewGroupController]).run(function ($log) {
+    gst.ng.application.controller('ViewGroupController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', 'dateFilter', '$modal', gst.controllers.ViewGroupController]).run(function ($log) {
         $log.info("ViewGroupController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

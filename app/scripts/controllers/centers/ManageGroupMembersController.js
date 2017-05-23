@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ManageGroupMembersController: function ($q, scope, resourceFactory, location, routeParams, $modal) {
         	
         	scope.centerId = routeParams.id;
@@ -63,7 +63,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ManageGroupMembersController', ['$q','$scope', 'ResourceFactory', '$location', '$routeParams', '$modal', mifosX.controllers.ManageGroupMembersController]).run(function ($log) {
+	gst.ng.application.controller('ManageGroupMembersController', ['$q','$scope', 'ResourceFactory', '$location', '$routeParams', '$modal', gst.controllers.ManageGroupMembersController]).run(function ($log) {
         $log.info("ManageGroupMembersController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

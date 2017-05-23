@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
 
         ViewTransactionController: function (scope, routeParams, resourceFactory, location, route, $modal) {
             scope.flag = false;
@@ -105,7 +105,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewTransactionController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$modal', mifosX.controllers.ViewTransactionController]).run(function ($log) {
+    gst.ng.application.controller('ViewTransactionController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$modal', gst.controllers.ViewTransactionController]).run(function ($log) {
         $log.info("ViewTransactionController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

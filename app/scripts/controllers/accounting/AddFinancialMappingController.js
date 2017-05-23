@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AddFinancialMappingController: function (scope, resourceFactory, location) {
             scope.formData = {};
 
@@ -28,7 +28,7 @@
 
         }
     });
-    mifosX.ng.application.controller('AddFinancialMappingController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.AddFinancialMappingController]).run(function ($log) {
+    gst.ng.application.controller('AddFinancialMappingController', ['$scope', 'ResourceFactory', '$location', gst.controllers.AddFinancialMappingController]).run(function ($log) {
         $log.info("AddFinancialMappingController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

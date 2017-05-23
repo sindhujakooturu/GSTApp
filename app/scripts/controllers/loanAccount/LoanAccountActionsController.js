@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         LoanAccountActionsController: function (scope, resourceFactory, location, routeParams, dateFilter) {
 
             scope.action = routeParams.action || "";
@@ -519,7 +519,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('LoanAccountActionsController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.LoanAccountActionsController]).run(function ($log) {
+	gst.ng.application.controller('LoanAccountActionsController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.LoanAccountActionsController]).run(function ($log) {
         $log.info("LoanAccountActionsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

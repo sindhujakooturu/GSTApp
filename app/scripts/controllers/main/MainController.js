@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         MainController: function (scope, location, sessionManager, translate, $rootScope, localStorageService, keyboardManager, $idle, tmhDynamicLocale, 
                   uiConfigService, $http) {
 
@@ -206,13 +206,13 @@
                 location.path('/').replace();
             };
 
-            scope.langs = mifosX.models.Langs;
+            scope.langs = gst.models.Langs;
             if (localStorageService.getFromLocalStorage('Language')) {
                 var temp = localStorageService.getFromLocalStorage('Language');
-                for (var i in mifosX.models.Langs) {
-                    if (mifosX.models.Langs[i].code == temp.code) {
-                        scope.optlang = mifosX.models.Langs[i];
-                        tmhDynamicLocale.set(mifosX.models.Langs[i].code);
+                for (var i in gst.models.Langs) {
+                    if (gst.models.Langs[i].code == temp.code) {
+                        scope.optlang = gst.models.Langs[i];
+                        tmhDynamicLocale.set(gst.models.Langs[i].code);
                         }
                 }
             } else {
@@ -408,7 +408,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('MainController', [
+	gst.ng.application.controller('MainController', [
         '$scope',
         '$location',
         'SessionManager',
@@ -419,8 +419,8 @@
         'tmhDynamicLocale',
         'UIConfigService',
         '$http',
-        mifosX.controllers.MainController
+        gst.controllers.MainController
     ]).run(function ($log) {
         $log.info("MainController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

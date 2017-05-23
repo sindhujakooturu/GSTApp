@@ -21,7 +21,7 @@ describe("UserFormController", function () {
             userResource: jasmine.createSpy('userResource')
         };
 
-        this.controller = new mifosX.controllers.UserFormController(this.scope, this.resourceFactory);
+        this.controller = new gst.controllers.UserFormController(this.scope, this.resourceFactory);
     });
 
     describe("Initialization", function () {

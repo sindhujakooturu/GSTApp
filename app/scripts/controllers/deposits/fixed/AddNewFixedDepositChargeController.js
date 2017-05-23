@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AddNewFixedDepositChargeController: function (scope, resourceFactory, location, routeParams, dateFilter) {
             scope.offices = [];
             scope.cancelRoute = routeParams.id;
@@ -48,7 +48,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('AddNewFixedDepositChargeController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.AddNewFixedDepositChargeController]).run(function ($log) {
+	gst.ng.application.controller('AddNewFixedDepositChargeController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.AddNewFixedDepositChargeController]).run(function ($log) {
         $log.info("AddNewFixedDepositChargeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

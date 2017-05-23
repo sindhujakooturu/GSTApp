@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AdjustRepaymentSchedule: function (scope, routeParams, resourceFactory, location, route, http, $modal, dateFilter, API_VERSION, $sce, $rootScope) {
             scope.formData = {};
             scope.enablePrincipal = false ;
@@ -349,7 +349,7 @@
         }
     });
 
-    mifosX.ng.application.controller('AdjustRepaymentSchedule', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$http', '$modal', 'dateFilter', 'API_VERSION', '$sce', '$rootScope', mifosX.controllers.AdjustRepaymentSchedule]).run(function ($log) {
+	gst.ng.application.controller('AdjustRepaymentSchedule', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$http', '$modal', 'dateFilter', 'API_VERSION', '$sce', '$rootScope', gst.controllers.AdjustRepaymentSchedule]).run(function ($log) {
         $log.info("AdjustRepaymentSchedule initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -9,7 +9,7 @@ describe("ClientController", function () {
                 })
             }
         }
-        this.controller = new mifosX.controllers.ClientController(this.scope, this.resourceFactory);
+        this.controller = new gst.controllers.ClientController(this.scope, this.resourceFactory);
         spyOn(this.scope, "initPage");
     });
 
@@ -34,7 +34,7 @@ xdescribe("ClientController", function () {
 
         this.paginatorService = jasmine.createSpyObj("paginatorService", ["paginate"]);
 
-        this.controller = new mifosX.controllers.ClientController(this.scope, this.resourceFactory, this.paginatorService);
+        this.controller = new gst.controllers.ClientController(this.scope, this.resourceFactory, this.paginatorService);
     });
 
     it("should populate the scope with paginated clients", function () {

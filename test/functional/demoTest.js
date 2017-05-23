@@ -1,8 +1,8 @@
-define(['mifosX', 'services/HttpServiceProvider', 'services/ResourceFactoryProvider'], {
+define(['gst', 'services/HttpServiceProvider', 'services/ResourceFactoryProvider'], {
     configure: function (url) {
 
         var baseUrl = url || "https://demo.openmf.com";
-        mifosX.ng.services.config(['HttpServiceProvider', 'ResourceFactoryProvider', '$httpProvider', function (httpServiceProvider, resourceFactoryProvider, httpProvider) {
+        gst.ng.services.config(['HttpServiceProvider', 'ResourceFactoryProvider', '$httpProvider', function (httpServiceProvider, resourceFactoryProvider, httpProvider) {
 
                 // Below initialization has been moved to   InitialTask.js
                 /*resourceFactoryProvider.setBaseUrl(baseUrl);

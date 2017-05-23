@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewSavingProductController: function (scope, routeParams, location, anchorScroll, resourceFactory) {
             resourceFactory.savingProductResource.get({savingProductId: routeParams.id, template: 'true'}, function (data) {
                 scope.savingproduct = data;
@@ -13,7 +13,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ViewSavingProductController', ['$scope', '$routeParams', '$location', '$anchorScroll' , 'ResourceFactory', mifosX.controllers.ViewSavingProductController]).run(function ($log) {
+	gst.ng.application.controller('ViewSavingProductController', ['$scope', '$routeParams', '$location', '$anchorScroll' , 'ResourceFactory', gst.controllers.ViewSavingProductController]).run(function ($log) {
         $log.info("ViewSavingProductController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

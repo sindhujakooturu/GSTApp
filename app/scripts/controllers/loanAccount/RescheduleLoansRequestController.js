@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         RescheduleLoansRequestController: function (scope, resourceFactory, routeParams, location, dateFilter) {
             scope.loanId = routeParams.loanId;
             scope.formData = {};
@@ -32,7 +32,7 @@
 
         }
     });
-    mifosX.ng.application.controller('RescheduleLoansRequestController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', mifosX.controllers.RescheduleLoansRequestController]).run(function ($log) {
+	gst.ng.application.controller('RescheduleLoansRequestController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', gst.controllers.RescheduleLoansRequestController]).run(function ($log) {
         $log.info("RescheduleLoansRequestController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

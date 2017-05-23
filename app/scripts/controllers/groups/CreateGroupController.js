@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateGroupController: function ($q, scope, resourceFactory, location, dateFilter, routeParams, WizardHandler) {
             scope.offices = [];
             scope.staffs = [];
@@ -212,7 +212,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateGroupController', ['$q', '$scope', 'ResourceFactory', '$location', 'dateFilter', '$routeParams', 'WizardHandler', mifosX.controllers.CreateGroupController]).run(function ($log) {
+	gst.ng.application.controller('CreateGroupController', ['$q', '$scope', 'ResourceFactory', '$location', 'dateFilter', '$routeParams', 'WizardHandler', gst.controllers.CreateGroupController]).run(function ($log) {
         $log.info("CreateGroupController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

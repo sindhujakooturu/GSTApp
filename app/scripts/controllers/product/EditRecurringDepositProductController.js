@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditRecurringDepositProductController: function (scope, resourceFactory, location, routeParams, dateFilter,$modal) {
             scope.formData = {};
             scope.charges = [];
@@ -509,7 +509,7 @@
 
         }
     });
-    mifosX.ng.application.controller('EditRecurringDepositProductController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter','$modal', mifosX.controllers.EditRecurringDepositProductController]).run(function ($log) {
+	gst.ng.application.controller('EditRecurringDepositProductController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter','$modal', gst.controllers.EditRecurringDepositProductController]).run(function ($log) {
         $log.info("EditRecurringDepositProductController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

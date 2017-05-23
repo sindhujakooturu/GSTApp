@@ -13,7 +13,7 @@ describe('UploadClientIdentifierDocumentController', function() {
       })
     }
     this.$rootScope = $rootScope;
-    this.controller = new mifosX.controllers.UploadClientIdentifierDocumentController(
+    this.controller = new gst.controllers.UploadClientIdentifierDocumentController(
       this.scope,
       this.location,
       this.routeParams,

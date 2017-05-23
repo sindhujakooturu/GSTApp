@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         TemplateController: function (scope, resourceFactory, location) {
             scope.routeTo = function (id) {
                 location.path('/viewtemplate/' + id);
@@ -21,7 +21,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('TemplateController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.TemplateController]).run(function ($log) {
+	gst.ng.application.controller('TemplateController', ['$scope', 'ResourceFactory', '$location', gst.controllers.TemplateController]).run(function ($log) {
         $log.info("TemplateController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

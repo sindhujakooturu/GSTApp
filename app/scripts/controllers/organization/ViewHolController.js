@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewHolController: function (scope, routeParams, resourceFactory, $modal, location, route) {
 
             resourceFactory.holValueResource.getholvalues({officeId: 1, holId: routeParams.id}, function (data) {
@@ -54,8 +54,8 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewHolController', ['$scope', '$routeParams', 'ResourceFactory', '$modal', '$location', '$route', mifosX.controllers.ViewHolController]).run(function ($log) {
+	gst.ng.application.controller('ViewHolController', ['$scope', '$routeParams', 'ResourceFactory', '$modal', '$location', '$route', gst.controllers.ViewHolController]).run(function ($log) {
         $log.info("ViewHolController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));
 

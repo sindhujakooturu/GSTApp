@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ListGuarantorController: function (scope, routeParams, resourceFactory, location, route, http, $modal, dateFilter, API_VERSION, $sce, $rootScope) {
 
             scope.modified = 0;
@@ -79,7 +79,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ListGuarantorController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$http', '$modal', 'dateFilter', 'API_VERSION', '$sce', '$rootScope', mifosX.controllers.ListGuarantorController]).run(function ($log) {
+	gst.ng.application.controller('ListGuarantorController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$route', '$http', '$modal', 'dateFilter', 'API_VERSION', '$sce', '$rootScope', gst.controllers.ListGuarantorController]).run(function ($log) {
         $log.info("ListGuarantorController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

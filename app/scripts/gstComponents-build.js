@@ -1,4 +1,4 @@
-define(['Q', 'underscore', 'mifosX'], function (Q) {
+define(['Q', 'underscore', 'gst'], function (Q) {
     var components = {
         models: [
             'models.js'

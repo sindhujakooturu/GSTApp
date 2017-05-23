@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         JournalEntryController: function (scope, resourceFactory, location, dateFilter) {
 
             scope.formData = {};
@@ -92,7 +92,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('JournalEntryController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', mifosX.controllers.JournalEntryController]).run(function ($log) {
+	gst.ng.application.controller('JournalEntryController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.JournalEntryController]).run(function ($log) {
         $log.info("JournalEntryController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

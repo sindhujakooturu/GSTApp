@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         UserSettingController: function (scope, translate, localStorageService, tmhDynamicLocale) {
 
             
@@ -15,7 +15,7 @@
                 'yyyy-MM-dd'
             ];
 
-            scope.langs = mifosX.models.Langs;
+            scope.langs = gst.models.Langs;
             
 
             scope.$watch(function () {
@@ -34,7 +34,7 @@
         }
     });
 
-    mifosX.ng.application.controller('UserSettingController', ['$scope', '$translate', 'localStorageService', 'tmhDynamicLocale', mifosX.controllers.UserSettingController]).run(function ($log) {
+	gst.ng.application.controller('UserSettingController', ['$scope', '$translate', 'localStorageService', 'tmhDynamicLocale', gst.controllers.UserSettingController]).run(function ($log) {
         $log.info("UserSettingController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         SearchTransactionController: function (scope, resourceFactory, paginatorService, dateFilter, location) {
             scope.filters = [
                 {option: "All", value: ""},
@@ -141,7 +141,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('SearchTransactionController', ['$scope', 'ResourceFactory', 'PaginatorService', 'dateFilter', '$location', mifosX.controllers.SearchTransactionController]).run(function ($log) {
+	gst.ng.application.controller('SearchTransactionController', ['$scope', 'ResourceFactory', 'PaginatorService', 'dateFilter', '$location', gst.controllers.SearchTransactionController]).run(function ($log) {
         $log.info("SearchTransactionController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

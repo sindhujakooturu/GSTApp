@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewChargeController: function (scope, routeParams, resourceFactory, location, $modal) {
             scope.charge = [];
             scope.choice = 0;
@@ -27,7 +27,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewChargeController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$modal', mifosX.controllers.ViewChargeController]).run(function ($log) {
+	gst.ng.application.controller('ViewChargeController', ['$scope', '$routeParams', 'ResourceFactory', '$location', '$modal', gst.controllers.ViewChargeController]).run(function ($log) {
         $log.info("ViewChargeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

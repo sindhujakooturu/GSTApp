@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         FixedDepositProductController: function (scope, resourceFactory, location) {
             scope.routeTo = function (id) {
                 location.path('/viewfixeddepositproduct/' + id);
@@ -21,7 +21,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('FixedDepositProductController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.FixedDepositProductController]).run(function ($log) {
+	gst.ng.application.controller('FixedDepositProductController', ['$scope', 'ResourceFactory', '$location', gst.controllers.FixedDepositProductController]).run(function ($log) {
         $log.info("FixedDepositProductController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

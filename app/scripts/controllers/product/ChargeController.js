@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ChargeController: function (scope, resourceFactory, location) {
             scope.charges = [];
 
@@ -25,7 +25,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('ChargeController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.ChargeController]).run(function ($log) {
+	gst.ng.application.controller('ChargeController', ['$scope', 'ResourceFactory', '$location', gst.controllers.ChargeController]).run(function ($log) {
         $log.info("ChargeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

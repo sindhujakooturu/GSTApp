@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateClientController: function (scope, resourceFactory, location, http, dateFilter, API_VERSION, $upload, $rootScope, routeParams, WizardHandler) {
             scope.offices = [];
             scope.staffs = [];
@@ -361,7 +361,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateClientController', ['$scope', 'ResourceFactory', '$location', '$http', 'dateFilter', 'API_VERSION', '$upload', '$rootScope', '$routeParams', 'WizardHandler', mifosX.controllers.CreateClientController]).run(function ($log) {
+	gst.ng.application.controller('CreateClientController', ['$scope', 'ResourceFactory', '$location', '$http', 'dateFilter', 'API_VERSION', '$upload', '$rootScope', '$routeParams', 'WizardHandler', gst.controllers.CreateClientController]).run(function ($log) {
         $log.info("CreateClientController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

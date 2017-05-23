@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ClientScreenReportController: function (scope, resourceFactory, location, $http, API_VERSION, routeParams, $rootScope, $sce) {
             scope.clientId = routeParams.clientId;
             resourceFactory.templateResource.get({entityId: 0, typeId: 0}, function (data) {
@@ -26,7 +26,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ClientScreenReportController', ['$scope', 'ResourceFactory', '$location', '$http', 'API_VERSION', '$routeParams', '$rootScope', '$sce', mifosX.controllers.ClientScreenReportController]).run(function ($log) {
+	gst.ng.application.controller('ClientScreenReportController', ['$scope', 'ResourceFactory', '$location', '$http', 'API_VERSION', '$routeParams', '$rootScope', '$sce', gst.controllers.ClientScreenReportController]).run(function ($log) {
         $log.info("ClientScreenReportController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         TransferClientsController: function ($q, scope, routeParams, route, location, resourceFactory) {
             scope.group = [];
             scope.tempData = [];
@@ -83,8 +83,8 @@
 
         }
     });
-    mifosX.ng.application.controller('TransferClientsController', ['$q', '$scope', '$routeParams', '$route', '$location', 'ResourceFactory',
-        mifosX.controllers.TransferClientsController]).run(function ($log) {
+	gst.ng.application.controller('TransferClientsController', ['$q', '$scope', '$routeParams', '$route', '$location', 'ResourceFactory',
+		gst.controllers.TransferClientsController]).run(function ($log) {
         $log.info("TransferClientsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

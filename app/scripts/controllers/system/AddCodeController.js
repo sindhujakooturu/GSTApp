@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AddCodeController: function (scope, resourceFactory, location) {
 
             scope.submit = function () {
@@ -9,8 +9,8 @@
             };
         }
     });
-    mifosX.ng.application.controller('AddCodeController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.AddCodeController]).run(function ($log) {
+	gst.ng.application.controller('AddCodeController', ['$scope', 'ResourceFactory', '$location', gst.controllers.AddCodeController]).run(function ($log) {
         $log.info("AddCodeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));
 

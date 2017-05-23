@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ProductMixController: function (scope, resourceFactory, location) {
             scope.productmixes = [];
             scope.routeTo = function (id) {
@@ -10,7 +10,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('ProductMixController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.ProductMixController]).run(function ($log) {
+	gst.ng.application.controller('ProductMixController', ['$scope', 'ResourceFactory', '$location', gst.controllers.ProductMixController]).run(function ($log) {
         $log.info("ProductMixController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

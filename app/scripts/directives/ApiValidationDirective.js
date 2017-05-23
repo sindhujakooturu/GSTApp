@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         ApiValidationDirective: function ($compile) {
             return {
                 restrict: 'E',
@@ -18,8 +18,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("apiValidate", ['$compile', mifosX.directives.ApiValidationDirective]).run(function ($log) {
+gst.ng.application.directive("apiValidate", ['$compile', gst.directives.ApiValidationDirective]).run(function ($log) {
     $log.info("ApiValidationDirective initialized");
 });

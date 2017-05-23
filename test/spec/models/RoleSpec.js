@@ -6,7 +6,7 @@ describe("Role", function () {
             description: "test super user description"
         };
 
-        var role = new mifosX.models.Role(data);
+        var role = new gst.models.Role(data);
         expect(role.id).toEqual(1);
         expect(role.name).toEqual('Test super user role');
         expect(role.description).toEqual('test super user description');

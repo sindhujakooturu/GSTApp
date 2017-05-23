@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         DataTableController: function (scope, resourceFactory, location) {
             scope.routeTo = function (id) {
                 location.path('/viewdatatable/' + id);
@@ -21,7 +21,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('DataTableController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.DataTableController]).run(function ($log) {
+	gst.ng.application.controller('DataTableController', ['$scope', 'ResourceFactory', '$location', gst.controllers.DataTableController]).run(function ($log) {
         $log.info("DataTableController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

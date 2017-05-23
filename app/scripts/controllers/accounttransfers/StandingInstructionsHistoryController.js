@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         StandingInstructionsHistoryController: function (scope, resourceFactory, paginatorService, dateFilter, $modal) {
             scope.date = {};
             scope.formData = {};
@@ -108,7 +108,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('StandingInstructionsHistoryController', ['$scope', 'ResourceFactory', 'PaginatorService', 'dateFilter', '$modal', mifosX.controllers.StandingInstructionsHistoryController]).run(function ($log) {
+	gst.ng.application.controller('StandingInstructionsHistoryController', ['$scope', 'ResourceFactory', 'PaginatorService', 'dateFilter', '$modal', gst.controllers.StandingInstructionsHistoryController]).run(function ($log) {
         $log.info("StandingInstructionsHistoryController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

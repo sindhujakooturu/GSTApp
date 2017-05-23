@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ClientIdentifierController: function (scope, routeParams, location, resourceFactory) {
             scope.clientId = routeParams.clientId;
             scope.formData = {};
@@ -24,8 +24,8 @@
 
         }
     });
-    mifosX.ng.application.controller('ClientIdentifierController', ['$scope', '$routeParams', '$location', 'ResourceFactory', mifosX.controllers.ClientIdentifierController]).run(function ($log) {
+	gst.ng.application.controller('ClientIdentifierController', ['$scope', '$routeParams', '$location', 'ResourceFactory', gst.controllers.ClientIdentifierController]).run(function ($log) {
         $log.info("ClientIdentifierController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));
 

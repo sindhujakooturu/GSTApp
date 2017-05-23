@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AccViewGLAccountContoller: function (scope, routeParams, location, resourceFactory, route, $modal) {
             scope.glaccountdata = [];
             scope.accountOptions = [];
@@ -70,7 +70,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('AccViewGLAccountContoller', ['$scope', '$routeParams', '$location', 'ResourceFactory', '$route', '$modal', mifosX.controllers.AccViewGLAccountContoller]).run(function ($log) {
+	gst.ng.application.controller('AccViewGLAccountContoller', ['$scope', '$routeParams', '$location', 'ResourceFactory', '$route', '$modal', gst.controllers.AccViewGLAccountContoller]).run(function ($log) {
         $log.info("AccViewGLAccountContoller initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

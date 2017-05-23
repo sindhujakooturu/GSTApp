@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.services = _.extend(module, {
+	gst.services = _.extend(module, {
 
         UIConfigService: function ($q,$http,$templateCache) {
             this.appendConfigToScope = function(scope){
@@ -34,9 +34,9 @@
 
     });
 
-    mifosX.ng.services.service('UIConfigService', ['$q','$http','$templateCache',mifosX.services.UIConfigService]).run(function ($log) {
+    gst.ng.services.service('UIConfigService', ['$q','$http','$templateCache',gst.services.UIConfigService]).run(function ($log) {
         $log.info("UIConfigService initialized");
 
     });
 
-}(mifosX.services || {}));
+}(gst.services || {}));

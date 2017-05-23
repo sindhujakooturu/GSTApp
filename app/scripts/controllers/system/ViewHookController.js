@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewHookController: function (scope, routeParams, route, location, resourceFactory, $modal) {
             scope.hook = [];
             scope.formData = {};
@@ -29,7 +29,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewHookController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$modal', mifosX.controllers.ViewHookController]).run(function ($log) {
+	gst.ng.application.controller('ViewHookController', ['$scope', '$routeParams', '$route', '$location', 'ResourceFactory', '$modal', gst.controllers.ViewHookController]).run(function ($log) {
         $log.info("ViewHookController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

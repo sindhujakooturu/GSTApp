@@ -65,7 +65,7 @@
             'webcam-directive': {deps: ['angular']},
             'angular-wizard': {deps: ['angular', 'underscore']},
             'angular-utils-pagination': {deps: ['angular']},
-            'mifosX': {
+            'gst': {
                 deps: [
                     'angular',
                     'jquery',
@@ -95,7 +95,7 @@
                     'angular-wizard',
                     'angular-utils-pagination'
                 ],
-                exports: 'mifosX'
+                exports: 'gst'
             }
         },
         packages: [
@@ -107,11 +107,11 @@
         ]
     });
 
-    require(['mifosXComponents', 'mifosXStyles'], function (componentsInit) {
+    require(['gstComponents', 'gstStyles'], function (componentsInit) {
         componentsInit().then(function(){
             require(['test/testInitializer'], function (testMode) {
                 if (!testMode) {
-                    angular.bootstrap(document, ['MifosX_Application']);
+                    angular.bootstrap(document, ['GST_Application']);
                 }
             });
         });

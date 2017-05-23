@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewShareAccountController: function (scope, routeParams, resourceFactory, location, $modal, route, dateFilter, $sce, $rootScope, API_VERSION) {
             scope.report = false;
             scope.hidePentahoReport = true;
@@ -348,7 +348,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewShareAccountController', ['$scope', '$routeParams', 'ResourceFactory', '$location','$modal', '$route', 'dateFilter', '$sce', '$rootScope', 'API_VERSION', mifosX.controllers.ViewShareAccountController]).run(function ($log) {
+	gst.ng.application.controller('ViewShareAccountController', ['$scope', '$routeParams', 'ResourceFactory', '$location','$modal', '$route', 'dateFilter', '$sce', '$rootScope', 'API_VERSION', gst.controllers.ViewShareAccountController]).run(function ($log) {
         $log.info("ViewShareAccountController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

@@ -1,7 +1,7 @@
 (function (module) {
-    mifosX.services = _.extend(module, {
+	gst.services = _.extend(module, {
         ResourceFactoryProvider: function () {
-            var baseUrl = "" , apiVer = "/fineract-provider/api/v1", tenantIdentifier = "";
+            var baseUrl = "" , apiVer = "/gstplatform/api/v1", tenantIdentifier = "";
             this.setBaseUrl = function (url) {
                 baseUrl = url;
                 console.log(baseUrl);
@@ -646,9 +646,9 @@
             }];
         }
     });
-    mifosX.ng.services.config(function ($provide) {
-        $provide.provider('ResourceFactory', mifosX.services.ResourceFactoryProvider);
+	gst.ng.services.config(function ($provide) {
+        $provide.provider('ResourceFactory', gst.services.ResourceFactoryProvider);
     }).run(function ($log) {
         $log.info("ResourceFactory initialized");
     });
-}(mifosX.services || {}));
+}(gst.services || {}));

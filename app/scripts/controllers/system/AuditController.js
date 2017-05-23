@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AuditController: function (scope, resourceFactory, paginatorService, dateFilter, location) {
             scope.formData = [];
             scope.isCollapsed = true;
@@ -158,7 +158,7 @@
             scope.searchAudit();
         }
     });
-    mifosX.ng.application.controller('AuditController', ['$scope', 'ResourceFactory', 'PaginatorService', 'dateFilter', '$location', mifosX.controllers.AuditController]).run(function ($log) {
+	gst.ng.application.controller('AuditController', ['$scope', 'ResourceFactory', 'PaginatorService', 'dateFilter', '$location', gst.controllers.AuditController]).run(function ($log) {
         $log.info("AuditController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

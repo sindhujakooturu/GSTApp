@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ListOnHoldTransactionController: function (scope, resourceFactory, paginatorService, routeParams, dateFilter) {
 
             scope.fromPath = routeParams.fromPath;
@@ -21,7 +21,7 @@
             scope.transactions = paginatorService.paginate(fetchFunction, 14);
         }
     });
-    mifosX.ng.application.controller('ListOnHoldTransactionController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams', 'dateFilter', mifosX.controllers.ListOnHoldTransactionController]).run(function ($log) {
+	gst.ng.application.controller('ListOnHoldTransactionController', ['$scope', 'ResourceFactory', 'PaginatorService', '$routeParams', 'dateFilter', gst.controllers.ListOnHoldTransactionController]).run(function ($log) {
         $log.info("ListOnHoldTransactionController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

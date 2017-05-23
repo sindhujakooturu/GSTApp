@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AssignSavingsOfficerController: function (scope, resourceFactory, routeParams, location, dateFilter) {
 
             scope.loanOfficers = [];
@@ -34,8 +34,8 @@
 
         }
     });
-    mifosX.ng.application.controller('AssignSavingsOfficerController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', mifosX.controllers.AssignSavingsOfficerController]).run(function ($log) {
+	gst.ng.application.controller('AssignSavingsOfficerController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', gst.controllers.AssignSavingsOfficerController]).run(function ($log) {
         $log.info("AssignSavingsOfficerController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));
 

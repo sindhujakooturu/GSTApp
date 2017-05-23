@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateTaxComponentController: function (scope, resourceFactory, location, dateFilter) {
             scope.debitaccounts = [];
             scope.creditaccounts = [];
@@ -59,7 +59,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateTaxComponentController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', mifosX.controllers.CreateTaxComponentController]).run(function ($log) {
+	gst.ng.application.controller('CreateTaxComponentController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.CreateTaxComponentController]).run(function ($log) {
         $log.info("CreateTaxComponentController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

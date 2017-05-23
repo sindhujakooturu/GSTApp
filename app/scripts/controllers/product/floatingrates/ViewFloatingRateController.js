@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewFloatingRateController: function (scope, routeParams, resourceFactory, location, dateFilter, translate) {
             resourceFactory.floatingrates.get({floatingRateId: routeParams.floatingRateId}, function (data) {
                 scope.id = data.id ;
@@ -13,7 +13,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewFloatingRateController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', '$translate', mifosX.controllers.ViewFloatingRateController]).run(function ($log) {
+	gst.ng.application.controller('ViewFloatingRateController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', '$translate', gst.controllers.ViewFloatingRateController]).run(function ($log) {
         $log.info("ViewFloatingRateController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

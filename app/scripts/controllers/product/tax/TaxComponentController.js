@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         TaxComponentController: function (scope, resourceFactory, location) {
             scope.taxcomponents = [];
 
@@ -13,7 +13,7 @@
             });
         }
     });
-    mifosX.ng.application.controller('TaxComponentController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.TaxComponentController]).run(function ($log) {
+	gst.ng.application.controller('TaxComponentController', ['$scope', 'ResourceFactory', '$location', gst.controllers.TaxComponentController]).run(function ($log) {
         $log.info("TaxComponentController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

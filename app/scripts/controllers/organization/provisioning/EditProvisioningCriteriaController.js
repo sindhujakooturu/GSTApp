@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditProvisioningCriteriaController: function (scope, resourceFactory, routeParams, location, dateFilter, translate) {
             scope.available = [];
             scope.selected = [];
@@ -59,7 +59,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('EditProvisioningCriteriaController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', '$translate', mifosX.controllers.EditProvisioningCriteriaController]).run(function ($log) {
+	gst.ng.application.controller('EditProvisioningCriteriaController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', '$translate', gst.controllers.EditProvisioningCriteriaController]).run(function ($log) {
         $log.info("EditProvisioningCriteriaController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

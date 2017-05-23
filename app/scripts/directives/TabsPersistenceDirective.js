@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         TabsPersistenceDirective: function (localStorageService) {
             function setSavedTab (tabsetName, tabHeading) {
                 var savedTabs = localStorageService.getFromLocalStorage("tabPersistence");
@@ -53,8 +53,8 @@
             }
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("tabset", ['localStorageService', mifosX.directives.TabsPersistenceDirective]).run(function ($log) {
+gst.ng.application.directive("tabset", ['localStorageService', gst.directives.TabsPersistenceDirective]).run(function ($log) {
     $log.info("tabsPersistenceDirective initialized");
 });

@@ -20,7 +20,7 @@ describe('ViewUserController', function(){
     };
     this.$modal = jasmine.createSpyObj('$modal', ['open']);
   
-    this.controller = new mifosX.controllers.ViewUserController(
+    this.controller = new gst.controllers.ViewUserController(
       this.scope,
       this.routeParams,
       this.route,

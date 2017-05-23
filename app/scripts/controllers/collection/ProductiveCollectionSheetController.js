@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ProductiveCollectionSheetController: function (scope, routeParams, resourceFactory, dateFilter, location) {
             var params = {};
             params.locale = scope.optlang.code;
@@ -222,7 +222,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ProductiveCollectionSheetController', ['$scope', '$routeParams', 'ResourceFactory', 'dateFilter', '$location', mifosX.controllers.ProductiveCollectionSheetController]).run(function ($log) {
+	gst.ng.application.controller('ProductiveCollectionSheetController', ['$scope', '$routeParams', 'ResourceFactory', 'dateFilter', '$location', gst.controllers.ProductiveCollectionSheetController]).run(function ($log) {
         $log.info("ProductiveCollectionSheetController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

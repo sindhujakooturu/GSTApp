@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ApproveLoanRescheduleRequestController: function (scope, resourceFactory, routeParams, location, dateFilter) {
             scope.formData = {};
             scope.loanId = routeParams.loanId;
@@ -19,7 +19,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ApproveLoanRescheduleRequestController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', mifosX.controllers.ApproveLoanRescheduleRequestController]).run(function ($log) {
+	gst.ng.application.controller('ApproveLoanRescheduleRequestController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', gst.controllers.ApproveLoanRescheduleRequestController]).run(function ($log) {
         $log.info("ApproveLoanRescheduleRequestController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

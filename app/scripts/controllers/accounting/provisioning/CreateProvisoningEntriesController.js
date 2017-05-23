@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateProvisoningEntriesController: function (scope, resourceFactory, location, dateFilter, translate) {
             scope.template = [];
             scope.formData = {};
@@ -17,7 +17,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateProvisoningEntriesController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$translate', mifosX.controllers.CreateProvisoningEntriesController]).run(function ($log) {
+	gst.ng.application.controller('CreateProvisoningEntriesController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$translate', gst.controllers.CreateProvisoningEntriesController]).run(function ($log) {
         $log.info("CreateProvisoningEntriesController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

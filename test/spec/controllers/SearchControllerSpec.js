@@ -35,7 +35,7 @@ describe("SearchController", function () {
                     centerAccountGet = callback;
                 })}
         }
-        this.controller = new mifosX.controllers.SearchController(this.scope, this.route, this.resourceFactory);
+        this.controller = new gst.controllers.SearchController(this.scope, this.route, this.resourceFactory);
 
     });
 

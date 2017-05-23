@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         RichDashboard: function (scope, resourceFactory, localStorageService, $rootScope, location) {
 
         	scope.recent = [];
@@ -459,7 +459,7 @@
 
         }
     });
-    mifosX.ng.application.controller('RichDashboard', ['$scope', 'ResourceFactory', 'localStorageService', '$rootScope', '$location', mifosX.controllers.RichDashboard]).run(function ($log) {
+	gst.ng.application.controller('RichDashboard', ['$scope', 'ResourceFactory', 'localStorageService', '$rootScope', '$location', gst.controllers.RichDashboard]).run(function ($log) {
         $log.info("RichDashboard initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

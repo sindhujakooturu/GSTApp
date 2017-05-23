@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewSavingDetailsController: function (scope, routeParams, resourceFactory, location, $modal, route, dateFilter, $sce, $rootScope, API_VERSION) {
             scope.report = false;
             scope.hidePentahoReport = true;
@@ -456,7 +456,7 @@
             
         }
     });
-    mifosX.ng.application.controller('ViewSavingDetailsController', ['$scope', '$routeParams', 'ResourceFactory', '$location','$modal', '$route', 'dateFilter', '$sce', '$rootScope', 'API_VERSION', mifosX.controllers.ViewSavingDetailsController]).run(function ($log) {
+	gst.ng.application.controller('ViewSavingDetailsController', ['$scope', '$routeParams', 'ResourceFactory', '$location','$modal', '$route', 'dateFilter', '$sce', '$rootScope', 'API_VERSION', gst.controllers.ViewSavingDetailsController]).run(function ($log) {
         $log.info("ViewSavingDetailsController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

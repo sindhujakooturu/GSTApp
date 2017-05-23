@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.filters = _.extend(module, {
+	gst.filters = _.extend(module, {
         DayMonthFormat: function () {
             return function (input) {
                 if (input) {
@@ -50,7 +50,7 @@
             }
         }
     });
-    mifosX.ng.application.filter('DayMonthFormat', ['dateFilter', mifosX.filters.DayMonthFormat]).run(function ($log) {
+	gst.ng.application.filter('DayMonthFormat', ['dateFilter', gst.filters.DayMonthFormat]).run(function ($log) {
         $log.info("DayMonthFormat filter initialized");
     });
-}(mifosX.filters || {}));
+}(gst.filters || {}));

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateUserController: function (scope, resourceFactory, location) {
             scope.offices = [];
             scope.available = [];
@@ -76,7 +76,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateUserController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.CreateUserController]).run(function ($log) {
+	gst.ng.application.controller('CreateUserController', ['$scope', 'ResourceFactory', '$location', gst.controllers.CreateUserController]).run(function ($log) {
         $log.info("CreateUserController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

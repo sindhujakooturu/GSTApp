@@ -3,7 +3,7 @@ describe("ResourceFactoryProvider", function () {
         rootScope,
         apiVersion = "/fineract-provider/api/v1";
     beforeEach(function () {
-        this.provider = new mifosX.services.ResourceFactoryProvider();
+        this.provider = new gst.services.ResourceFactoryProvider();
         ngResource = jasmine.createSpy("$resource").andReturn("test_resource");
         rootScope = jasmine.createSpyObj("$rootScope", ["hostUrl"]);
 

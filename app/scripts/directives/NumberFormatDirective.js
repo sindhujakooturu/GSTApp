@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         NumberFormatDirective: function ($filter, $locale, $parse) {
             return {
                 replace: false,
@@ -79,8 +79,8 @@
             };
         }
     });
-}(mifosX.directives || {}));
-mifosX.ng.application.directive("numberFormat", ['$filter', '$locale','$parse', mifosX.directives.NumberFormatDirective]).run(function ($log) {
+}(gst.directives || {}));
+gst.ng.application.directive("numberFormat", ['$filter', '$locale','$parse', gst.directives.NumberFormatDirective]).run(function ($log) {
     $log.info("NumberFormatDirective initialized");
 });
 

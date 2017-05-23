@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         NewLoanAccAppController: function (scope, routeParams, resourceFactory, location, dateFilter, uiConfigService, WizardHandler) {
             scope.previewRepayment = false;
             scope.clientId = routeParams.clientId;
@@ -384,7 +384,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('NewLoanAccAppController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', 'UIConfigService', 'WizardHandler', mifosX.controllers.NewLoanAccAppController]).run(function ($log) {
+	gst.ng.application.controller('NewLoanAccAppController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', 'UIConfigService', 'WizardHandler', gst.controllers.NewLoanAccAppController]).run(function ($log) {
         $log.info("NewLoanAccAppController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

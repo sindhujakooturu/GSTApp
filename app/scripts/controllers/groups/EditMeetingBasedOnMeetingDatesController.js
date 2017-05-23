@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditMeetingBasedOnMeetingDatesController: function (scope, resourceFactory, location, routeParams, dateFilter) {
             scope.formData = {};
             scope.formData.presentMeetingDate = {};
@@ -43,9 +43,9 @@
             };
         }
     });
-    mifosX.ng.application.controller('EditMeetingBasedOnMeetingDatesController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.EditMeetingBasedOnMeetingDatesController]).run(function ($log) {
+	gst.ng.application.controller('EditMeetingBasedOnMeetingDatesController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.EditMeetingBasedOnMeetingDatesController]).run(function ($log) {
         $log.info("EditMeetingBasedOnMeetingDatesController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));
 
 

@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         AddressFormController: function ($scope, resourceFactory, routeParams, location) {
 
             $scope.formData={};
@@ -77,9 +77,9 @@
 
 
     });
-    mifosX.ng.application.controller('AddressFormController', ['$scope','ResourceFactory', '$routeParams', '$location', mifosX.controllers.AddressFormController]).run(function ($log) {
+	gst.ng.application.controller('AddressFormController', ['$scope','ResourceFactory', '$routeParams', '$location', gst.controllers.AddressFormController]).run(function ($log) {
         $log.info("AddressFormController initialized");
     });
 
 }
-(mifosX.controllers || {}));
+(gst.controllers || {}));

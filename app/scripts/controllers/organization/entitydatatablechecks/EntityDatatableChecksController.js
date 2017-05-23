@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EntityDatatableChecksController: function (scope, resourceFactory, location, dateFilter, translate, $modal, route) {
             scope.template = [];
             scope.formData = {};
@@ -152,7 +152,7 @@
             }
         }
     });
-    mifosX.ng.application.controller('EntityDatatableChecksController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$translate', '$modal', '$route', mifosX.controllers.EntityDatatableChecksController]).run(function ($log) {
+	gst.ng.application.controller('EntityDatatableChecksController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$translate', '$modal', '$route', gst.controllers.EntityDatatableChecksController]).run(function ($log) {
         $log.info("EntityDatatableChecksController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

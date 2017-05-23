@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.directives = _.extend(module, {
+	gst.directives = _.extend(module, {
         SummaryDirective: function () {
             return {
                 restrict: "E",
@@ -16,8 +16,8 @@
 
         }
     });
-}(mifosX.directives || {}));
+}(gst.directives || {}));
 
-mifosX.ng.application.directive("ngSummary", [mifosX.directives.SummaryDirective]).run(function ($log) {
+gst.ng.application.directive("ngSummary", [gst.directives.SummaryDirective]).run(function ($log) {
     $log.info("SummaryDirective initialized");
 });

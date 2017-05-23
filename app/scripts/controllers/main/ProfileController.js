@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ProfileController: function (scope, localStorageService, resourceFactory, $modal) {
             scope.userDetails = localStorageService.getFromLocalStorage('userData');
             resourceFactory.userListResource.get({userId: scope.userDetails.userId}, function (data) {
@@ -35,7 +35,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('ProfileController', ['$scope', 'localStorageService', 'ResourceFactory', '$modal', mifosX.controllers.ProfileController]).run(function ($log) {
+	gst.ng.application.controller('ProfileController', ['$scope', 'localStorageService', 'ResourceFactory', '$modal', gst.controllers.ProfileController]).run(function ($log) {
         $log.info("ProfileController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

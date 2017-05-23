@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         EditCenterController: function (scope, resourceFactory, location, routeParams, dateFilter) {
             scope.managecode = routeParams.managecode;
             scope.first = {};
@@ -46,7 +46,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('EditCenterController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', mifosX.controllers.EditCenterController]).run(function ($log) {
+	gst.ng.application.controller('EditCenterController', ['$scope', 'ResourceFactory', '$location', '$routeParams', 'dateFilter', gst.controllers.EditCenterController]).run(function ($log) {
         $log.info("EditCenterController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

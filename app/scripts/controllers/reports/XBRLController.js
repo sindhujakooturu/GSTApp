@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         XBRLController: function (scope, resourceFactory, location, dateFilter, route, http, API_VERSION, $rootScope, localStorageService, $timeout) {
             scope.offices = [];
             scope.date = {};
@@ -120,8 +120,8 @@
             };
         }
     });
-    mifosX.ng.application.controller('XBRLController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$route', '$http', 'API_VERSION', '$rootScope',
-            'localStorageService', '$timeout', mifosX.controllers.XBRLController]).run(function ($log) {
+	gst.ng.application.controller('XBRLController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', '$route', '$http', 'API_VERSION', '$rootScope',
+            'localStorageService', '$timeout', gst.controllers.XBRLController]).run(function ($log) {
             $log.info("XBRLController initialized");
         });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

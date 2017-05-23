@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         CreateLoanProductController: function (scope, resourceFactory, location, dateFilter) {
             scope.restrictDate = new Date();
             scope.formData = {};
@@ -370,7 +370,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('CreateLoanProductController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', mifosX.controllers.CreateLoanProductController]).run(function ($log) {
+	gst.ng.application.controller('CreateLoanProductController', ['$scope', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.CreateLoanProductController]).run(function ($log) {
         $log.info("CreateLoanProductController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

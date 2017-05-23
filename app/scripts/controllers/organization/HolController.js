@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         HolController: function (scope, resourceFactory, location) {
             scope.holidays = [];
             scope.offices = [];
@@ -38,7 +38,7 @@
             };
         }
     });
-    mifosX.ng.application.controller('HolController', ['$scope', 'ResourceFactory', '$location', mifosX.controllers.HolController]).run(function ($log) {
+	gst.ng.application.controller('HolController', ['$scope', 'ResourceFactory', '$location', gst.controllers.HolController]).run(function ($log) {
         $log.info("HolController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

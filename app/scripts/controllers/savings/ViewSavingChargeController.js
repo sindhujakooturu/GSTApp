@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewSavingChargeController: function (scope, resourceFactory, routeParams, location, $modal) {
 
             scope.savingId = routeParams.savingId;
@@ -48,7 +48,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewSavingChargeController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', mifosX.controllers.ViewSavingChargeController]).run(function ($log) {
+	gst.ng.application.controller('ViewSavingChargeController', ['$scope', 'ResourceFactory', '$routeParams', '$location', '$modal', gst.controllers.ViewSavingChargeController]).run(function ($log) {
         $log.info("ViewSavingChargeController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

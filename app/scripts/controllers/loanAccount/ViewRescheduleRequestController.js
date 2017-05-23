@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.controllers = _.extend(module, {
+	gst.controllers = _.extend(module, {
         ViewRescheduleRequestController: function (scope, resourceFactory, routeParams, location, dateFilter) {
             scope.requestId = routeParams.requestId;
             scope.loanId = routeParams.loanId;
@@ -59,7 +59,7 @@
 
         }
     });
-    mifosX.ng.application.controller('ViewRescheduleRequestController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', mifosX.controllers.ViewRescheduleRequestController]).run(function ($log) {
+	gst.ng.application.controller('ViewRescheduleRequestController', ['$scope', 'ResourceFactory', '$routeParams', '$location', 'dateFilter', gst.controllers.ViewRescheduleRequestController]).run(function ($log) {
         $log.info("ViewRescheduleRequestController initialized");
     });
-}(mifosX.controllers || {}));
+}(gst.controllers || {}));

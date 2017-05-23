@@ -1,5 +1,5 @@
 (function (module) {
-    mifosX.models = _.extend(module, {
+	gst.models = _.extend(module, {
         CashierTxnAmount: function (data) {
             this.txnType = data.txnType.value;
             this.amount = data.txnAmount;
@@ -37,4 +37,4 @@
     		};
         }
     });
-}(mifosX.models || {}));
+}(gst.models || {}));
