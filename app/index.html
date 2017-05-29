@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="./images/favicon.ico" ng-if="!isFaviconPath" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" ng-if="!isFaviconPath" />
     <link rel="icon" type="image/png" href="{{faviconPath}}" ng-if="isFaviconPath" />
     <title>{{ 'label.heading.gstclient' | translate }}</title>
     <style>[data-ng-cloak] { display: none !important; }</style>
@@ -13,7 +13,7 @@
 
 <div id="loaderWrapper" data-ng-hide="domReady" style="position:relative; height: 100%;">
     <div id="loader" style="  margin:auto;   height: 300px;  width: 300px;  position:fixed;  top:0;  bottom:0;  left:0; right:0;   display:flex;  flex-direction:column;  justify-content:center; ">
-        <img src="./images/MifosX_logo.png" alt="MifosX" style="min-width: 50px;   width: 6%; margin: 10px auto" class="img-responsive">
+        <!-- <img src="./images/gst-logo.png" alt="MifosX" style="min-width: 50px;   width: 6%; margin: 10px auto" class="img-responsive"> -->
         <img src="./images/loader.gif" style="margin: 10px auto" class="img-responsive">
     </div>
 </div>
@@ -66,7 +66,7 @@
         </div>
         <div class="row col-md-8 col-lg-offset-2 paddedbottom">
         	<div class="col-md-3">
-                <img src="./images/MifosX_logo.png" alt="Mifos X" width="150" class="img-responsive" ng-if="!isBigLogoPath"/>
+                <img src="./images/gst-logo.png" alt="Mifos X" width="150" class="img-responsive" ng-if="!isBigLogoPath"/>
                 <img src="{{bigLogoPath}}" alt="Mifos X" width="150" class="img-responsive" ng-if="isBigLogoPath">
             </div>
             <div class="col-md-9">
@@ -173,7 +173,7 @@
         	<div class="container-fluid container">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <a class="brand" href="#/home">
-                        <img src="./images/MifosX_logoSmall.png" alt="Mifos X" height="20" ng-if="!isHeaderLogoPath">
+                        <img src="./images/gst_logoSmall.png" alt="Mifos X" height="20" ng-if="!isHeaderLogoPath" style="height: 29px;">
                         <img src="{{headerLogoPath}}" alt="Mifos X" height="20" ng-if="isHeaderLogoPath">
                     </a>
                     <ul class="nav navbar-nav" id="main-menu-left">
