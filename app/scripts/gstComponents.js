@@ -287,7 +287,8 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/smscampaigns/CreateSmsCampaignController',
             'organization/smscampaigns/ViewSmsCampaignController',
             'organization/smscampaigns/EditSmsCampaignController',
-            'organization/entitydatatablechecks/EntityDatatableChecksController',
+            'organization/entitydatatablechecks/EntityDatatableChecksController'
+            
         ],
         filters: [
             'StatusLookup',
@@ -322,6 +323,7 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'NumberFormatDirective',
             'SuccessfulResponsesDirective',
             'TabsPersistenceDirective'
+            
         ]
     };
 

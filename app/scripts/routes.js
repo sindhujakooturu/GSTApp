@@ -908,6 +908,7 @@
             .when('/entitydatatablechecks', {
                 templateUrl: 'views/organization/entitydatatablechecks/entitydatatablechecks.html'
             })
+           
         ;
         $locationProvider.html5Mode(false);
     };
