@@ -1,10 +1,10 @@
-<div class="col-md-12" ng-controller="ClientController">
+<div class="col-md-12" ng-controller="PurchaseController">
     <ul class="breadcrumb">
         <li class="active">{{'label.anchor.clients' | translate}}</li>
     </ul>
     <api-validate></api-validate>
 
-    <a href="#/createclient" class="btn btn-primary pull-right" has-permission='CREATE_CLIENT'><i class="icon-plus icon-white"></i>{{'label.button.createclient' | translate}}</a>
+    <a href="#/createpurchaser" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.createpurchaser' | translate}}</a>
     <div class="clearfix"></div>
     <form ng-submit="search()" class="form-horizontal">
         <div class="form-group">
@@ -37,7 +37,7 @@
         </tr>
         </thead>
 
-        <tbody>
+       <!--  <tbody>
         <tr class="pointer-main" dir-paginate="client in clients | orderBy:'displayName':reverse  | filter:filterText | itemsPerPage: clientsPerPage" total-items="totalClients">
             <td class="pointer" data-ng-click="routeTo(client.id)">{{client.displayName}}</td>
             <td class="pointer" data-ng-click="routeTo(client.id)">{{client.accountNo}}</td>
@@ -49,7 +49,7 @@
             <td class="pointer" data-ng-click="routeTo(client.id)">{{client.officeName}}</td>
             <td class="pointer" data-ng-click="routeTo(client.id)">{{client.staffName}}</td>
         </tr>
-        </tbody>
+        </tbody> -->
 
     </table>
     <dir-pagination-controls boundary-links="true" template-url="bower_components/angular-utils-pagination/dirPagination.tpl.html" on-page-change="getResultsPage(newPageNumber)"></dir-pagination-controls>

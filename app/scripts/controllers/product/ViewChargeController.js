@@ -13,6 +13,7 @@
                     controller: ChDeleteCtrl
                 });
             };
+            
             var ChDeleteCtrl = function ($scope, $modalInstance) {
                 $scope.delete = function () {
                     resourceFactory.chargeResource.delete({chargeId: routeParams.id}, {}, function (data) {

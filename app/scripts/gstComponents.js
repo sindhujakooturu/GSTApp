@@ -287,7 +287,9 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/smscampaigns/CreateSmsCampaignController',
             'organization/smscampaigns/ViewSmsCampaignController',
             'organization/smscampaigns/EditSmsCampaignController',
-            'organization/entitydatatablechecks/EntityDatatableChecksController'
+            'organization/entitydatatablechecks/EntityDatatableChecksController',
+            'organization/purchaser/PurchaserController',
+            'organization/purchaser/CreatePurchaserController'
             
         ],
         filters: [

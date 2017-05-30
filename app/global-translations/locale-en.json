@@ -4216,10 +4216,12 @@
 	"label.heading.companyname":"Company Name",
 	"label.heading.contactname":"Contact Name",
 	"label.heading.mobile":"Mobile",
+	"label.heading.email":"Email",
 	"label.heading.address1":"Address",
 	"label.heading.city":"City",
 	"label.heading.state":"State",
 	"label.heading.country":"Country",
+	"label.heading.panno":"Pan No",
 	"label.heading.action":"Action",
 	"label.error.specialchar":"Special Characters are not allowed",
     "label.required.field":"Required Field",    
@@ -4228,6 +4230,18 @@
     "abel.prospect.error.fax":"Invalid Fax",
     "label.prospect.error.email":"Invalid Email",
     "label.prospect.error.pin":"Invalid Pin",
+    
+    "label.gstcompany.name":"GST Company Name",
+    "label.supplier.name":"Supplier Name",
+    "label.anchor.purchaser":"Purchaser",
+    "label.view.purchaser":"Define Purchaser",
+    "label.button.createpurchaser":"Create Purchaser",
+    "label.heading.createpurchaser":"Create Purchaser",
+    "label.anchor.purchaser":"Purchaser",
+    "label.anchor.createpurchaser":"Create Purchaser",
+    
+    "label.heading.editvalue":"Edit Value",
+    "label.heading.viewvalue":"View Value",
 	
 	"":""
 }

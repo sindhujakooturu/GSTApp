@@ -1368,3 +1368,8 @@ h3.bolder {
     overflow: auto;
     font-size: 12px;
 }
+
+.heading1{
+	color:#096cc3;
+	text-align: center;
+}
