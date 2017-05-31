@@ -11,7 +11,7 @@
             <th>{{'label.heading.enabled' | translate}}</th>
             <th></th>
             <th>{{'label.heading.value' | translate}}</th>
-            <th></th>
+            <th>{{'label.heading.editvalue' | translate}}</th>
         </tr>
         </thead>
         <tbody>
@@ -30,13 +30,30 @@
                 <button type="button" class="btn btn-danger" data-ng-show="config.enabled"
                         data-ng-click="disable(config.id, config.name)" has-permission='UPDATE_CONFIGURATION'>{{"label.button.disable" | translate}}</button>                
             </td>
-            <td>{{config.value}}</td>
             <td>
-                <a title="{{'label.edit' | translate}}"  data-ng-show="config.showEditvalue"  
+            <a data-ng-click="showvalue(config.value)" data-popover="View Value" 
+					data-popover-trigger="mouseenter" ><i class="icon-eye-open icon-white"></i></a>
+            
+            </td>
+            
+            <td>
+                <a data-popover="Edit Value" data-popover-trigger="mouseenter"  data-ng-show="config.showEditvalue"  
                    href="#/configurations/{{config.id}}/editconfig">
 					<i class="icon-pencil icon-white"></i></a>
             </td>                   
         </tr>
         </tbody>
     </table>
+    <script type="text/ng-template" id="showValue.html">
+            <div class="modal-header silver">
+                <h3 class="bolder">{{'label.heading.viewvalue' | translate}}</h3>
+            </div>
+            <div class="modal-body ">
+                <api-validate></api-validate>
+				<h3>{{valuee}}</h3>
+                <br>
+                <button class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+                
+            </div>
+        </script>
 </div>
