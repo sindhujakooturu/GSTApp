@@ -908,6 +908,18 @@
             .when('/entitydatatablechecks', {
                 templateUrl: 'views/organization/entitydatatablechecks/entitydatatablechecks.html'
             })
+            .when('/supplier', {
+                templateUrl: 'views/organization/supplier/supplier.html'
+            })
+            .when('/createsupplier', {
+                templateUrl: 'views/organization/supplier/createsupplier.html'
+            })
+            .when('/viewsupplier', {
+                templateUrl: 'views/organization/supplier/viewsupplier.html'
+            })
+            .when('/editsupplier', {
+                templateUrl: 'views/organization/supplier/editsupplier.html'
+            })
            
         ;
         $locationProvider.html5Mode(false);

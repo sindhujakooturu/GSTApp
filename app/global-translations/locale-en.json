@@ -4228,6 +4228,39 @@
     "abel.prospect.error.fax":"Invalid Fax",
     "label.prospect.error.email":"Invalid Email",
     "label.prospect.error.pin":"Invalid Pin",
+    
+    "#Supplier":"",
+    "label.anchor.supplier":"Supplier",
+    "label.view.supplier":"Define Supplier",
+    
+    "label.anchor.createsupplier":"Create Supplier",
+    "label.button.createsupplier":"Create Supplier",
+    
+    "label.gstin":"GSTIN",
+    "label.gstincompany":"GSTIN Company",
+    "label.suppliername":"Supplier Name",
+    "label.contactname":"Contact Name",
+    "label.officephone":"Office Phone",
+    "label.homephone":"Home Phone",
+    "label.fax":"Fax",
+    "label.pin":"Pin",
+    "label.email":"Email",
+    "label.city":"City",
+    "label.state":"State",
+    "label.country":"Country",
+    "label.panno":"PAN No",
+    "label.etin":"ETIN",
+    "label.addrline1":"Address Line1",
+    "label.addrline2":"Address Line2",
+    
+    
+    "label.heading.gstin":"GSTIN",
+    "label.heading.suppliername":"Supplier Name",
+    "label.heading.contactname":"Contact Name",
+    "label.heading.mobile":"Mobile",
+    
+    "label.anchor.viewsupplier":"View Supplier",
+    "label.anchor.editsupplier":"Edit Supplier",
 	
 	"":""
 }

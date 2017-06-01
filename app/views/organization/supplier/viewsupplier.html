@@ -1,0 +1,92 @@
+<div class="col-md-12" ng-controller="ViewSupplierController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/supplier">{{'label.anchor.supplier' | translate}}</a></li>
+        <li class="active">{{'label.anchor.viewsupplier' | translate}</li>
+    </ul>
+
+    <div class="well">
+        <div class="pull-right">
+            <div class="btn-group">
+                <a href="#/editsupplier" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
+            </div>
+        </div>
+        <h3 class="bolder">{{employee.displayName}}</h3>
+		<div class="row">
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.gstin' | translate }}</td>
+		                <td>{{employee.firstname}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.gstincompany' | translate }}</td>
+		                <td>{{employee.lastname}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'suppliername' | translate }}</td>
+		                <td>{{employee.officeName}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.contactname' | translate }}</td>
+		                <td>{{employee.isLoanOfficer}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.officephone' | translate }}</td>
+		                <td>{{employee.mobileNo}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.homephone' | translate }}</td>
+		                <td>{{employee.isActive}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.fax' | translate }}</td>
+                        <td>{{employee.joiningDate | DateFormat}}</td>
+                    </tr>
+                     <tr>
+		                <td>{{ 'label.addrline1' | translate }}</td>
+		                <td>{{employee.isActive}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.addrline2' | translate }}</td>
+                        <td>{{employee.joiningDate | DateFormat}}</td>
+                    </tr>
+		        </table>
+			</div>
+			
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.pin' | translate }}</td>
+		                <td>{{employee.firstname}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.email' | translate }}</td>
+		                <td>{{employee.lastname}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.city' | translate }}</td>
+		                <td>{{employee.officeName}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.state' | translate }}</td>
+		                <td>{{employee.isLoanOfficer}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.country' | translate }}</td>
+		                <td>{{employee.mobileNo}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.panno' | translate }}</td>
+		                <td>{{employee.isActive}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.etin' | translate }}</td>
+                        <td>{{employee.joiningDate | DateFormat}}</td>
+                    </tr>
+		        </table>
+			</div>
+			
+		</div>
+    </div>
+</div>      

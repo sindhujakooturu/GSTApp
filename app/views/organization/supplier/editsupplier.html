@@ -1,0 +1,124 @@
+<div class="col-md-12" ng-controller="EditSupplierController">
+    <div>
+        <ul class="breadcrumb">
+            <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+            <li><a href="#/employees">{{'label.anchor.supplier' | translate}}</a></li>
+            <li class="active">{{'label.anchor.editsupplier' | translate}}</li>
+        </ul>
+    </div>
+    <form name="editsupplierform" novalidate="" class="form-horizontal well" 
+	      rc-submit="submit()">
+	    <api-validate></api-validate>
+	    <fieldset>
+	        <legend>{{'label.heading.createcompany' | translate}}</legend>
+			
+			<table>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="gstin">{{'label.gstin' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstin" name="gstin" data-ng-model="formData.gstin" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="panno">{{'label.panno' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="panno" name="panno" data-ng-model="formData.panno" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.gstincompany' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="etin">{{'label.etin' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="etin" name="etin" data-ng-model="formData.etin" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.suppliername' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="etin">{{'label.addrline1' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="etin" name="etin" data-ng-model="formData.etin" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.contactname' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="etin">{{'label.addrline2' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="etin" name="etin" data-ng-model="formData.etin" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+         	<label class="control-label col-sm-2" for="etin">{{'label.officephone' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="etin" name="etin" data-ng-model="formData.etin" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.city' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+         	<label class="control-label col-sm-2" for="etin">{{'label.homephone' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="etin" name="etin" data-ng-model="formData.etin" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.state' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.mobile' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="etin">{{'label.country' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="etin" name="etin" data-ng-model="formData.etin" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.fax' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="etin">{{'label.pin' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="etin" name="etin" data-ng-model="formData.etin" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="gstincompany">{{'label.email' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="gstincompany" name="gstincompany" data-ng-model="formData.gstincompany" class="form-control">
+				 </div>
+         	</div>
+         	
+  	  
+     </table>
+     
+  </fieldset>
+  <div class="col-md-offset-5 paddedtop">
+		    <button id="cancel" type="reset" class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+		    <button id="save" type="submit" class="btn btn-primary">{{'label.button.save'
+		        | translate}}
+		    </button>
+		</div>
+  
+	</form>
+</div>
