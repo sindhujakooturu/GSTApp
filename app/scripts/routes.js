@@ -914,6 +914,15 @@
             .when('/createpurchaser', {
                 templateUrl: 'views/organization/purchaser/createpurchaser.html'
             })
+            .when('/outwardstaginginvoice', {
+                templateUrl: 'views/organization/outwardstaginginvoice/outwardstaginginvoice.html'
+            })
+            .when('/viewoutwardinvoice', {
+                templateUrl: 'views/organization/outwardstaginginvoice/viewoutwardinvoice.html'
+            })
+            .when('/editoutwardinvoice', {
+                templateUrl: 'views/organization/outwardstaginginvoice/editoutwardinvoice.html'
+            })
            
         ;
         $locationProvider.html5Mode(false);

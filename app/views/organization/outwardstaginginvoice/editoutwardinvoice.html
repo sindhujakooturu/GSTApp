@@ -1,0 +1,152 @@
+<div class="col-md-12" ng-controller="EditOutwardInvoiceController">
+    <div>
+        <ul class="breadcrumb">
+            <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+            <li class="active">{{'label.anchor.editoutwardinvoice' | translate}}</li>
+        </ul>
+    </div>
+    <form name="editemployeeform" novalidate="" class="form-horizontal well" rc-submit="submit()">
+        <api-validate></api-validate>
+        <fieldset>
+            <legend>{{'label.heading.editemployee' | translate}}</legend>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.gstin' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.orderdate' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.gstinpurchaser' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.etin' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.cname' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.invoiceid' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.supplierinvno' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.receiptstatecode' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.supplierinvdate' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.status' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.supplierinvvalue' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.errorcode' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.supplierstatecode' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.errordescription' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+            </div>
+             <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">{{ 'label.heading.orderno' | translate }}<span
+                        class="required">*</span></label>
+
+                <div class="col-sm-3">
+                    <input type="text" id="firstname" name="firstname" ng-model="formData.firstname" class="form-control" required
+                           late-Validate/>
+                </div>
+                
+            </div>
+
+            
+            <div class="col-md-offset-3">
+                <a id="cancel" href="#/viewemployee/{{staffId}}">
+                    <button type="reset" class="btn btn-default">{{'label.button.cancel' | translate}}</button>
+                </a>
+                <button id="save" type="submit" class="btn btn-primary" has-permission='UPDATE_STAFF'>{{'label.button.save' | translate}}</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

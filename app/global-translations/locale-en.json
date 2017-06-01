@@ -4206,6 +4206,7 @@
 	"label.country":"Country",
 	"label.pin":"Pin",
 	
+	"#Company":"",
 	"label.gstnid":"GSTN ID",
 	"label.panid":"PAN ID",
 	"label.heading.createcompany":"Create Company",
@@ -4242,6 +4243,41 @@
     
     "label.heading.editvalue":"Edit Value",
     "label.heading.viewvalue":"View Value",
+	
+	"#Outward Staging Invoice":"",
+	
+	"label.anchor.outwardstaginginvoice":"OutWard Staging Invoice",
+	"label.view.outwardstaginginvoice":"Defining OutWard Staging Invoice",
+	"label.anchor.outwardinvoice":"Outward Invoice",
+	
+	"label.heading.gstin":"GSTIN",
+	"label.heading.suppinvno":"Supplier Invoice No",
+	"label.heading.suppinvvalue":"Supplier Invoice Value",
+	"label.heading.orderno":"Order No",
+	"label.heading.status":"Status",
+	
+	"label.anchor.viewoutwardinvoice":"View Outward Invoice",
+	
+	"label.heading.gstin":"GSTIN",
+	"label.heading.gstinpurchaser":"GSTIN Purchaser",
+	"label.heading.cname":"GSTIN C Name",
+	"label.heading.supplierinvno":"Supplier Invoice No",
+	"label.heading.supplierinvdate":"Supplier Invoice Date",
+	"label.supplierinvvalue":"Supplier Invoice Value",
+	"label.heading.supplierstatecode":"Supplier State Code",
+	"label.heading.orderno":"Order No",
+	"label.heading.orderdate":"Order Date",
+	"label.heading.etin":"ETIN",
+	"label.heading.invoiceid":"Invoice Id",
+	"label.heading.receiptstatecode":"Receipt State Code",
+	"label.status":"Status",
+	"label.heading.errorcode":"Error Code",
+	"label.heading.errordescription":"Error Description",
+	"label.anchor.editoutwardinvoice":"Edit Outward Invoice",
+	
+	
+	
+	
 	
 	"":""
 }
