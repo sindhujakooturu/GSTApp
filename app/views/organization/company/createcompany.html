@@ -4,8 +4,7 @@
         <li><a href="#/company">{{'label.anchor.company' | translate}}</a></li>
         <li class="active">{{'label.anchor.createcompany' | translate}}</li>
     </ul>
-	<form name="createcompanyform" novalidate="" class="form-horizontal well" 
-	      rc-submit="submit()">
+	<form name="createcompanyform" novalidate="" class="form-horizontal well" rc-submit="submit()">
 	    <api-validate></api-validate>
 	    <fieldset>
 	        <legend>{{'label.heading.createcompany' | translate}}</legend>
@@ -86,7 +85,7 @@
 				 
 				 <label class="control-label col-sm-2" for="state"> {{'label.state' | translate }} <span class="required">*</span></label>
 				<div class="controls col-sm-3">
-					<input type="text" id="state" data-ng-model="formData.state" readonly class="form-control">
+					<input type="text" id="state" data-ng-model="formData.state" class="form-control">
 				</div>
 				 
 			</div>
@@ -104,7 +103,7 @@
 				 
 				 <label class="control-label col-sm-2" for="country"> {{'label.country' | translate }} <span class="required">*</span></label>
 				<div class="controls col-sm-3">
-					<input type="text" id="country" data-ng-model="formData.country" readonly class="form-control">
+					<input type="text" id="country" data-ng-model="formData.country" class="form-control">
 				</div>
 				 
 			</div>
@@ -222,13 +221,7 @@
 		</div>
   	  </div>
   	  </div> -->
-  	  
-  	  
-  	  
      </table>
-     
-     
-     
   </fieldset>
   <div class="col-md-offset-5 paddedtop">
 		    <button id="cancel" type="reset" class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
