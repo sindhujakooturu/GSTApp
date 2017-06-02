@@ -908,6 +908,7 @@
             .when('/entitydatatablechecks', {
                 templateUrl: 'views/organization/entitydatatablechecks/entitydatatablechecks.html'
             })
+<<<<<<< HEAD
             .when('/supplier', {
                 templateUrl: 'views/organization/supplier/supplier.html'
             })
@@ -919,6 +920,13 @@
             })
             .when('/editsupplier', {
                 templateUrl: 'views/organization/supplier/editsupplier.html'
+=======
+            .when('/purchaser', {
+                templateUrl: 'views/organization/purchaser/purchaser.html'
+            })
+            .when('/createpurchaser', {
+                templateUrl: 'views/organization/purchaser/createpurchaser.html'
+>>>>>>> upstream/master
             })
            
         ;

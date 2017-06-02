@@ -288,10 +288,15 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/smscampaigns/ViewSmsCampaignController',
             'organization/smscampaigns/EditSmsCampaignController',
             'organization/entitydatatablechecks/EntityDatatableChecksController',
+<<<<<<< HEAD
             'organization/supplier/SupplierController',
             'organization/supplier/CreateSupplierController',
             'organization/supplier/ViewSupplierController',
             'organization/supplier/EditSupplierController'
+=======
+            'organization/purchaser/PurchaserController',
+            'organization/purchaser/CreatePurchaserController'
+>>>>>>> upstream/master
             
         ],
         filters: [

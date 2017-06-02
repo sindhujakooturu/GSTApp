@@ -1,6 +1,6 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
-        GlobalConfigurationController: function (scope, resourceFactory, location, route) {
+        GlobalConfigurationController: function (scope, resourceFactory, location, route, $modal) {
             scope.configs = [];
             resourceFactory.configurationResource.get(function (data) {
                 for (var i in data.globalConfiguration) {
@@ -30,7 +30,27 @@
                 scope.searchCriteria.config = scope.filterText;
                 scope.saveSC();
             };
-
+            	
+            scope.showvalue = function(valuee) {
+            	   $modal.open({
+            	    templateUrl : 'showValue.html',
+            	    controller : ShowValueCntrl,
+            	    resolve : {
+            	    	valuee : function(){
+            	      return valuee;
+            	     }
+            	    }
+            	   });
+            	   
+            	  };
+            	  function ShowValueCntrl($scope, $modalInstance, valuee) {
+            		  $scope.valuee = valuee;
+            		  $scope.cancel = function () {
+                          $modalInstance.dismiss('cancel');
+                      };
+            	  }
+            
+            
             scope.enable = function (id, name) {
                 if (name == 'Is Cache Enabled') {
                     var temp = {};
@@ -63,7 +83,7 @@
             };
         }
     });
-	gst.ng.application.controller('GlobalConfigurationController', ['$scope', 'ResourceFactory', '$location', '$route', gst.controllers.GlobalConfigurationController]).run(function ($log) {
+	gst.ng.application.controller('GlobalConfigurationController', ['$scope', 'ResourceFactory', '$location', '$route','$modal', gst.controllers.GlobalConfigurationController]).run(function ($log) {
         $log.info("GlobalConfigurationController initialized");
     });
 }(gst.controllers || {}));
