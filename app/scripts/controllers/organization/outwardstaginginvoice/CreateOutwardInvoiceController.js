@@ -15,8 +15,10 @@
             	
             	this.formData.locale = scope.optlang.code;
             	var supplierInvDate = dateFilter(scope.formData.supplierInvDate, scope.df);
+            	var orderDate = dateFilter(scope.formData.orderDate, scope.df);
                 this.formData.dateFormat = scope.df;
                 this.formData.supplierInvDate = supplierInvDate;
+                this.formData.orderDate = orderDate;
                 
                 resourceFactory.outwardinvResource.save(this.formData, function (data) {
                     location.path('/outwardstaginginvoice/');

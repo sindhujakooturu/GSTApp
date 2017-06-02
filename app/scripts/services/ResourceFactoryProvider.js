@@ -640,6 +640,7 @@
                      
                      outwardinvResource: defineResource(apiVer + "/outwardinv/:outwardinvId", {}, {
                        	    get: {method: 'GET', params: {}, isArray : true},
+                       	    getall: {method: 'GET', params: {}},
                             update: { method: 'PUT'}
                          }),
                     
