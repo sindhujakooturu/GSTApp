@@ -2,9 +2,9 @@
 	gst.controllers = _.extend(module, {
 		ViewCompanyController: function (scope, routeParams, resourceFactory) {
 			
-            scope.company = [];
+            scope.company = {};
             
-            resourceFactory.companyResource.get({companyId: routeParams.id}, function (data) {
+            resourceFactory.companyResource.getall({companyId: routeParams.id}, function (data) {
                 scope.company = data;
             });
         }

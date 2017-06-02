@@ -291,6 +291,7 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/purchaser/PurchaserController',
             'organization/purchaser/CreatePurchaserController',
             'organization/outwardstaginginvoice/OutwardInvoiceController',
+            'organization/outwardstaginginvoice/CreateOutwardInvoiceController',
             'organization/outwardstaginginvoice/ViewOutwardInvoiceController',
             'organization/outwardstaginginvoice/EditOutwardInvoiceController',
             'organization/supplier/SupplierController',

@@ -634,6 +634,7 @@
 
                     companyResource: defineResource(apiVer + "/company/:companyId", {}, {
                    	    get: {method: 'GET', params: {}, isArray : true},
+                   	    getall: {method: 'GET', params: {}},
                         update: { method: 'PUT'}
                      }),
                      
