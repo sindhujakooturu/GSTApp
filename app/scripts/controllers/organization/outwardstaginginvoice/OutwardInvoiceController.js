@@ -1,8 +1,8 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
 		OutwardInvoiceController: function (scope, resourceFactory, location) {
-            /*scope.employees = [];
-            scope.routeTo = function (id) {
+			scope.outwardinv = {};
+            /*scope.routeTo = function (id) {
                 location.path('/viewemployee/' + id);
             };
 
