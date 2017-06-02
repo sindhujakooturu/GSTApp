@@ -19,13 +19,16 @@
              <th>{{'label.heading.panno' | translate}}</th>
         </tr>
         </thead>
-        <!-- <tbody>
-        <tr class="pointer-main" ng-repeat="employee in employees | filter:filterText">
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.displayName}}</td>
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.isLoanOfficer}}</td>
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.officeName}}</td>
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.isActive}}</td>
+        <tbody>
+        <tr class="pointer-main" ng-repeat="comp in company | filter:filterText">
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.companyName}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.contactName}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.mobile}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.email}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.city}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.country}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.panNo}}</td>
         </tr>
-        </tbody> -->
+        </tbody>
     </table>
 </div>

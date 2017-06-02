@@ -15,11 +15,11 @@
             scope.onFilter = function () {
                 scope.searchCriteria.employees = scope.filterText;
                 scope.saveSC();
-            };
+            };*/
 
-            resourceFactory.employeeResource.getAllEmployees(function (data) {
-                scope.employees = data;
-            });*/
+            resourceFactory.outwardinvResource.get(function (data) {
+                scope.outwards = data;
+            });
         }
     });
 	gst.ng.application.controller('OutwardInvoiceController', ['$scope', 'ResourceFactory', '$location', gst.controllers.OutwardInvoiceController]).run(function ($log) {
