@@ -4270,6 +4270,7 @@
 	"label.heading.status":"Status",
 	
 	"label.anchor.viewoutwardinvoice":"View Outward Invoice",
+	"label.button.createoutwardinvoice":"Create Outward Invoice",
 	
 	"label.heading.gstin":"GSTIN",
 	"label.heading.gstinpurchaser":"GSTIN Purchaser",

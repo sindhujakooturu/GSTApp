@@ -917,6 +917,9 @@
             .when('/outwardstaginginvoice', {
                 templateUrl: 'views/organization/outwardstaginginvoice/outwardstaginginvoice.html'
             })
+            .when('/createoutwardinvoice', {
+                templateUrl: 'views/organization/outwardstaginginvoice/createoutwardinvoice.html'
+            })
             .when('/viewoutwardinvoice', {
                 templateUrl: 'views/organization/outwardstaginginvoice/viewoutwardinvoice.html'
             })
@@ -944,7 +947,7 @@
             .when('/viewcompany/:id',{
                 templateUrl: 'views/organization/company/viewcompany.html'
             })
-            .when('/editcompany', {
+            .when('/editcompany/:id', {
                 templateUrl: 'views/organization/company/editcompany.html'
             })
             .when('/sacdata', {
