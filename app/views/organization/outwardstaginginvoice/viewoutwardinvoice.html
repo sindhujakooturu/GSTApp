@@ -1,85 +1,89 @@
 <div class="col-md-12" ng-controller="ViewOutwardInvoiceController">
     <ul class="breadcrumb">
         <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
-        <li>{{'label.anchor.viewoutwardinvoice' | translate}}</li>
-     </ul>
+        <li><a href="#/outwardstaginginvoice">{{'label.anchor.supplier' | translate}}</a></li>
+        <li class="active">{{'label.anchor.viewsupplier' | translate}</li>
+    </ul>
 
     <div class="well">
         <div class="pull-right">
             <div class="btn-group">
-                <a href="#/editoutwardinvoice" class="btn btn-primary" ><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
+                <a href="#/editoutwardinvoice" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
             </div>
         </div>
+        <h3 class="bolder">{{outward.displayName}}</h3>
 		<div class="row">
 			<div class="col-md-6">
-		        <table class="table table-bordered table-striped"><br>
+		        <table class="table table-bordered table-striped">
 		            <tr>
 		                <td>{{ 'label.heading.gstin' | translate }}</td>
-		                <td>{{employee.firstname}}</td>
+		                <td>{{outward.gstin}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.gstinpurchaser' | translate }}</td>
-		                <td>{{employee.lastname}}</td>
+		                <td>{{outward.gstinPurchaser}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.cname' | translate }}</td>
-		                <td>{{employee.officeName}}</td>
+		                <td>{{outward.cName}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.supplierinvno' | translate }}</td>
-		                <td>{{employee.isLoanOfficer}}</td>
+		                <td>{{outward.supplierInvNo}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.supplierinvdate' | translate }}</td>
-		                <td>{{employee.mobileNo}}</td>
+		                <td>{{outward.supplierInvDate}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.supplierinvvalue' | translate }}</td>
-		                <td>{{employee.isActive}}</td>
+		                <td>{{outward.supplierInvValue}}</td>
 		            </tr>
                     <tr>
                         <td>{{ 'label.heading.supplierstatecode' | translate }}</td>
-                        <td>{{employee.joiningDate | DateFormat}}</td>
+                        <td>{{outward.supplyStateCode | DateFormat}}</td>
                     </tr>
-                    <tr>
+                     <tr>
 		                <td>{{ 'label.heading.orderno' | translate }}</td>
-		                <td>{{employee.firstname}}</td>
-		            </tr>
-		        </table>
-			</div><br>
-			<div class="col-md-6">
-		        <table class="table table-bordered table-striped">
-		            
-		            <tr>
-		                <td>{{ 'label.heading.orderdate' | translate }}</td>
-		                <td>{{employee.lastname}}</td>
-		            </tr>
-		            <tr>
-		                <td>{{ 'label.heading.etin' | translate }}</td>
-		                <td>{{employee.officeName}}</td>
-		            </tr>
-		            <tr>
-		                <td>{{ 'label.heading.invoiceid' | translate }}</td>
-		                <td>{{employee.isLoanOfficer}}</td>
-		            </tr>
-		            <tr>
-		                <td>{{ 'label.heading.receiptstatecode' | translate }}</td>
-		                <td>{{employee.mobileNo}}</td>
-		            </tr>
-		            <tr>
-		                <td>{{ 'label.status' | translate }}</td>
-		                <td>{{employee.isActive}}</td>
+		                <td>{{outward.orderNo}}</td>
 		            </tr>
                     <tr>
-                        <td>{{ 'label.heading.errorcode' | translate }}</td>
-                        <td>{{employee.joiningDate | DateFormat}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ 'label.heading.errordescription' | translate }}</td>
-                        <td>{{employee.joiningDate | DateFormat}}</td>
+                        <td>{{ 'label.heading.orderdate' | translate }}</td>
+                        <td>{{outward.orderDate | DateFormat}}</td>
                     </tr>
 		        </table>
 			</div>
+			
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.heading.etin' | translate }}</td>
+		                <td>{{outward.etin}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.invoiceid' | translate }}</td>
+		                <td>{{outward.invoiceId}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.receiptstatecode' | translate }}</td>
+		                <td>{{outward.receiptStateCode}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.status' | translate }}</td>
+		                <td>{{outward.status}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.errorcode' | translate }}</td>
+		                <td>{{outward.errorCode}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.errordescription' | translate }}</td>
+		                <td>{{outward.errorDescripter}}</td>
+		            </tr>
+                   
+		        </table>
+			</div>
+			
 		</div>
     </div>
 </div>      

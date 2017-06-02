@@ -1,20 +1,21 @@
-<div class="col-md-12" ng-controller="SupplierController">
+<div class="col-md-12" ng-controller="SACDataController">
     <ul class="breadcrumb">
         <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
-        <li class="active">{{'label.anchor.outwardinvoice' | translate}}</li>
+        <li class="active">{{'label.anchor.sacdata' | translate}}</li>
     </ul>
 
     <input ng-autofocus="true" ng-model="filterText" type="text" ng-keyup="onFilter()" class="form-control" placeholder="{{'label.input.filterbyname' | translate}}">
-    <!-- <a href="#/createsupplier" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.createsupplier' | translate }}</a>
- -->
+    <a href="#/createsacdata" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.createsacdata' | translate }}</a>
+
     <table class="table">
         <thead>
         <tr class="graybg">
-            <th>{{ 'label.heading.gstin' | translate }}</th>
-            <th>{{ 'label.heading.suppinvno' | translate }}</th>
-            <th>{{ 'label.heading.suppinvvalue' | translate }}</th>
-            <th>{{ 'label.heading.orderno' | translate }}</th>
-            <th>{{ 'label.heading.status' | translate }}</th>
+            <th>{{ 'label.heading.servicename' | translate }}</th>
+            <th>{{ 'label.heading.description' | translate }}</th>
+            <th>{{ 'label.heading.sactaxcollection' | translate }}</th>
+            <th>{{ 'label.heading.sacothreceipts' | translate }}</th>
+            <th>{{ 'label.heading.deductrefund' | translate }}</th>
+            <th>{{ 'label.heading.sacpenality' | translate }}</th>
         </tr>
         </thead>
         <!-- <tbody>

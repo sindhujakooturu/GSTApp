@@ -1,6 +1,6 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
-        CreateClientController: function (scope, resourceFactory, location, http, dateFilter, API_VERSION, $upload, $rootScope, routeParams) {
+        CreateClientController: function (scope, resourceFactory, location, http, dateFilter, API_VERSION, $upload, $rootScope, routeParams, WizardHandler) {
             scope.offices = [];
             scope.staffs = [];
             scope.savingproducts = [];
@@ -113,6 +113,10 @@
 
                         }
 
+
+
+
+
                     })
 
 
@@ -213,10 +217,10 @@
             };
 
             scope.submit = function () {
-                /*if (WizardHandler.wizard().getCurrentStep() != scope.noOfTabs) {
+                if (WizardHandler.wizard().getCurrentStep() != scope.noOfTabs) {
                     WizardHandler.wizard().next();
                     return;
-                }*/
+                }
                 var reqDate = dateFilter(scope.first.date, scope.df);
 
                 this.formData.locale = scope.optlang.code;
@@ -283,7 +287,7 @@
                     this.formData.savingsProductId = null;
                 }
 
-                /*if(scope.enableAddress===true)
+                if(scope.enableAddress===true)
                 {
                     for(var i=0;i<scope.addressArray.length;i++)
                     {
@@ -347,21 +351,8 @@
                         }
                         scope.formData.address.push(temp);
                     }
-                }*/
-                
-                scope.submit = function () {
-              	  $upload.upload({/*41.75.85.206:8080*/
-                      url: $rootScope.hostUrl+ API_VERSION +'/clients/documents', 
-                      data: scope.formData,
-                      file: scope.file
-                    }).then(function(data) {
-                      // to fix IE not refreshing the model
-                      if (!scope.$$phase) {
-                        scope.$apply();
-                      }
-                      location.path('/importing');
-                    });
-                  };
+                }
+
 
 
                 resourceFactory.clientResource.save(this.formData, function (data) {
@@ -370,7 +361,7 @@
             };
         }
     });
-	gst.ng.application.controller('CreateClientController', ['$scope', 'ResourceFactory', '$location', '$http', 'dateFilter', 'API_VERSION', '$upload', '$rootScope', '$routeParams',  gst.controllers.CreateClientController]).run(function ($log) {
+	gst.ng.application.controller('CreateClientController', ['$scope', 'ResourceFactory', '$location', '$http', 'dateFilter', 'API_VERSION', '$upload', '$rootScope', '$routeParams', 'WizardHandler', gst.controllers.CreateClientController]).run(function ($log) {
         $log.info("CreateClientController initialized");
     });
 }(gst.controllers || {}));

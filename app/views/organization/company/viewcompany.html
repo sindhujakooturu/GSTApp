@@ -1,0 +1,100 @@
+<div class="col-md-12" ng-controller="ViewCompanyController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/company">{{'label.anchor.company' | translate}}</a></li>
+        <li class="active">{{'label.anchor.viewcompany' | translate}}</li>
+    </ul>
+
+    <div class="well">
+        <div class="pull-right">
+            <div class="btn-group">
+                <a href="#/editcomapny" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
+            </div>
+        </div>
+        <h3 class="bolder">{{company.displayName}}</h3>
+		<div class="row">
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.heading.companyname' | translate }}</td>
+		                <td>{{company.companyName}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.contactname' | translate }}</td>
+		                <td>{{company.contactName}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.officephone' | translate }}</td>
+		                <td>{{company.officePhone}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.homephone' | translate }}</td>
+		                <td>{{company.homePhone}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.mobile' | translate }}</td>
+		                <td>{{company.mobile}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.fax' | translate }}</td>
+		                <td>{{company.fax}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.heading.email' | translate }}</td>
+                        <td>{{company.email | DateFormat}}</td>
+                    </tr>
+                     <tr>
+		                <td>{{ 'label.heading.gstnregno' | translate }}</td>
+		                <td>{{company.gstnRegNo}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.heading.panno' | translate }}</td>
+                        <td>{{company.panNo | DateFormat}}</td>
+                    </tr>
+		        </table>
+			</div>
+			
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.heading.addressline1' | translate }}</td>
+		                <td>{{company.addressLine1}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.addressline2' | translate }}</td>
+		                <td>{{company.addressLine2}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.city' | translate }}</td>
+		                <td>{{company.city}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.state' | translate }}</td>
+		                <td>{{company.state}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.country' | translate }}</td>
+		                <td>{{company.country}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.panno' | translate }}</td>
+		                <td>{{company.isActive}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.heading.pin' | translate }}</td>
+                        <td>{{company.pin | DateFormat}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'label.heading.gstnid' | translate }}</td>
+                        <td>{{company.gstnid | DateFormat}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ 'label.heading.panid' | translate }}</td>
+                        <td>{{company.panid | DateFormat}}</td>
+                    </tr>
+		        </table>
+			</div>
+			
+		</div>
+    </div>
+</div>      

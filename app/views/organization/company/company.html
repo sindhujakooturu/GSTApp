@@ -1,20 +1,22 @@
-<div class="col-md-12" ng-controller="SupplierController">
+<div class="col-md-12" ng-controller="CompanyController">
     <ul class="breadcrumb">
         <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
-        <li class="active">{{'label.anchor.outwardinvoice' | translate}}</li>
+        <li class="active">{{'label.anchor.company' | translate}}</li>
     </ul>
 
     <input ng-autofocus="true" ng-model="filterText" type="text" ng-keyup="onFilter()" class="form-control" placeholder="{{'label.input.filterbyname' | translate}}">
-    <!-- <a href="#/createsupplier" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.createsupplier' | translate }}</a>
- -->
+    <a href="#/createcompany" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.createcompany' | translate }}</a>
+
     <table class="table">
         <thead>
         <tr class="graybg">
-            <th>{{ 'label.heading.gstin' | translate }}</th>
-            <th>{{ 'label.heading.suppinvno' | translate }}</th>
-            <th>{{ 'label.heading.suppinvvalue' | translate }}</th>
-            <th>{{ 'label.heading.orderno' | translate }}</th>
-            <th>{{ 'label.heading.status' | translate }}</th>
+            <th>{{'label.heading.companyname' | translate}}</th>
+            <th>{{'label.heading.contactname' | translate}}</th>
+            <th>{{'label.heading.mobile' | translate}}</th>
+            <th>{{'label.heading.email' | translate}}</th>
+            <th>{{'label.heading.city' | translate}}</th>
+            <th>{{'label.heading.country' | translate}}</th>
+             <th>{{'label.heading.panno' | translate}}</th>
         </tr>
         </thead>
         <!-- <tbody>

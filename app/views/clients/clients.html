@@ -8,7 +8,7 @@
     <div class="clearfix"></div>
     <form ng-submit="search()" class="form-horizontal">
         <div class="form-group">
-            <!-- <div class="col-md-4">
+            <div class="col-md-4">
                 <input ng-autofocus="true" ng-model="filterText" ng-keyup="onFilter()" type="text" class="form-control" placeholder="{{'label.input.filterbynameaccno' | translate}}">
             </div>
             <div class="col-lg-6 col-md-4">
@@ -20,20 +20,19 @@
                         </button>
                     </span>
                 </div>
-            </div> -->
+            </div>
         </div>
     </form>
 
     <table class="table">
         <thead>
         <tr class="graybg">
-            <th>{{'label.heading.companyname' | translate}}</th>
-            <th>{{'label.heading.contactname' | translate}}</th>
-            <th>{{'label.heading.mobile' | translate}}</th>
-            <th>{{'label.heading.email' | translate}}</th>
-            <th>{{'label.heading.city' | translate}}</th>
-            <th>{{'label.heading.country' | translate}}</th>
-             <th>{{'label.heading.panno' | translate}}</th>
+            <th>{{'label.heading.name' | translate}}</th>
+            <th>{{'label.heading.clientno' | translate}}</th>
+            <th>{{'label.heading.externalid' | translate}}</th>
+            <th>{{'label.heading.status' | translate}}</th>
+            <th>{{'label.heading.office' | translate}}</th>
+            <th>{{'label.heading.staff' | translate}}</th>
         </tr>
         </thead>
 

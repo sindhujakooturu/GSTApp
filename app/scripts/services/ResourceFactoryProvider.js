@@ -632,6 +632,11 @@
                         delete: {method: 'DELETE', params: {}}
                     }),
 
+                    companyResource: defineResource(apiVer + "/company/:companyId", {}, {
+                   	 get: {method: 'GET', params: {}},
+                        update: { method: 'PUT'}
+                     }),
+                    
                     smsResource: defineResource(apiVer + "/sms/:campaignId/messageByStatus", {campaignId: '@campaignId', additionalParam: '@additionalParam'}, {
                         getByStatus: {method: 'GET', params:{}}
                     }),
@@ -642,6 +647,9 @@
                         save: {method: 'POST', params: {}},
                         delete: {method: 'DELETE', params: {}}
                     })
+                    
+                    
+                    
                 };
             }];
         }
