@@ -4245,7 +4245,7 @@
     "label.prospect.error.email":"Invalid Email",
     "label.prospect.error.pin":"Invalid Pin",
     
-<<<<<<< HEAD
+
     "#Supplier":"",
     "label.anchor.supplier":"Supplier",
     "label.view.supplier":"Define Supplier",
@@ -4278,19 +4278,7 @@
     
     "label.anchor.viewsupplier":"View Supplier",
     "label.anchor.editsupplier":"Edit Supplier",
-=======
-    "label.gstcompany.name":"GST Company Name",
-    "label.supplier.name":"Supplier Name",
-    "label.anchor.purchaser":"Purchaser",
-    "label.view.purchaser":"Define Purchaser",
-    "label.button.createpurchaser":"Create Purchaser",
-    "label.heading.createpurchaser":"Create Purchaser",
-    "label.anchor.purchaser":"Purchaser",
-    "label.anchor.createpurchaser":"Create Purchaser",
-    
-    "label.heading.editvalue":"Edit Value",
-    "label.heading.viewvalue":"View Value",
->>>>>>> upstream/master
+
 	
 	"#Outward Staging Invoice":"",
 	
@@ -4382,8 +4370,7 @@
 	"label.heading.sactaxcollection":"Tax Collection",
 	"label.heading.sacothreceipts":"Other Receipts",
 	"label.heading.deductrefund":"Deduct Refund",
-	"label.heading.sacpenality":"Penality",
+	"label.heading.sacpenality":"Penality"
 	
 	
-	"":""
 }
