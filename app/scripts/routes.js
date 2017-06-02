@@ -941,7 +941,7 @@
             .when('/createcompany', {
                 templateUrl: 'views/organization/company/createcompany.html'
             })
-            .when('/viewcompany', {
+            .when('/viewcompany/:id',{
                 templateUrl: 'views/organization/company/viewcompany.html'
             })
             .when('/editcompany', {
