@@ -914,6 +914,51 @@
             .when('/createpurchaser', {
                 templateUrl: 'views/organization/purchaser/createpurchaser.html'
             })
+            .when('/outwardstaginginvoice', {
+                templateUrl: 'views/organization/outwardstaginginvoice/outwardstaginginvoice.html'
+            })
+            .when('/viewoutwardinvoice', {
+                templateUrl: 'views/organization/outwardstaginginvoice/viewoutwardinvoice.html'
+            })
+            .when('/editoutwardinvoice', {
+                templateUrl: 'views/organization/outwardstaginginvoice/editoutwardinvoice.html'
+            })
+            .when('/supplier', {
+                templateUrl: 'views/organization/supplier/supplier.html'
+            })
+            .when('/createsupplier', {
+                templateUrl: 'views/organization/supplier/createsupplier.html'
+            })
+            .when('/viewsupplier', {
+                templateUrl: 'views/organization/supplier/viewsupplier.html'
+            })
+            .when('/editsupplier', {
+                templateUrl: 'views/organization/supplier/editsupplier.html'
+            })
+            .when('/company', {
+                templateUrl: 'views/organization/company/company.html'
+            })
+            .when('/createcompany', {
+                templateUrl: 'views/organization/company/createcompany.html'
+            })
+            .when('/viewcompany', {
+                templateUrl: 'views/organization/company/viewcompany.html'
+            })
+            .when('/editcompany', {
+                templateUrl: 'views/organization/company/editcompany.html'
+            })
+            .when('/sacdata', {
+                templateUrl: 'views/organization/sacdata/sacdata.html'
+            })
+            .when('/createsacdata', {
+                templateUrl: 'views/organization/sacdata/createsacdata.html'
+            })
+            .when('/viewsacdata', {
+                templateUrl: 'views/organization/sacdata/viewsacdata.html'
+            })
+            .when('/editsacdata', {
+                templateUrl: 'views/organization/sacdata/editsacdata.html'
+            })
            
         ;
         $locationProvider.html5Mode(false);
