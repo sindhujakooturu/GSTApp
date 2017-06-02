@@ -1,10 +1,10 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
 		ViewOutwardInvoiceController: function (scope, routeParams, resourceFactory) {
-            /*scope.employee = [];
-            resourceFactory.employeeResource.get({staffId: routeParams.id}, function (data) {
-                scope.employee = data;
-            });*/
+            scope.outwardinv = [];
+            resourceFactory.outwardinvResource.get({outwardinvId: routeParams.id}, function (data) {
+                scope.outwardinv = data;
+            });
         }
     });
 	gst.ng.application.controller('ViewOutwardInvoiceController', ['$scope', '$routeParams', 'ResourceFactory', gst.controllers.ViewOutwardInvoiceController]).run(function ($log) {

@@ -639,7 +639,7 @@
                      }),
                      
                      outwardinvResource: defineResource(apiVer + "/outwardinv/:outwardinvId", {}, {
-                       	 get: {method: 'GET', params: {}},
+                       	 get: {method: 'GET', params: {}, isArray : true},
                             update: { method: 'PUT'}
                          }),
                     

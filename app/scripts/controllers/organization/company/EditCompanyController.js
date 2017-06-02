@@ -1,8 +1,8 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
 		EditCompanyController: function (scope, routeParams, resourceFactory, location, dateFilter) {
-            scope.company = {};
             
+			scope.company = {};
 
             resourceFactory.companyResource.getall({companyId: routeParams.id}, function (data) {
                 
