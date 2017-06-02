@@ -633,13 +633,14 @@
                     }),
 
                     companyResource: defineResource(apiVer + "/company/:companyId", {}, {
-                   	 get: {method: 'GET', params: {}, isArray : true},
-                   	 getall: {method: 'GET', params: {}},
+                   	    get: {method: 'GET', params: {}, isArray : true},
+                   	    getall: {method: 'GET', params: {}},
                         update: { method: 'PUT'}
                      }),
                      
                      outwardinvResource: defineResource(apiVer + "/outwardinv/:outwardinvId", {}, {
-                       	 get: {method: 'GET', params: {}, isArray : true},
+                       	    get: {method: 'GET', params: {}, isArray : true},
+                       	    getall: {method: 'GET', params: {}},
                             update: { method: 'PUT'}
                          }),
                     

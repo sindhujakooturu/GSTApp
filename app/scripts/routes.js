@@ -920,7 +920,7 @@
             .when('/createoutwardinvoice', {
                 templateUrl: 'views/organization/outwardstaginginvoice/createoutwardinvoice.html'
             })
-            .when('/viewoutwardinvoice', {
+            .when('/viewoutwardinvoice/:id', {
                 templateUrl: 'views/organization/outwardstaginginvoice/viewoutwardinvoice.html'
             })
             .when('/editoutwardinvoice', {

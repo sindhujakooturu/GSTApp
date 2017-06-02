@@ -33,7 +33,7 @@
                /* this.formData.locale = scope.optlang.code;*/
                 
                 resourceFactory.companyResource.update({'companyId': routeParams.id}, this.formData, function (data) {
-                    location.path('/viewcompany/');
+                    location.path('/viewcompany/' + data.resourceId);
                 });
             };
             

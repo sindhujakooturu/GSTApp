@@ -20,9 +20,10 @@
         <tbody>
         <tr class="pointer-main" ng-repeat="outward in outwards | filter:filterText">
             <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.gstin}}</td>
-            <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.suppInvno}}</td>
-            <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.officeName}}</td>
-            <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.isActive}}</td>
+            <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.supplierInvNo}}</td>
+            <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.supplierInvValue}}</td>
+            <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.orderNo}}</td>
+            <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.status}}</td>
         </tr>
         </tbody>
     </table>
