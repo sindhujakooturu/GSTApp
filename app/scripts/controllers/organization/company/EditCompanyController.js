@@ -1,37 +1,42 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
 		EditCompanyController: function (scope, routeParams, resourceFactory, location, dateFilter) {
-            /*scope.offices = [];
-            scope.restrictDate = new Date();
+            scope.company = {};
+            
 
-            resourceFactory.employeeResource.get({staffId: routeParams.id, template: 'true'}, function (data) {
-                scope.offices = data.allowedOffices;
-                scope.staffId = data.id;
-                if (data.joiningDate) {
-                    var editDate = dateFilter(data.joiningDate, scope.df);
-                    data.joiningDate = new Date(editDate);
-                }
+            resourceFactory.companyResource.getall({companyId: routeParams.id}, function (data) {
+                
+                scope.companyId = data.id;
+                
                 scope.formData = {
-                    firstname: data.firstname,
-                    lastname: data.lastname,
-                    isLoanOfficer: data.isLoanOfficer,
-                    officeId: data.officeId,
-                    mobileNo: data.mobileNo,
-                    isActive: data.isActive,
-                    joiningDate: data.joiningDate
+                		companyName: data.companyName,
+                		contactName: data.contactName,
+                		officePhone: data.officePhone,
+                		homePhone: data.homePhone,
+                		mobile: data.mobile,
+                		fax: data.fax,
+                		email: data.email,
+                		gstnRegNo: data.gstnRegNo,
+                		panNo: data.panNo,
+                		addressLine1: data.addressLine1,
+                		addressLine2: data.addressLine2,
+                		city: data.city,
+                		state: data.state,
+                		country: data.country,
+                		pin: data.pin
                 };
-
+                
+                
             });
 
             scope.submit = function () {
-                this.formData.locale = scope.optlang.code;
-                var joiningDate = dateFilter(scope.formData.joiningDate, scope.df);
-                this.formData.dateFormat = scope.df;
-                this.formData.joiningDate = joiningDate;
-                resourceFactory.employeeResource.update({'staffId': routeParams.id}, this.formData, function (data) {
-                    location.path('/viewemployee/' + data.resourceId);
+               /* this.formData.locale = scope.optlang.code;*/
+                
+                resourceFactory.companyResource.update({'companyId': routeParams.id}, this.formData, function (data) {
+                    location.path('/viewcompany/');
                 });
-            };*/
+            };
+            
         }
     });
 	gst.ng.application.controller('EditCompanyController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.EditCompanyController]).run(function ($log) {
