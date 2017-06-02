@@ -4185,8 +4185,8 @@
     "error.msg.collection.sheet.can.not.be.selected.meeting.date.not.attached.to.any.center" : "Collection sheet can not be generated without meeting date `{{params[0].value}}` attached to any center",
     "error.msg.guarantor.saving.account.activation.date.is.on.or.before.loan.submitted.on.date" : "Guarantor saving account activation date `{{params[0].value}}` is on or before the loan submitted on date `{{params[1].value}}`.",
     
-    "label.anchor.companyregistration": "Company Registration",
-    "label.view.companyregistration":"Company Registration",
+    "label.anchor.company": "Company",
+    "label.view.company":"Company",
     "label.anchor.companyprofile":"Company Profile",
     "label.anchor.createcompany":"Create Company",
 	"label.button.createcompany":"Create Company",
@@ -4206,6 +4206,7 @@
 	"label.country":"Country",
 	"label.pin":"Pin",
 	
+	"#Company":"",
 	"label.gstnid":"GSTN ID",
 	"label.panid":"PAN ID",
 	"label.heading.createcompany":"Create Company",
@@ -4223,6 +4224,19 @@
 	"label.heading.country":"Country",
 	"label.heading.panno":"Pan No",
 	"label.heading.action":"Action",
+	
+	"label.heading.officephone":"Office Phone",
+	"label.heading.homephone":"Home Phone",
+	"label.heading.fax":"Fax",
+	"label.heading.gstnregno":"GST Reg No",
+	"label.heading.addressline1":"Address Line1" ,	
+	"label.heading.addressline2":"Address Line2 ",
+	"label.heading.pin":"Pin",	
+	"label.heading.gstnid":"GSTN Id",	
+	"label.heading.panid":"PAN Id",
+	"label.anchor.viewcompany":"View Company",
+	"label.anchor.editcompany":"Edit Company",
+	
 	"label.error.specialchar":"Special Characters are not allowed",
     "label.required.field":"Required Field",    
     "label.prospect.error.phone Office":"Invalid Phone Number",    
@@ -4277,6 +4291,99 @@
     "label.heading.editvalue":"Edit Value",
     "label.heading.viewvalue":"View Value",
 >>>>>>> upstream/master
+	
+	"#Outward Staging Invoice":"",
+	
+	"label.anchor.outwardstaginginvoice":"OutWard Staging Invoice",
+	"label.view.outwardstaginginvoice":"Defining OutWard Staging Invoice",
+	"label.anchor.outwardinvoice":"Outward Invoice",
+	
+	"label.heading.gstin":"GSTIN",
+	"label.heading.suppinvno":"Supplier Invoice No",
+	"label.heading.suppinvvalue":"Supplier Invoice Value",
+	"label.heading.orderno":"Order No",
+	"label.heading.status":"Status",
+	
+	"label.anchor.viewoutwardinvoice":"View Outward Invoice",
+	
+	"label.heading.gstin":"GSTIN",
+	"label.heading.gstinpurchaser":"GSTIN Purchaser",
+	"label.heading.cname":"GSTIN C Name",
+	"label.heading.supplierinvno":"Supplier Invoice No",
+	"label.heading.supplierinvdate":"Supplier Invoice Date",
+	"label.supplierinvvalue":"Supplier Invoice Value",
+	"label.heading.supplierstatecode":"Supplier State Code",
+	"label.heading.orderno":"Order No",
+	"label.heading.orderdate":"Order Date",
+	"label.heading.etin":"ETIN",
+	"label.heading.invoiceid":"Invoice Id",
+	"label.heading.receiptstatecode":"Receipt State Code",
+	"label.status":"Status",
+	"label.heading.errorcode":"Error Code",
+	"label.heading.errordescription":"Error Description",
+	"label.anchor.editoutwardinvoice":"Edit Outward Invoice",
+	
+	"#Supplier":"",
+    "label.anchor.supplier":"Supplier",
+    "label.view.supplier":"Define Supplier",
+    
+    "label.anchor.createsupplier":"Create Supplier",
+    "label.button.createsupplier":"Create Supplier",
+    
+    "label.gstin":"GSTIN",
+    "label.gstincompany":"GSTIN Company",
+    "label.suppliername":"Supplier Name",
+    "label.contactname":"Contact Name",
+    "label.officephone":"Office Phone",
+    "label.homephone":"Home Phone",
+    "label.fax":"Fax",
+    "label.pin":"Pin",
+    "label.email":"Email",
+    "label.city":"City",
+    "label.state":"State",
+    "label.country":"Country",
+    "label.panno":"PAN No",
+    "label.etin":"ETIN",
+    "label.addrline1":"Address Line1",
+    "label.addrline2":"Address Line2",
+    
+    
+    "label.heading.gstin":"GSTIN",
+    "label.heading.suppliername":"Supplier Name",
+    "label.heading.contactname":"Contact Name",
+    "label.heading.mobile":"Mobile",
+    
+    "label.anchor.viewsupplier":"View Supplier",
+    "label.anchor.editsupplier":"Edit Supplier",
+
+    "label.gstcompany.name":"GST Company Name",
+    "label.supplier.name":"Supplier Name",
+    "label.anchor.purchaser":"Purchaser",
+    "label.view.purchaser":"Define Purchaser",
+    "label.button.createpurchaser":"Create Purchaser",
+    "label.heading.createpurchaser":"Create Purchaser",
+    "label.anchor.purchaser":"Purchaser",
+    "label.anchor.createpurchaser":"Create Purchaser",
+    
+    "label.heading.editvalue":"Edit Value",
+    "label.heading.viewvalue":"View Value",
+    
+    "#sacdata":"",
+    "label.anchor.sacdata":"SACData",
+	"label.view.sacdata":"Define SACData",
+	"label.heading.createsacdata":"Create SACData",
+	"label.button.createsacdata":"Create SACData",
+	"label.anchor.viewsacdata":"View SACData",
+	"label.heading.editsacdata":"Edit SACData",
+	"label.anchor.viewsacdata":"View SACData",
+	
+	"label.heading.servicename":"Service Name",
+	"label.heading.description":"Description",
+	"label.heading.sactaxcollection":"Tax Collection",
+	"label.heading.sacothreceipts":"Other Receipts",
+	"label.heading.deductrefund":"Deduct Refund",
+	"label.heading.sacpenality":"Penality",
+	
 	
 	"":""
 }

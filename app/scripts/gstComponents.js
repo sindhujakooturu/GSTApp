@@ -288,15 +288,23 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/smscampaigns/ViewSmsCampaignController',
             'organization/smscampaigns/EditSmsCampaignController',
             'organization/entitydatatablechecks/EntityDatatableChecksController',
-<<<<<<< HEAD
+            'organization/purchaser/PurchaserController',
+            'organization/purchaser/CreatePurchaserController',
+            'organization/outwardstaginginvoice/OutwardInvoiceController',
+            'organization/outwardstaginginvoice/ViewOutwardInvoiceController',
+            'organization/outwardstaginginvoice/EditOutwardInvoiceController',
             'organization/supplier/SupplierController',
             'organization/supplier/CreateSupplierController',
             'organization/supplier/ViewSupplierController',
-            'organization/supplier/EditSupplierController'
-=======
-            'organization/purchaser/PurchaserController',
-            'organization/purchaser/CreatePurchaserController'
->>>>>>> upstream/master
+            'organization/supplier/EditSupplierController',
+            'organization/company/CompanyController',
+            'organization/company/CreateCompanyController',
+            'organization/company/ViewCompanyController',
+            'organization/company/EditCompanyController',
+            'organization/sacdata/SACDataController',
+            'organization/sacdata/CreateSACDataController',
+            'organization/sacdata/EditSACDataController',
+            'organization/sacdata/ViewSACDataController'
             
         ],
         filters: [
