@@ -1,0 +1,32 @@
+<div class="col-md-12" ng-controller="GSTR1ProcessDataController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li class="active">{{'label.anchor.gstr1processdata' | translate}}</li>
+    </ul>
+
+    <input ng-autofocus="true" ng-model="filterText" type="text" ng-keyup="onFilter()" class="form-control" placeholder="{{'label.input.filterbyname' | translate}}">
+    <a href="#/creategstr1processdata" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.creategstr1processdata' | translate }}</a>
+
+    <table class="table">
+        <thead>
+        <tr class="graybg">
+            <th>{{'label.gstin' | translate}}</th>
+            <th>{{'label.fp' | translate}}</th>
+            <th>{{'label.grossturnover' | translate}}</th>
+            <th>{{'label.fileno' | translate}}</th>
+            <th>{{'label.version' | translate}}</th>
+        </tr>
+        </thead>
+        <!-- <tbody>
+        <tr class="pointer-main" ng-repeat="comp in company | filter:filterText">
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.companyName}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.contactName}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.mobile}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.email}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.city}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.country}}</td>
+            <td class="pointer" data-ng-click="routeTo(comp.id)">{{comp.panNo}}</td>
+        </tr>
+        </tbody> -->
+    </table>
+</div>

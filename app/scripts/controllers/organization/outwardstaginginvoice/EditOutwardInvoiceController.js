@@ -1,13 +1,17 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
 		EditOutwardInvoiceController: function (scope, routeParams, resourceFactory, location, dateFilter) {
-            scope.outwardinv = [];
             
-            	resourceFactory.outwardinvResource.getall({companyId: routeParams.id}, function (data) {
+			scope.outwardinv = [];
+			scope.formData = {};
+            
+            	resourceFactory.outwardinvResource.getall({outwardinvId: routeParams.id}, function (data) {
+            		
+            		 scope.supplierInvDate = new Date();
+                     scope.orderDate = new Date();
+                     scope.outwardinvId = data.id;
                 
-                scope.outwardinvId = data.id;
-                
-                scope.formdata = data;
+                     scope.formData = data;
                 
                /* scope.formData = {
                 		gstin: data.gstin,
@@ -23,18 +27,30 @@
                 		invoiceId: data.invoiceId,
                 		receiptStateCode: data.receiptStateCode,
                 		status: data.status,
-                		country: data.country,
-                		pin: data.pin
+                		errorCode: data.errorCode,
+                		errorDescripter: data.errorDescripter
                 };*/
                 
                 
             });
 
             scope.submit = function () {
-               /* this.formData.locale = scope.optlang.code;*/
+            	this.formData.locale = scope.optlang.code;
+            	
+            	if (scope.supplierInvDate) {
+                    reqDate = dateFilter(scope.supplierInvDate, scope.df);
+                    this.formData.supplierInvDate = reqDate;
+                }
+
+                if (scope.orderDate) {
+                    this.formData.orderDate = dateFilter(scope.orderDate, scope.df);
+                }
                 
-                resourceFactory.companyResource.update({'outwardinvId': routeParams.id}, this.formData, function (data) {
-                    location.path('/viewoutwardinvoice/');
+                this.formData.dateFormat = scope.df;
+                delete this.formData.id;
+                
+                resourceFactory.outwardinvResource.update({'outwardinvId': routeParams.id}, this.formData, function (data) {
+                    location.path('/viewoutwardinvoice/' + data.resourceId);
                 });
             };
             

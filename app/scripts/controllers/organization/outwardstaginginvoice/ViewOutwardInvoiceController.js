@@ -1,8 +1,7 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
 		ViewOutwardInvoiceController: function (scope, routeParams, resourceFactory) {
-			
-            scope.outwardinv = {};
+            scope.outwardinv = [];
             resourceFactory.outwardinvResource.getall({outwardinvId: routeParams.id}, function (data) {
                 scope.outwardinv = data;
             });

@@ -1,0 +1,68 @@
+<div class="col-md-12" ng-controller="ViewGSTR1ProcessDataController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/gstr1processdata">{{'label.anchor.gstr1processdata' | translate}}</a></li>
+        <li class="active">{{'label.anchor.viewgstr1processdata' | translate}}</li>
+    </ul>
+
+    <div class="well">
+        <div class="pull-right">
+            <div class="btn-group">
+                <a href="#/editgstr1processdata/{{gstr1processdata.id}}" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
+            </div>
+        </div>
+        <h3 class="bolder">{{gstr1processdata.displayName}}</h3>
+		<div class="row">
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.gstin' | translate }}</td>
+		                <td>{{gstr1processdata.gstin}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.fp' | translate }}</td>
+		                <td>{{gstr1processdata.contactName}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.grossturnover' | translate }}</td>
+		                <td>{{gstr1processdata.officePhone}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.fileno' | translate }}</td>
+		                <td>{{gstr1processdata.homePhone}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.version' | translate }}</td>
+		                <td>{{gstr1processdata.mobile}}</td>
+		            </tr>
+		        </table>
+			</div>
+			
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.status' | translate }}</td>
+		                <td>{{gstr1processdata.addressLine1}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.assignedto' | translate }}</td>
+		                <td>{{gstr1processdata.addressLine2}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.errorcode' | translate }}</td>
+		                <td>{{gstr1processdata.city}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.errordescr' | translate }}</td>
+		                <td>{{gstr1processdata.state}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.reviewcomments' | translate }}</td>
+		                <td>{{gstr1processdata.country}}</td>
+		            </tr>
+		        </table>
+			</div>
+			
+		</div>
+    </div>
+</div>      

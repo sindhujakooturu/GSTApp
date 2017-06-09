@@ -15,6 +15,7 @@
             <th>{{ 'label.heading.suppinvvalue' | translate }}</th>
             <th>{{ 'label.heading.orderno' | translate }}</th>
             <th>{{ 'label.heading.status' | translate }}</th>
+            <th>{{ 'label.heading.action' | translate }}</th>
         </tr>
         </thead>
         <tbody>
@@ -24,6 +25,11 @@
             <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.supplierInvValue}}</td>
             <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.orderNo}}</td>
             <td class="pointer" data-ng-click="routeTo(outward.id)">{{outward.status}}</td>
+            <td>
+             	<a href="#/createoutwarditems/{{outward.invoiceId}}" title="Outward Item"  data-popover-trigger="mouseenter">
+                 		<i class="icon-plus-sign icon-white"></i>
+                </a>
+             </td>
         </tr>
         </tbody>
     </table>

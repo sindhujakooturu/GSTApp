@@ -5,10 +5,6 @@
             
 			scope.formData = {};
             scope.submit = function () {
-                /*this.formData.locale = scope.optlang.code;
-                var joiningDate = dateFilter(scope.formData.joiningDate, scope.df);
-                this.formData.dateFormat = scope.df;
-                this.formData.joiningDate = joiningDate;*/
                 resourceFactory.companyResource.save(this.formData, function (data) {
                     location.path('/company');
                 });

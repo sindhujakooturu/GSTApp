@@ -19,7 +19,7 @@
 </div>
 <div data-ng-hide="!domReady" data-ng-cloak>
     <!-- Login Form  -->
-    <div class="container well" data-ng-hide="currentSession.user != null" >
+    <div class="container well" data-ng-hide="currentSession.user != null" style="background-image: url(./images/gstbg1.jpg); height: 560px; width: 1050px;" >
 
         <div class="row form-search ng-pristine ng-valid paddedbottom" data-ng-form="loginForm" data-ng-controller="LoginFormController">
             <div class="pull-right ">
@@ -64,57 +64,57 @@
     	    </form>
             </div>
         </div>
-        <div class="row col-md-8 col-lg-offset-2 paddedbottom">
+        <div class="row col-md-8 " style="margin-left: -2.333333%;margin-top: -100px;">
         	<div class="col-md-3">
                 <img src="./images/gst-logo.png" alt="Mifos X" width="150" class="img-responsive" ng-if="!isBigLogoPath"/>
                 <img src="{{bigLogoPath}}" alt="Mifos X" width="150" class="img-responsive" ng-if="isBigLogoPath">
             </div>
             <div class="col-md-9">
-                <h1>{{ 'label.heading.gst' | translate }}</h1>
-    <span>{{ 'label.heading.version' | translate }} {{ version }}</span>
-                <br /> <span>{{ 'label.heading.uptodate' | translate }}</span>
+                <h2 style="color: rebeccapurple;">{{ 'label.heading.gst' | translate }}</h2>
+   				 <span>{{ 'label.heading.version' | translate }} {{ version }}</span>
+                <br /> <span>{{ 'label.heading.uptodate' | translate }}</span><br><br>
                 <!-- <br /> <span ng-bind-html="text"></span> -->
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
         <div class="col-md-4">
                 <div style="border: 1px solid #DDDDDD;padding:15px;">
-                    <div style="background-color: #F5F5F5;border-bottom: 1px solid #DDDDDD;padding: 10px 15px;margin: -15px -15px 15px;">
+                    <div style="background-color: rgba(170, 148, 255, 0.21);border-bottom: 1px solid #DDDDDD;padding: 10px 15px;margin: -15px -15px 15px;">
                         <strong>{{ 'label.heading.resources' | translate }}</strong>
                     </div>
                     <ul>
-                        <li><a target="_blank" href="https://mifosforge.jira.com/wiki/display/docs/User+Manual">{{ 'label.anchor.usermanual' | translate }}</a></li>
-                        <li><a target="_blank" href="https://mifosforge.jira.com/wiki/pages/viewpage.action?pageId=14712842">{{ 'label.anchor.functionalspec' | translate }}</a></li>
-                        <li><a target = "_blank" href="https://mifosforge.jira.com/wiki/display/MDZ/Welcome+to+the+Zone">{{ 'label.anchor.developerzone' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.usermanual' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.functionalspec' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.developerzone' | translate }}</a></li>
                     </ul>
                 </div>
         </div>
         <div class="col-md-4">
                 <div style="border: 1px solid #DDDDDD;padding:15px;">
-                    <div style="background-color: #F5F5F5;border-bottom: 1px solid #DDDDDD;padding: 10px 15px;margin: -15px -15px 15px;">
+                    <div style="background-color: rgba(170, 148, 255, 0.21);border-bottom: 1px solid #DDDDDD;padding: 10px 15px;margin: -15px -15px 15px;">
                         <strong>{{ 'label.heading.community' | translate }}</strong>
                     </div>
                     <ul>
-                        <li><a target="https://groups.google.com/forum/#!forum/mifosusers" href="https://groups.google.com/forum/#!forum/mifosusers">{{ 'label.anchor.usersgroup' | translate }}</a></li>
-                        <li><a target="https://groups.google.com/forum/#!forum/mifosdeveloper" href="https://groups.google.com/forum/#!forum/mifosdeveloper">{{ 'label.anchor.developergroup' | translate }}</a></li>
-                        <li><a target="http://mifos.org/resources/community/communications/#mifos-irc" href="http://mifos.org/community/communications/mifos-irc">{{ 'label.anchor.irc' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.usersgroup' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.developergroup' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.irc' | translate }}</a></li>
                     </ul>
                 </div>
         </div>
         <div class="col-md-4">
-                <div style="border: 1px solid #DDDDDD;padding:15px;">
-                    <div style="background-color: #F5F5F5;border-bottom: 1px solid #DDDDDD;padding: 10px 15px;margin: -15px -15px 15px;">
-                        <strong>{{ 'label.heading.contribute' | translate }}</strong>
+                <div style="border: 2px solid #ffffff;padding:15px; border-radius: 15px;">
+                    <div style="background-color: rgba(170, 148, 255, 0.21); border-bottom: 2px solid #ffffff;padding: 10px 15px;margin: -15px -15px 15px;">
+                        <strong style="color: #ffffff;">{{ 'label.heading.contribute' | translate }}</strong>
                     </div>
                     <ul>
-                        <li><a target="https://mifosforge.jira.com/wiki/display/MDZ/Key+Design+Principles" href="https://mifosforge.jira.com/wiki/display/MDZ/Key+Design+Principles/">{{ 'label.anchor.keydesignprinciples' | translate }}</a></li>
-                        <li><a target="https://mifosforge.jira.com/wiki/display/MDZ/Working+with+Code" href="http://sourceforge.net/projects/mifos/">{{ 'label.anchor.workingwithcode' | translate }}</a></li>
-                        <li><a target="http://mifos.org/donate/" href="http://mifos.org/donate/">{{ 'label.anchor.donate' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.keydesignprinciples' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.workingwithcode' | translate }}</a></li>
+                        <li><a href="#">{{ 'label.anchor.donate' | translate }}</a></li>
                     </ul>
                 </div>
 
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- Navbar -->
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div class="left-nav" style="display:flex">
+        <!-- <div class="left-nav" style="display:flex">
         	<ul class="nav nav-pills nav-stacked margin-nav">
                 <li><a class="black" href="#/help"><i class="icon-keyboard icon-large"></i>&nbsp;&nbsp;{{ 'label.anchor.keyboardshortcut' | translate}}</a></li>
                 <li class="divider"></li>
@@ -168,7 +168,7 @@
                 <li><a class="black" ng-click= "helpf()" ><i class="icon-question-sign icon-large"></i>&nbsp;&nbsp;&nbsp;{{ 'label.anchor.help' | translate }}</a></li>
 
             </ul>
-        </div>
+        </div> -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         	<div class="container-fluid container">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

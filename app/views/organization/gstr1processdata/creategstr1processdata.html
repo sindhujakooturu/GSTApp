@@ -1,0 +1,79 @@
+<div class="col-md-12" ng-controller="CreateGSTR1ProcessDataController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/gstr1processdata">{{'label.anchor.gstr1processdata' | translate}}</a></li>
+        <li class="active">{{'label.anchor.creategstr1processdata' | translate}}</li>
+    </ul>
+	<form name="creategstr1processdataform" novalidate="" class="form-horizontal well" rc-submit="submit()">
+	    <fieldset>
+	        <legend>{{'label.anchor.gstr1processdata' | translate}}</legend>
+	  <table>
+         	
+         	 <div class="form-group">
+         		<label class="control-label col-sm-2" for="gstin">{{'label.gstin' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="gstin" name="gstin" data-ng-model="formData.gstin" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="status">{{'label.status' | translate}}</label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="status" name="status" data-ng-model="formData.status" data-ng-maxlength=1 class="form-control" data-late-Validate>
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="fp">{{'label.fp' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="fp" name="fp" data-ng-model="formData.fp" class="form-control" data-ng-maxlength=6>
+				 </div>
+				 <label class="control-label col-sm-2" for="assignedto">{{'label.assignedto' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="assignedto" name="assignedto" data-ng-model="formData.assignedto" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="grossturnover">{{'label.grossturnover' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="grossturnover" name="grossturnover" data-ng-model="formData.grossturnover" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="errorcode">{{'label.errorcode' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="errorcode" name="errorcode" data-ng-model="formData.errorcode" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="fileno">{{'label.fileno' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="fileno" name="fileno" data-ng-model="formData.fileno" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="errordescr">{{'label.errordescr' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="errordescr" name="errordescr" data-ng-model="formData.errordescr" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="version">{{'label.version' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="version" name="version" data-ng-model="formData.version" data-ng-maxlength=2 class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="reviewcomments">{{'label.reviewcomments' | translate}} <span class="required">*</span></label>
+				 <div class="controls col-sm-3">
+ 					<input type="text" id="reviewcomments" name="reviewcomments" data-ng-model="formData.reviewcomments" class="form-control">
+				 </div>
+         	</div>
+         	
+     </table>
+     
+     
+  </fieldset>
+  <div class="col-md-offset-5 paddedtop">
+		    <button id="cancel" type="reset" class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+		    <button id="save" type="submit" class="btn btn-primary">{{'label.button.save'
+		        | translate}}
+		    </button>
+		</div>
+  
+	</form>
+</div>
