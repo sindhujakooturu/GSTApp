@@ -3,7 +3,6 @@
 		ViewCompanyController: function (scope, routeParams, resourceFactory) {
 			
             scope.company = {};
-            
             resourceFactory.companyResource.getall({companyId: routeParams.id}, function (data) {
                 scope.company = data;
             });

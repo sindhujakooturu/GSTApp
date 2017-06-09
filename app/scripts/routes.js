@@ -926,6 +926,12 @@
             .when('/editoutwardinvoice', {
                 templateUrl: 'views/organization/outwardstaginginvoice/editoutwardinvoice.html'
             })
+            .when('/createoutwarditems/:invoiceId', {
+                templateUrl: 'views/organization/outwardstaginginvoice/createoutwarditems.html'
+            })
+            .when('/viewoutwarditem/:id', {
+                templateUrl: 'views/organization/outwardstaginginvoice/viewoutwarditem.html'
+            })
             .when('/supplier', {
                 templateUrl: 'views/organization/supplier/supplier.html'
             })
@@ -961,6 +967,18 @@
             })
             .when('/editsacdata', {
                 templateUrl: 'views/organization/sacdata/editsacdata.html'
+            })
+            .when('/gstr1processdata', {
+                templateUrl: 'views/organization/gstr1processdata/gstr1processdata.html'
+            })
+            .when('/creategstr1processdata', {
+                templateUrl: 'views/organization/gstr1processdata/creategstr1processdata.html'
+            })
+            .when('/viewgstr1processdata', {
+                templateUrl: 'views/organization/gstr1processdata/viewgstr1processdata.html'
+            })
+            .when('/editgstr1processdata', {
+                templateUrl: 'views/organization/gstr1processdata/editgstr1processdata.html'
             })
            
         ;

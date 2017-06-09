@@ -1,0 +1,113 @@
+<div class="col-md-12" ng-controller="CreateOutwardItemsController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/outwardstaginginvoice">{{'label.anchor.outwardinvoice' | translate}}</a></li>
+        <li class="active">{{'label.anchor.createoutwarditem' | translate}}</li>
+    </ul>
+	<form name="createoutwarditemform" novalidate="" class="form-horizontal well" 
+	      rc-submit="submit()">
+	    <api-validate></api-validate>
+	    <fieldset>
+	        <legend>{{'label.anchor.createoutwarditem' | translate}}</legend>
+			
+			<table>
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="invoiceId">{{'label.heading.invoiceid' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="invoiceId" name="invoiceId" data-ng-model="formData.invoiceId" readonly class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="itemType">{{'label.heading.itemtype' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="itemType" name="itemType" data-ng-model="formData.itemType" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="sgstRate">{{'label.heading.sgstrate' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="sgstRate" name="sgstRate" data-ng-model="formData.sgstRate" class="form-control">
+				 </div>
+				
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="itemCode">{{'label.heading.itemcode' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="itemCode" name="itemCode" data-ng-model="formData.itemCode" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="sgstAmount">{{'label.heading.sgstamount' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="sgstAmount" name="sgstAmount" data-ng-model="formData.sgstAmount" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="taxValue">{{'label.heading.taxvalue' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="taxValue" name="taxValue" data-ng-model="formData.taxValue" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="cessRate">{{'label.heading.cessrate' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="cessRate" name="cessRate" data-ng-model="formData.cessRate" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="igstRate">{{'label.heading.igstrate' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="igstRate" name="igstRate" data-ng-model="formData.igstRate" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="cessAmount">{{'label.heading.cessamount' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="cessAmount" name="cessAmount" data-ng-model="formData.cessAmount" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+         	<label class="control-label col-sm-2" for="igstAmount">{{'label.heading.igstamount' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="igstAmount" name="igstAmount" data-ng-model="formData.igstAmount" class="form-control">
+				 </div>
+				 <!-- <div class="col-sm-3">
+                    <input id="supplierInvDate" name="supplierInvDate" sort type="text" datepicker-pop="dd MMMM yyyy" ng-model="formData.supplierInvDate"
+                           class="form-control" is-open="opened" min="minDate" max="restrictDate" required/>
+                </div> -->
+				<!-- <label class="control-label col-sm-2" for="status">{{'label.status' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="status" name="status" data-ng-model="formData.status" class="form-control">
+				 </div> -->
+         	</div>
+         	
+         	<div class="form-group">
+         	<label class="control-label col-sm-2" for="cgstRate">{{'label.cgstrate' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="cgstRate" name="cgstRate" data-ng-model="formData.cgstRate" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="errorCode">{{'label.heading.errorcode' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="errorCode" name="errorCode" data-ng-model="formData.errorCode" class="form-control">
+				 </div>
+         	</div>
+         	
+         	<div class="form-group">
+				<label class="control-label col-sm-2" for="cgstAmount">{{'label.heading.cgstamount' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="cgstAmount" name="cgstAmount" data-ng-model="formData.cgstAmount" class="form-control">
+				 </div>
+				<label class="control-label col-sm-2" for="errorDescripter">{{'label.heading.errordescription' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="errorDescripter" name="errorDescripter" data-ng-model="formData.errorDescripter" class="form-control">
+				 </div>
+         	</div>
+     </table>
+     
+  </fieldset>
+  <div class="col-md-offset-5 paddedtop">
+		    <button id="cancel" type="reset" class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+		    <button id="save" type="submit" class="btn btn-primary">{{'label.button.save'
+		        | translate}}
+		    </button>
+		</div>
+  
+	</form>
+</div>

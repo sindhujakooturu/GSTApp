@@ -633,16 +633,21 @@
                     }),
 
                     companyResource: defineResource(apiVer + "/company/:companyId", {}, {
-                   	    get: {method: 'GET', params: {}, isArray : true},
-                   	    getall: {method: 'GET', params: {}},
-                        update: { method: 'PUT'}
-                     }),
-                     
-                     outwardinvResource: defineResource(apiVer + "/outwardinv/:outwardinvId", {}, {
-                       	    get: {method: 'GET', params: {}, isArray : true},
-                       	    getall: {method: 'GET', params: {}},
-                            update: { method: 'PUT'}
-                         }),
+                      	 get: {method: 'GET', params: {}, isArray : true},
+                      	 getall: {method: 'GET', params: {}},
+                           update: { method: 'PUT'}
+                        }),
+                        
+                    outwardinvResource: defineResource(apiVer + "/outwardinv/:outwardinvId", {}, {
+                          	 get: {method: 'GET', params: {}, isArray : true},
+                          	getall: {method: 'GET', params: {}},
+                               update: { method: 'PUT'}
+                            }),
+                            
+                    outwarditemResource: defineResource(apiVer + "/outwarditem/:invoiceId", {invoiceId: '@invoiceId'}, {
+                              	 get: {method: 'GET', params: {}, isArray : true},
+                              	getall: {method: 'GET', params: {}}
+                              	 }),
                     
                     smsResource: defineResource(apiVer + "/sms/:campaignId/messageByStatus", {campaignId: '@campaignId', additionalParam: '@additionalParam'}, {
                         getByStatus: {method: 'GET', params:{}}

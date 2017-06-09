@@ -2,24 +2,24 @@
 	gst.controllers = _.extend(module, {
         CreateOutwardInvoiceController: function (scope, resourceFactory, location, dateFilter) {
             scope.outwardinv = [];
-            /*scope.restrictDate = new Date();
-            resourceFactory.officeResource.getAllOfficesInAlphabeticalOrder(function (data) {
-                scope.offices = data;
-                scope.formData = {
-                    isLoanOfficer: true,
-                    officeId: scope.offices[0].id,
-                };
-            });*/
-
+            scope.supplierInvDate = new Date();
+            scope.orderDate = new Date();
+            
             scope.submit = function () {
             	
+            	scope.formData.isDetails = false;
             	this.formData.locale = scope.optlang.code;
-            	var supplierInvDate = dateFilter(scope.formData.supplierInvDate, scope.df);
-            	var orderDate = dateFilter(scope.formData.orderDate, scope.df);
-                this.formData.dateFormat = scope.df;
-                this.formData.supplierInvDate = supplierInvDate;
-                this.formData.orderDate = orderDate;
+            	
+            	if (scope.supplierInvDate) {
+                    reqDate = dateFilter(scope.supplierInvDate, scope.df);
+                    this.formData.supplierInvDate = reqDate;
+                }
+
+                if (scope.orderDate) {
+                    this.formData.orderDate = dateFilter(scope.orderDate, scope.df);
+                }
                 
+                this.formData.dateFormat = scope.df;
                 resourceFactory.outwardinvResource.save(this.formData, function (data) {
                     location.path('/outwardstaginginvoice/');
                 });

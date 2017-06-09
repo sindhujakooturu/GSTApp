@@ -1,0 +1,90 @@
+<div class="col-md-12" ng-controller="ViewOutwardItemController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/outwardstaginginvoice">{{'label.anchor.outwardstaginginvoice' | translate}}</a></li>
+        <li class="active">{{'label.anchor.viewoutwardinvoice' | translate}}</li>
+    </ul>
+
+    <div class="well">
+        <div class="pull-right">
+            <!-- <div class="btn-group">
+                <a href="#/editoutwardinvoice/{{outwardinv.id}}" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
+            </div> -->
+        </div>
+        
+		<div class="row">
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		        	<tr>
+		                <td>{{ 'label.heading.invoiceid' | translate }}</td>
+		                <td>{{outwarditem.invoiceid}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.itemtype' | translate }}</td>
+		                <td>{{outwarditem.itemType}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.itemcode' | translate }}</td>
+		                <td>{{outwarditem.itemCode}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.taxvalue' | translate }}</td>
+		                <td>{{outwarditem.taxValue}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.igstrate' | translate }}</td>
+		                <td>{{outwarditem.igstRate}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.igstamount' | translate }}</td>
+		                <td>{{outwarditem.igstAmount}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.cgstrate' | translate }}</td>
+		                <td>{{outwarditem.cgstRate}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.heading.cgstamount' | translate }}</td>
+                        <td>{{outwarditem.cgstAmount}}</td>
+                    </tr>
+                     <tr>
+		                <td>{{ 'label.heading.sgstrate' | translate }}</td>
+		                <td>{{outwarditem.sgstRate}}</td>
+		            </tr>
+                    <tr>
+                        <td>{{ 'label.heading.sgstamount' | translate }}</td>
+                        <td>{{outwarditem.sgstAmount | DateFormat}}</td>
+                    </tr>
+		        </table>
+			</div>
+			
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.heading.cessrate' | translate }}</td>
+		                <td>{{outwarditem.cessRate}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.cessamount' | translate }}</td>
+		                <td>{{outwarditem.cessAmount}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.status' | translate }}</td>
+		                <td>{{outwarditem.errorDescripter}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.errorcode' | translate }}</td>
+		                <td>{{outwarditem.status}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.heading.errordescription' | translate }}</td>
+		                <td>{{outwarditem.errorCode}}</td>
+		            </tr>
+		            
+                   
+		        </table>
+			</div>
+			
+		</div>
+    </div>
+</div>      

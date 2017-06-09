@@ -4371,7 +4371,24 @@
 	"label.heading.sactaxcollection":"Tax Collection",
 	"label.heading.sacothreceipts":"Other Receipts",
 	"label.heading.deductrefund":"Deduct Refund",
-	"label.heading.sacpenality":"Penality"
+	"label.heading.sacpenality":"Penality",
+	
+	"#GSTR1 process Data":"",
+	
+	"label.anchor.gstr1processdata":"GSTR1 Process Data",
+	"label.anchor.creategstr1processdata":"Create GSTR1 Process Data",
+	"label.view.gstr1processdata":"Define GSTR1 Process Data",
+	"label.anchor.viewgstr1processdata":"View GSTR1 Process Data",
+	"label.heading.editgstr1processdata":"Edit GSTR1 Process Data",
+	"label.button.creategstr1processdata":"Create GSTR1 Process Data",
+	"label.fp":"Financial Period",
+	"label.assignedto":"Assigned to",
+	"label.grossturnover":"Gross Turn Over",
+	"label.errorcode":"Error Code",
+	"label.fileno":"File No",
+	"label.errordescr":"Error Descripter",
+	"label.version":"Version",
+	"label.reviewcomments":"Review Comments"
 	
 	
 }

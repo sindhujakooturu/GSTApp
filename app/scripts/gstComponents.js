@@ -294,6 +294,8 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/outwardstaginginvoice/CreateOutwardInvoiceController',
             'organization/outwardstaginginvoice/ViewOutwardInvoiceController',
             'organization/outwardstaginginvoice/EditOutwardInvoiceController',
+            'organization/outwardstaginginvoice/CreateOutwardItemsController',
+            'organization/outwardstaginginvoice/ViewOutwardItemController',
             'organization/supplier/SupplierController',
             'organization/supplier/CreateSupplierController',
             'organization/supplier/ViewSupplierController',
@@ -305,7 +307,11 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/sacdata/SACDataController',
             'organization/sacdata/CreateSACDataController',
             'organization/sacdata/EditSACDataController',
-            'organization/sacdata/ViewSACDataController'
+            'organization/sacdata/ViewSACDataController',
+            'organization/gstr1processdata/GSTR1ProcessDataController',
+            'organization/gstr1processdata/CreateGSTR1ProcessDataController',
+            'organization/gstr1processdata/EditGSTR1ProcessDataController',
+            'organization/gstr1processdata/ViewGSTR1ProcessDataController'
             
         ],
         filters: [

@@ -1,55 +1,55 @@
 <div class="col-md-12" ng-controller="ViewOutwardInvoiceController">
     <ul class="breadcrumb">
         <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
-        <li><a href="#/outwardstaginginvoice">{{'label.anchor.supplier' | translate}}</a></li>
-        <li class="active">{{'label.anchor.viewsupplier' | translate}}</li>
+        <li><a href="#/outwardstaginginvoice">{{'label.anchor.outwardstaginginvoice' | translate}}</a></li>
+        <li class="active">{{'label.anchor.viewoutwardinvoice' | translate}}</li>
     </ul>
 
     <div class="well">
         <div class="pull-right">
             <div class="btn-group">
-                <a href="#/editoutwardinvoice" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
+                <a href="#/editoutwardinvoice/{{outwardinv.id}}" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
             </div>
         </div>
-        <h3 class="bolder">{{outward.displayName}}</h3>
+        
 		<div class="row">
 			<div class="col-md-6">
 		        <table class="table table-bordered table-striped">
 		            <tr>
 		                <td>{{ 'label.heading.gstin' | translate }}</td>
-		                <td>{{ outwardinv.gstin}}</td>
+		                <td>{{outwardinv.gstin}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.gstinpurchaser' | translate }}</td>
-		                <td>{{ outwardinv.gstinPurchaser}}</td>
+		                <td>{{outwardinv.gstinPurchaser}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.cname' | translate }}</td>
-		                <td>{{ outwardinv.cName}}</td>
+		                <td>{{outwardinv.cName}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.supplierinvno' | translate }}</td>
-		                <td>{{ outwardinv.supplierInvNo}}</td>
+		                <td>{{outwardinv.supplierInvNo}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.supplierinvdate' | translate }}</td>
-		                <td>{{ outwardinv.supplierInvDate}}</td>
+		                <td>{{outwardinv.supplierInvDate}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.supplierinvvalue' | translate }}</td>
-		                <td>{{ outwardinv.supplierInvValue}}</td>
+		                <td>{{outwardinv.supplierInvValue}}</td>
 		            </tr>
                     <tr>
                         <td>{{ 'label.heading.supplierstatecode' | translate }}</td>
-                        <td>{{ outwardinv.supplyStateCode | DateFormat}}</td>
+                        <td>{{outwardinv.supplyStateCode}}</td>
                     </tr>
                      <tr>
 		                <td>{{ 'label.heading.orderno' | translate }}</td>
-		                <td>{{  outwardinv.orderNo}}</td>
+		                <td>{{outwardinv.orderNo}}</td>
 		            </tr>
                     <tr>
                         <td>{{ 'label.heading.orderdate' | translate }}</td>
-                        <td>{{ outwardinv.orderDate | DateFormat}}</td>
+                        <td>{{outwardinv.orderDate | DateFormat}}</td>
                     </tr>
 		        </table>
 			</div>
@@ -58,27 +58,27 @@
 		        <table class="table table-bordered table-striped">
 		            <tr>
 		                <td>{{ 'label.heading.etin' | translate }}</td>
-		                <td>{{ outwardinv.etin}}</td>
+		                <td>{{outwardinv.etin}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.invoiceid' | translate }}</td>
-		                <td>{{ outwardinv.invoiceId}}</td>
+		                <td>{{outwardinv.invoiceId}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.receiptstatecode' | translate }}</td>
-		                <td>{{ outwardinv.receiptStateCode}}</td>
+		                <td>{{outwardinv.receiptStateCode}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.status' | translate }}</td>
-		                <td>{{ outwardinv.status}}</td>
+		                <td>{{outwardinv.status}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.errorcode' | translate }}</td>
-		                <td>{{ outwardinv.errorCode}}</td>
+		                <td>{{outwardinv.errorCode}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.errordescription' | translate }}</td>
-		                <td>{{ outwardinv.errorDescripter}}</td>
+		                <td>{{outwardinv.errorDescripter}}</td>
 		            </tr>
                    
 		        </table>

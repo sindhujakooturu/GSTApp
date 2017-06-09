@@ -25,8 +25,7 @@
                 		country: data.country,
                 		pin: data.pin
                 };
-                
-                
+
             });
 
             scope.submit = function () {
