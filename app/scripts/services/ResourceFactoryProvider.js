@@ -652,6 +652,11 @@
                     smsResource: defineResource(apiVer + "/sms/:campaignId/messageByStatus", {campaignId: '@campaignId', additionalParam: '@additionalParam'}, {
                         getByStatus: {method: 'GET', params:{}}
                     }),
+                    
+                    testPostResource: defineResource(apiVer + "/mastertest", {}, {
+                        getByStatus: {method: 'GET', params:{}}
+                    }),
+                    
 
                     entityDatatableChecksResource: defineResource(apiVer + "/entityDatatableChecks/:entityDatatableCheckId/:additionalParam", {entityDatatableCheckId: '@entityDatatableCheckId', additionalParam: '@additionalParam'}, {
                         getAll: {method: 'GET', params: {}},
