@@ -1,0 +1,105 @@
+<div class="col-md-12" ng-controller="CreateTestGSTChildController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/testgst">{{'label.anchor.testgst' | translate}}</a></li>
+        <li class="active">{{'label.anchor.createtestgstchild' | translate}}</li>
+    </ul>
+	<form name="createtestgstchildform" novalidate="" class="form-horizontal well" 
+	      rc-submit="submit()">
+	    <api-validate></api-validate>
+	    <fieldset>
+	        <legend>{{'label.anchor.createtestgstchild' | translate}}</legend>
+			
+			<table>
+         	 
+         	 <div class="form-group">
+         		<label class="control-label col-sm-2" for="invoiceId">{{'label.invoiceid' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="invoiceId" name="invoiceId" data-ng-model="formData.invoiceId" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column22">{{'label.column22' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column22" name="column22" data-ng-model="formData.column22" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column15">{{'label.column15' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column15" name="column15" data-ng-model="formData.column15" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column23">{{'label.column23' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column23" name="column23" data-ng-model="formData.column23" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column16">{{'label.column16' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column16" name="column16" data-ng-model="formData.column16" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column24">{{'label.column24' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column24" name="column24" data-ng-model="formData.column24" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column17">{{'label.column17' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column17" name="column17" data-ng-model="formData.column17" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column25">{{'label.column25' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column25" name="column25" data-ng-model="formData.column25" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column18">{{'label.column18' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column18" name="column18" data-ng-model="formData.column18" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="status">{{'label.status' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="status" name="status" data-ng-model="formData.status" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column19">{{'label.column19' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column19" name="column19" data-ng-model="formData.column19" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column26">{{'label.column26' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column26" name="column26" data-ng-model="formData.column26" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column20">{{'label.column20' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column20" name="column20" data-ng-model="formData.column20" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column27">{{'label.column27' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column27" name="column27" data-ng-model="formData.column27" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column21">{{'label.column21' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column21" name="column21" data-ng-model="formData.column21" class="form-control">
+				 </div>
+         	</div>
+         	
+     </table>
+     
+     
+     
+  </fieldset>
+  <div class="col-md-offset-5 paddedtop">
+		    <button id="cancel" type="reset" class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+		    <button id="save" type="submit" class="btn btn-primary">{{'label.button.save'
+		        | translate}}
+		    </button>
+		</div>
+  
+	</form>
+</div>

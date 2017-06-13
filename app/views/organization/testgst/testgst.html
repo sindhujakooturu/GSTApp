@@ -1,0 +1,37 @@
+<div class="col-md-12" ng-controller="TestGSTController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li class="active">{{'label.anchor.testgst' | translate}}</li>
+    </ul>
+
+    <input ng-autofocus="true" ng-model="filterText" type="text" ng-keyup="onFilter()" class="form-control" placeholder="{{'label.input.filterbyname' | translate}}">
+    <a href="#/createtestgst" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.createtestgst' | translate }}</a>
+
+    <table class="table">
+        <thead>
+        <tr class="graybg">
+            <th>{{'label.column1' | translate}}</th>
+            <th>{{'label.column2' | translate}}</th>
+            <th>{{'label.column3' | translate}}</th>
+            <th>{{'label.column4' | translate}}</th>
+            <th>{{'label.column5' | translate}}</th>
+            <th>{{'label.action' | translate}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="pointer-main" ng-repeat="col in column | filter:filterText">
+            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column1}}</td>
+            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column2}}</td>
+            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column3}}</td>
+            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column4}}</td>
+            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column5}}</td>
+            <!-- <td>
+             	<a href="#/createoutwarditems/{{outward.invoiceId}}" title="Outward Item"  data-popover-trigger="mouseenter">
+                 		<i class="icon-plus-sign icon-white"></i>
+                </a>
+             </td> -->
+            
+        </tr>
+        </tbody>
+    </table>
+</div>
