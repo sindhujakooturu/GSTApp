@@ -4402,7 +4402,47 @@
 	"label.fileno":"File No",
 	"label.errordescr":"Error Descripter",
 	"label.version":"Version",
-	"label.reviewcomments":"Review Comments"
+	"label.reviewcomments":"Review Comments",
 	
+	"#Test":"",
+	"label.anchor.testgst":"TestGST",
+	"label.view.testgst":"TestGST",
+	"label.anchor.createtestgst":"Create Test GST",
+	"label.button.createtestgst":"Create Test GST",
+	"label.anchor.createtestgstchild":"Create Test GST Child",
+	"label.action":"Action",
+	"label.column1":"Column1",
+	"label.column2":"Column2",
+	"label.column3":"Column3",
+	"label.column4":"Column4",
+	"label.column5":"Column5",
+	"label.column6":"Column6",
+	"label.column7":"Column7",
+	"label.column8":"Column8",
+	"label.column9":"Column9",
+	"label.column10":"Column10",
+	"label.column11":"Column11",
+	"label.column12":"Column12",
+	"label.column13":"Column13",
+	"label.column14":"Column14",
+	"label.status":"Status",
+	"invoiceid":"Invoice Id",
+	"label.column15":"column15",
+	"label.column16":"column16",
+	"label.column17":"column17",
+	"label.column18":"column18",
+	"label.column19":"column19",
+	"label.column20":"column20",
+	"label.column21":"column21",
+	"label.column22":"column22",
+	"label.column23":"column23",
+	"label.column24":"column24",
+	"label.column25":"column25",
+	"label.column26":"column26",
+	"label.column27":"column27",
+	
+	
+	
+	"":""
 	
 }

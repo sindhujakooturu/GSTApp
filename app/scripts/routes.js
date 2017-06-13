@@ -980,6 +980,15 @@
             .when('/editgstr1processdata', {
                 templateUrl: 'views/organization/gstr1processdata/editgstr1processdata.html'
             })
+            .when('/testgst', {
+                templateUrl: 'views/organization/testgst/testgst.html'
+            })
+            .when('/createtestgst', {
+                templateUrl: 'views/organization/testgst/createtestgst.html'
+            })
+            .when('/createtestgstchild', {
+                templateUrl: 'views/organization/testgst/createtestgstchild.html'
+            })
            
         ;
         $locationProvider.html5Mode(false);
