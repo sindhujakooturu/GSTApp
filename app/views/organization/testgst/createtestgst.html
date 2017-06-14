@@ -1,0 +1,107 @@
+<div class="col-md-12" ng-controller="CreateTestGSTController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/testgst">{{'label.anchor.testgst' | translate}}</a></li>
+        <li class="active">{{'label.anchor.createtestgst' | translate}}</li>
+    </ul>
+	<form name="createtestgstform" novalidate="" class="form-horizontal well" 
+	      rc-submit="submit()">
+	    <api-validate></api-validate>
+	    <fieldset>
+	        <legend>{{'label.anchor.createtestgst' | translate}}</legend>
+			
+			<table>
+         	 
+         	 <div class="form-group">
+         		<label class="control-label col-sm-2" for="column1">{{'label.column1' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column1" name="column1" data-ng-model="formData.column1" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column9">{{'label.column9' | translate}} </label>
+				<div class="col-sm-3">
+                    <input id="column9" name="column9" sort type="text" datepicker-pop="dd MMMM yyyy" ng-model="formData.column9"
+                           class="form-control" is-open="opened" min="minDate" max="restrictDate" required/>
+                </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column2">{{'label.column2' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column2" name="column2" data-ng-model="formData.column2" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column10">{{'label.column10' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column10" name="column10" data-ng-model="formData.column10" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column3">{{'label.column3' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column3" name="column3" data-ng-model="formData.column3" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column11">{{'label.column11' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column11" name="column11" data-ng-model="formData.column11" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column4">{{'label.column4' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column4" name="column4" data-ng-model="formData.column4" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column12">{{'label.column12' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column12" name="column12" data-ng-model="formData.column12" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column5">{{'label.column5' | translate}} </label>
+				<div class="col-sm-3">
+                    <input id="column5" name="column5" sort type="text" datepicker-pop="dd MMMM yyyy" ng-model="formData.column5"
+                           class="form-control" is-open="opened" min="minDate" max="restrictDate" required/>
+                </div>
+				 <label class="control-label col-sm-2" for="status">{{'label.status' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="status" name="status" data-ng-model="formData.status" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column6">{{'label.column6' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column6" name="column6" data-ng-model="formData.column6" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column13">{{'label.column13' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column13" name="column13" data-ng-model="formData.column13" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column7">{{'label.column7' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column7" name="column7" data-ng-model="formData.column7" class="form-control">
+				 </div>
+				 <label class="control-label col-sm-2" for="column14">{{'label.column14' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column14" name="column2" data-ng-model="formData.column2" class="form-control">
+				 </div>
+         	</div>
+         	<div class="form-group">
+         		<label class="control-label col-sm-2" for="column8">{{'label.column8' | translate}} </label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="column8" name="column8" data-ng-model="formData.column8" class="form-control">
+				 </div>
+         	</div>
+         	
+     </table>
+     
+     
+     
+  </fieldset>
+  <div class="col-md-offset-5 paddedtop">
+		    <button id="cancel" type="reset" class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
+		    <button id="save" type="submit" class="btn btn-primary">{{'label.button.save'
+		        | translate}}
+		    </button>
+		</div>
+  
+	</form>
+</div>
