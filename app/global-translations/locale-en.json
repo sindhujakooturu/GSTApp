@@ -4406,6 +4406,10 @@
 	"label.refno":"Ref No",
 	"label.transid":"Trans Id",
 	
+	"label.anchor.gstr1b2binv":"GSTR1 B2B Invoice",
+	"label.view.gstr1b2binv":"GSTR1 B2B Invoice",
+	"label.anchor.viewgstr1b2binv":"View GSTR1 B2B Invoice",
+	
 	"#Test":"",
 	"label.anchor.testgst":"TestGST",
 	"label.view.testgst":"TestGST",

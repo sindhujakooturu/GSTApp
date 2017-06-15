@@ -980,6 +980,12 @@
             .when('/editgstr1processdata/:id', {
                 templateUrl: 'views/organization/gstr1processdata/editgstr1processdata.html'
             })
+            .when('/gstr1b2binv', {
+                templateUrl: 'views/organization/gstr1processdata/gstr1b2binv.html'
+            })
+            .when('/viewgstr1b2binv', {
+                templateUrl: 'views/organization/gstr1processdata/viewgstr1b2binv.html'
+            })
             .when('/testgst', {
                 templateUrl: 'views/organization/testgst/testgst.html'
             })
