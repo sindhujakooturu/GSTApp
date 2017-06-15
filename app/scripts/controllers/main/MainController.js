@@ -397,6 +397,31 @@
             
             };//helpf
             
+            scope.isCAUser = function(){
+				var userData = localStorageService.getFromLocalStorage('userData');
+				if(userData){
+					if(userData.roles[0].name == 'CA'){
+						return true;
+					}
+					else{
+						return false;
+					}
+				}
+			}
+            
+			scope.isAppUser = function(){
+				
+				var userData = localStorageService.getFromLocalStorage('userData');console.log("hi");
+				if(userData){
+					if(userData.roles[0].name ==  'Super user'){
+						return true;
+					}
+					else{
+						return false;
+					}
+				}
+			}
+				
             sessionManager.restore(function (session) {
                 scope.currentSession = session;
                 scope.start(scope.currentSession);
