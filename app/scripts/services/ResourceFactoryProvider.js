@@ -663,7 +663,11 @@
                         getByStatus: {method: 'GET', params:{}}
                     }),
                     
-
+                    
+                    gstr1fileinvoiceStatusUpdateResource: defineResource(apiVer + "/gstr1fileinvoicedata/updatestatus/:id", {id: '@id'}, {
+                       update: { method: 'PUT'}
+                      }),
+                   
                     entityDatatableChecksResource: defineResource(apiVer + "/entityDatatableChecks/:entityDatatableCheckId/:additionalParam", {entityDatatableCheckId: '@entityDatatableCheckId', additionalParam: '@additionalParam'}, {
                         getAll: {method: 'GET', params: {}},
                         get: {method: 'GET', params: {}},

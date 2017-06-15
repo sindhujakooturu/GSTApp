@@ -15,6 +15,7 @@
             <th>{{'label.grossturnover' | translate}}</th>
             <th>{{'label.fileno' | translate}}</th>
             <th>{{'label.version' | translate}}</th>
+            <th>{{'label.action' | translate}}</th>
         </tr>
         </thead>
         <tbody>
@@ -24,6 +25,16 @@
             <td class="pointer" data-ng-click="routeTo(gstr.id)">{{gstr.grossTurnover}}</td>
             <td class="pointer" data-ng-click="routeTo(gstr.id)">{{gstr.fileNo}}</td>
             <td class="pointer" data-ng-click="routeTo(gstr.id)">{{gstr.version}}</td>
+            <td>
+             	<a ng-if="gstr.status==0" ng-click = "action('approve',gstr.id)" title="Approve"  data-popover-trigger="mouseenter">
+                 		<i class="icon-check icon-white icon-2x"></i>
+                </a> &nbsp;&nbsp;&nbsp;
+                <a ng-if="gstr.status==0" ng-click = "action('reject',gstr.id)" title="Reject"  data-popover-trigger="mouseenter">
+                 		<i class="icon-ban-circle icon-white icon-2x"></i>
+                </a>
+                <span ng-show="gstr.status==4" style="color:green;">Approved</span>
+                <span ng-show="gstr.status==3" style="color:red;">Rejected</span>
+             </td>
          </tr>
         </tbody>
     </table>
