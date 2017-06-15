@@ -110,7 +110,7 @@
                 }
                 ;
             };
-
+            
             scope.$watch(function () {
                 return location.path();
             }, function () {

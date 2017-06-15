@@ -1,0 +1,109 @@
+<div class="col-md-12" ng-controller="ViewGSTR1B2BInvController">
+    <ul class="breadcrumb">
+        <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
+        <li><a href="#/gstr1b2binv">{{'label.anchor.gstr1b2binv' | translate}}</a></li>
+        <li class="active">{{'label.anchor.viewgstr1b2binv' | translate}}</li>
+    </ul>
+
+    <div class="well">
+        <div class="pull-right">
+            <!-- <div class="btn-group">
+                <a href="#/editgstr1b2binv/{{gstr1b2binv.id}}" class="btn btn-primary"><i class="icon-edit icon-white"></i>{{'label.button.edit' | translate}}</a>
+            </div> -->
+        </div>
+        <!-- <h3 class="bolder">{{gstr1b2binv.displayName}}</h3> -->
+		<div class="row">
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		            <tr>
+		                <td>{{ 'label.gstin' | translate }}</td>
+		                <td>{{gstr1b2binv.gstin}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.fp' | translate }}</td>
+		                <td>{{gstr1b2binv.fp}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.grossturnover' | translate }}</td>
+		                <td>{{gstr1b2binv.grossTurnover}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.fileno' | translate }}</td>
+		                <td>{{gstr1b2binv.fileNo}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.suplierinvno' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.suplierinvdate' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.suplierinvvalue' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.suplierplace' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.orderno' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.orderdate' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            
+		        </table>
+			</div>
+			
+			<div class="col-md-6">
+		        <table class="table table-bordered table-striped">
+		        	<tr>
+		                <td>{{ 'label.etin' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.invoiceid' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.flag' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.chksum' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.isreverse' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.isprovision' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.recordtype' | translate }}</td>
+		                <td>{{gstr1b2binv.version}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.status' | translate }}</td>
+		                <td>{{gstr1b2binv.status}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.errorcode' | translate }}</td>
+		                <td>{{gstr1b2binv.errorCode}}</td>
+		            </tr>
+		            <tr>
+		                <td>{{ 'label.errordescr' | translate }}</td>
+		                <td>{{gstr1b2binv.errorDescr}}</td>
+		            </tr>
+		        </table>
+			</div>
+			
+		</div>
+    </div>
+</div>      
