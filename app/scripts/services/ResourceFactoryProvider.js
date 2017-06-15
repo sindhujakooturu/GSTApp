@@ -648,6 +648,12 @@
                               	 get: {method: 'GET', params: {}, isArray : true},
                               	getall: {method: 'GET', params: {}}
                               	 }),
+                              	 
+                       gstr1fileinvoiceResource: defineResource(apiVer + "/gstr1fileinvoicedata/:gstr1InvId", {}, {
+                        get: {method: 'GET', params:{}, isArray : true},
+                       getid: {method: 'GET', params: {}},
+                       update: { method: 'PUT'}
+                      }),
                     
                     smsResource: defineResource(apiVer + "/sms/:campaignId/messageByStatus", {campaignId: '@campaignId', additionalParam: '@additionalParam'}, {
                         getByStatus: {method: 'GET', params:{}}

@@ -312,6 +312,8 @@ define(['Q', 'underscore', 'gst'], function (Q) {
             'organization/gstr1processdata/CreateGSTR1ProcessDataController',
             'organization/gstr1processdata/EditGSTR1ProcessDataController',
             'organization/gstr1processdata/ViewGSTR1ProcessDataController',
+            'organization/gstr1processdata/GSTR1B2BInvController',
+            'organization/gstr1processdata/ViewGSTR1B2BInvController',
             'organization/testgst/TestGSTController',
             'organization/testgst/CreateTestGSTController',
             'organization/testgst/CreateTestGSTChildController'
