@@ -1,12 +1,11 @@
-<div class="col-md-12" ng-controller="GSTR1ProcessDataController">
+<div class="col-md-12" ng-controller="GSTR1B2BInvController">
     <ul class="breadcrumb">
         <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
-        <li class="active">{{'label.anchor.gstr1processdata' | translate}}</li>
+        <li class="active">{{'label.anchor.gstr1b2binv' | translate}}</li>
     </ul>
 
     <input ng-autofocus="true" ng-model="filterText" type="text" ng-keyup="onFilter()" class="form-control" placeholder="{{'label.input.filterbyname' | translate}}">
-    <a href="#/creategstr1processdata" class="btn btn-primary pull-right"><i class="icon-plus icon-white"></i>{{'label.button.creategstr1processdata' | translate }}</a>
-
+    
     <table class="table">
         <thead>
         <tr class="graybg">
@@ -14,10 +13,10 @@
             <th>{{'label.fp' | translate}}</th>
             <th>{{'label.grossturnover' | translate}}</th>
             <th>{{'label.fileno' | translate}}</th>
-            <th>{{'label.version' | translate}}</th>
+            <th>{{'label.action' | translate}}</th>
         </tr>
         </thead>
-        <tbody>
+        <!-- <tbody>
         <tr class="pointer-main" ng-repeat="gstr in gstr1processdata| filter:filterText">
             <td class="pointer" data-ng-click="routeTo(gstr.id)">{{gstr.gstin}}</td>
             <td class="pointer" data-ng-click="routeTo(gstr.id)">{{gstr.fp}}</td>
@@ -25,6 +24,6 @@
             <td class="pointer" data-ng-click="routeTo(gstr.id)">{{gstr.fileNo}}</td>
             <td class="pointer" data-ng-click="routeTo(gstr.id)">{{gstr.version}}</td>
          </tr>
-        </tbody>
+        </tbody> -->
     </table>
 </div>
