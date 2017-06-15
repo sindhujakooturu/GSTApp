@@ -11,16 +11,40 @@
 	        <legend>{{'label.heading.createcompany' | translate}}</legend>
 			
 			<table>
-         	
          	 <!-- <legend class="heading1">{{'label.heading.companyinfo' | translate}}</legend> -->
-         	 
          	 <div class="form-group">
-         		<label class="control-label col-sm-2" for="gstin">{{'label.gstin' | translate}} <span class="required">*</span></label>
+         	 <label class="control-label col-sm-2" for="companyName">{{'label.office' | translate}} <span class="required">*</span></label>
+         	 	<div class="col-sm-3">
+					<div ng-show="forceOffice == null">
+						<select chosen="offices" id="officeId" ng-model="formData.officeId"  class="form-control"  ng-options="office.id as office.name for office in offices" value="{{office.id}}"
+								ng-change="changeOffice(formData.officeId)"></select>
+					 </div>
+					 <!-- <div ng-show="forceOffice != null">
+					  <p class="form-control-static">{{forceOffice.name}}</p>
+					  </div> -->
+			    </div>
+			    <label class="control-label col-sm-2" for="panNo">{{'label.pan' | translate}} <span class="required">*</span></label>
+   				<div class="controls col-sm-3">
+     					<input type="text" id="panNo" name="panNo" data-ng-model="formData.panNo" class="form-control">
+				</div>
+         		
+         	</div>
+         	<div class="form-group">
+   				<label class="control-label col-sm-2" for="gstin">{{'label.gstin' | translate}} <span class="required">*</span></label>
 				<div class="controls col-sm-3">
  					<input type="text" id="gstin" name="gstin" data-ng-model="formData.gstin" class="form-control">
 				 </div>
-         	</div>
-         	 
+				 <label class="control-label col-sm-2" for="addressLine1">{{'label.address1' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="addressLine1" name="addressLine1" data-ng-model="formData.addressLine1" class="form-control" data-ng-minlength=3 data-late-Validate>
+ 					<span  data-ng-show="createcompanyform.addressLine1.$invalid"><br>
+	                   <small class="error" data-ng-show="createcompanyform.addressLine1.$error.req">
+	                      {{'label.required.field' | translate}}
+	                   </small>
+	                   <small class="error" data-ng-show="createcompanyform.addressLine1.$error.minlength && !createcompanyform.addressLine1.$error.req">Address required at least 3 characters</small>
+	               </span>
+				 </div>
+			</div>
          	<div class="form-group">
          		<label class="control-label col-sm-2" for="companyName">{{'label.company.name' | translate}} <span class="required">*</span></label>
 				<div class="controls col-sm-3">
@@ -34,16 +58,10 @@
 	               </div>
 				 </div>
 				
-				<label class="control-label col-sm-2" for="addressLine1">{{'label.address1' | translate}} <span class="required">*</span></label>
-				<div class="controls col-sm-3">
- 					<input type="text" id="addressLine1" name="addressLine1" data-ng-model="formData.addressLine1" class="form-control" data-ng-minlength=3 data-late-Validate>
- 					<span  data-ng-show="createcompanyform.addressLine1.$invalid"><br>
-	                   <small class="error" data-ng-show="createcompanyform.addressLine1.$error.req">
-	                      {{'label.required.field' | translate}}
-	                   </small>
-	                   <small class="error" data-ng-show="createcompanyform.addressLine1.$error.minlength && !createcompanyform.addressLine1.$error.req">Address required at least 3 characters</small>
-	               </span>
-				 </div>
+				<label class="control-label col-sm-2" for="addressLine2">{{'label.address2' | translate}}</label>
+					<div class="controls col-sm-3">
+ 						<input type="text" id="addressLine2" name="addressLine2" data-ng-model="formData.addressLine2" class="form-control">
+				 	</div>
 				 
          	</div>
 	          <div class="form-group">
@@ -59,10 +77,10 @@
 	               </div>
 				 </div>
 				 
-				 <label class="control-label col-sm-2" for="addressLine2">{{'label.address2' | translate}}</label>
+				 <label class="control-label col-sm-2" for="city"> {{'label.city' | translate }} <span class="required">*</span> </label>
 					<div class="controls col-sm-3">
- 						<input type="text" id="addressLine2" name="addressLine2" data-ng-model="formData.addressLine2" class="form-control">
-				 	</div>
+						<input type="text" id="city" name="city" data-ng-model="formData.city"  class="form-control">
+					</div>
 
 			  </div>
 			  
@@ -75,44 +93,47 @@
 					</span>
 				 </div>
 				 
-				 <label class="control-label col-sm-2" for="city"> {{'label.city' | translate }} <span class="required">*</span> </label>
-					<div class="controls col-sm-3">
-						<input type="text" id="city" name="city" data-ng-model="formData.city"  class="form-control">
-					</div>
+				 <label class="control-label col-sm-2" for="state"> {{'label.state' | translate }} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+					<input type="text" id="state" data-ng-model="formData.state" class="form-control">
+				</div>
 				 
 			 </div>
 			 
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="homePhone">{{'label.phone.home' | translate}}</label>
 				<div class="controls col-sm-3">
- 					<input type="text" id="homePhone" name="homePhone" data-ng-model="formData.homePhone" class="form-control"data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" data-late-Validate/>
+ 					<input type="text" id="homePhone" name="homePhone" data-ng-model="formData.homePhone" class="form-control" data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" data-late-Validate/>
  					<span data-ng-show="createcompanyform.homePhone.$dirty && createcompanyform.homePhone.$invalid"><br>
 		  				<small class="error" data-ng-show="createcompanyform.homePhone.$error.pattern">{{'label.prospect.error.phone Office' | translate}}</small>
 					</span>
 				 </div>
 				 
-				 <label class="control-label col-sm-2" for="state"> {{'label.state' | translate }} <span class="required">*</span></label>
+				  <label class="control-label col-sm-2" for="country"> {{'label.country' | translate }} <span class="required">*</span></label>
 				<div class="controls col-sm-3">
-					<input type="text" id="state" data-ng-model="formData.state" class="form-control">
+					<input type="text" id="country" data-ng-model="formData.country" class="form-control">
 				</div>
 				 
 			</div>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="mobile">{{'label.mobile' | translate}} <span class="required">*</span></label>
    					<div class="controls col-sm-3">
-     					<input type="text" id="mobile" name="mobile" data-ng-model="formData.mobile" class="form-control"data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" maxlength="15" minlength="10" data-late-Validate/><br>
+     					<input type="text" id="mobile" name="mobile" data-ng-model="formData.mobile" class="form-control"data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" data-ng-maxlength="15" data-ng-minlength="10" data-late-Validate/><br>
     					<span data-ng-show="createcompanyform.mobile.$dirty && createcompanyform.mobile.$invalid"><br>
     					<small class="error" data-ng-show="createcompanyform.mobile.$error.req">
 	                      {{'label.required.field' | translate}}
 	                   </small>
-							<small class="error-row" data-ng-show="createcompanyform.mobile.$error.pattern"> {{'label.prospect.error.mobileno' | translate}} </small>
+							<small class="error" data-ng-show="createcompanyform.mobile.$error.pattern"> {{'label.prospect.error.mobileno' | translate}} </small>
   						</span>
 				 </div>
 				 
-				 <label class="control-label col-sm-2" for="country"> {{'label.country' | translate }} <span class="required">*</span></label>
-				<div class="controls col-sm-3">
-					<input type="text" id="country" data-ng-model="formData.country" class="form-control">
-				</div>
+				<label class="control-label col-sm-2">{{'label.pin' | translate}} <span class="required">*</span></label>
+		        <div class="controls col-sm-3">
+		          <input type="text" id="pin" name="pin" data-ng-model="formData.pin" class="form-control" data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/"  data-late-Validate/>
+		        	<span data-ng-show="createcompanyform.pin.$dirty && createcompanyform.pin.$invalid"><br>
+		  				<small class="error" data-ng-show="createcompanyform.pin.$error.pattern">{{'label.prospect.error.pin' | translate}}</small>
+					</span>	
+		        </div>
 				 
 			</div>
 			<div class="form-group ">
@@ -124,13 +145,10 @@
 						</span>
 				 </div>
 				 
-				 <label class="control-label col-sm-2">{{'label.pin' | translate}} <span class="required">*</span></label>
-		        <div class="controls col-sm-3">
-		          <input type="text" id="pin" name="pin" data-ng-model="formData.pin" class="form-control" data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" required  data-late-Validate/>
-		        	<span data-ng-show="createcompanyform.pin.$dirty && createcompanyform.pin.$invalid"><br>
-		  				<small class="error" data-ng-show="createcompanyform.pin.$error.pattern">{{'label.prospect.error.pin' | translate}}</small>
-					</span>	
-		        </div>
+				 <label class="control-label col-sm-2" for="gstnid">{{'label.gstnid' | translate}}</label>
+				<div class="controls col-sm-3" >
+					<input type="file" ng-file-select="onFileSelect($files)">
+				</div>
 				 
 			</div>
 			<div class="form-group ">
@@ -141,26 +159,17 @@
 							<small class="error" data-ng-show="createcompanyform.email.$error.email"> {{'label.prospect.error.email' | translate}} </small>
 						</div>
 				 </div>
-				 <label class="control-label col-sm-2" for="gstnid">{{'label.gstnid' | translate}}</label>
-				<div class="controls col-sm-3" >
-					<input type="file" ng-file-select="onFileSelect($files)">
-				</div>
+				 <label class="control-label col-sm-2" for="panid">{{'label.panid' | translate}}</label>
+					<div class="controls col-sm-3" >
+						<input type="file" ng-file-select="onFileSelect($files)">
+					</div>
 			</div>
 			<div class="form-group ">
    				<label class="control-label col-sm-2" for="gstnRegNo">{{'label.gstn' | translate}} <span class="required">*</span></label>
    					<div class="controls col-sm-3">
      					<input type="text" id="gstnRegNo" name="gstnRegNo" data-ng-model="formData.gstnRegNo" class="form-control">
 				 </div>
-				  <label class="control-label col-sm-2" for="panid">{{'label.panid' | translate}}</label>
-					<div class="controls col-sm-3" >
-						<input type="file" ng-file-select="onFileSelect($files)">
-					</div>
-			</div>
-			<div class="form-group">
-   				<label class="control-label col-sm-2" for="panNo">{{'label.pan' | translate}} <span class="required">*</span></label>
-   					<div class="controls col-sm-3">
-     					<input type="text" id="panNo" name="panNo" data-ng-model="formData.panNo" class="form-control">
-				 </div>
+				  
 			</div>
 			
      </table>

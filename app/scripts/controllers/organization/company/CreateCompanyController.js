@@ -2,8 +2,17 @@
 	gst.controllers = _.extend(module, {
 		CreateCompanyController: function (scope, resourceFactory, location) {
             
-            
 			scope.formData = {};
+			
+			resourceFactory.officeResource.getAllOffices(function (data) {
+				
+				scope.offices = angular.copy(data);
+				for(var i in scope.offices){
+					if(scope.offices[i].name == "Trigital")
+						scope.offices.splice(i ,1);
+				}
+			});
+			
             scope.submit = function () {
                 resourceFactory.companyResource.save(this.formData, function (data) {
                     location.path('/company');

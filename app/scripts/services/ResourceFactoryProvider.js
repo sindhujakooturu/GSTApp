@@ -636,7 +636,7 @@
                       	 get: {method: 'GET', params: {}, isArray : true},
                       	 getall: {method: 'GET', params: {}},
                            update: { method: 'PUT'}
-                        }),
+                      }),
                         
                     outwardinvResource: defineResource(apiVer + "/outwardinv/:outwardinvId", {}, {
                           	 get: {method: 'GET', params: {}, isArray : true},
@@ -657,6 +657,11 @@
                         getByStatus: {method: 'GET', params:{}}
                     }),
                     
+                    companyByUserResource: defineResource(apiVer + "/company/companyuser/:officeId", {}, {
+                     	 get: {method: 'GET', params: {}, isArray : true},
+                     	 getall: {method: 'GET', params: {}},
+                          update: { method: 'PUT'}
+                     }),
 
                     entityDatatableChecksResource: defineResource(apiVer + "/entityDatatableChecks/:entityDatatableCheckId/:additionalParam", {entityDatatableCheckId: '@entityDatatableCheckId', additionalParam: '@additionalParam'}, {
                         getAll: {method: 'GET', params: {}},
