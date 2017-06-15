@@ -974,10 +974,10 @@
             .when('/creategstr1processdata', {
                 templateUrl: 'views/organization/gstr1processdata/creategstr1processdata.html'
             })
-            .when('/viewgstr1processdata', {
+            .when('/viewgstr1processdata/:id', {
                 templateUrl: 'views/organization/gstr1processdata/viewgstr1processdata.html'
             })
-            .when('/editgstr1processdata', {
+            .when('/editgstr1processdata/:id', {
                 templateUrl: 'views/organization/gstr1processdata/editgstr1processdata.html'
             })
             .when('/testgst', {

@@ -4241,7 +4241,7 @@
     "label.required.field":"Required Field",    
     "label.prospect.error.phone Office":"Invalid Phone Number",    
     "label.prospect.error.mobileno":"Invalid Mobile Number",
-    "abel.prospect.error.fax":"Invalid Fax",
+    "label.prospect.error.fax":"Invalid Fax",
     "label.prospect.error.email":"Invalid Email",
     "label.prospect.error.pin":"Invalid Pin",
     
@@ -4393,7 +4393,7 @@
 	"label.anchor.creategstr1processdata":"Create GSTR1 Process Data",
 	"label.view.gstr1processdata":"Define GSTR1 Process Data",
 	"label.anchor.viewgstr1processdata":"View GSTR1 Process Data",
-	"label.heading.editgstr1processdata":"Edit GSTR1 Process Data",
+	"label.anchor.editgstr1processdata":"Edit GSTR1 Process Data",
 	"label.button.creategstr1processdata":"Create GSTR1 Process Data",
 	"label.fp":"Financial Period",
 	"label.assignedto":"Assigned to",
@@ -4403,6 +4403,8 @@
 	"label.errordescr":"Error Descripter",
 	"label.version":"Version",
 	"label.reviewcomments":"Review Comments",
+	"label.refno":"Ref No",
+	"label.transid":"Trans Id",
 	
 	"#Test":"",
 	"label.anchor.testgst":"TestGST",
