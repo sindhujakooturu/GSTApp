@@ -177,7 +177,8 @@
                         <img src="{{headerLogoPath}}" alt="Mifos X" height="20" ng-if="isHeaderLogoPath">
                     </a>
                     <ul class="nav navbar-nav" id="main-menu-left">
-                        <li class="dropdown">
+                    	<li><a  href="#/gstr1processdata" has-permission='READ_GSTR1FILEINVOICEDATA'><i class="icon-money"></i>Gstr1File</a></li>
+                        <li class="dropdown" has-permission='READ_ADMIN'>
                             <a class="dropdown-toggle" data-toggle="dropdown" ng-class="{ activate: isActive('clients') }"  href="#"><i class="icon-group"></i> {{ 'label.anchor.clients' | translate }}<b class="caret"></b></a>
                             <ul class="dropdown-menu" id="swatch-menu">
                                 <li><a href="#/clients" has-permission='READ_CLIENT'>{{ 'label.anchor.clients' | translate }}</a></li>
@@ -185,8 +186,8 @@
                                 <li><a href="#/centers" has-permission='READ_CENTER'>{{ 'label.anchor.centers' | translate }}</a></li>
                             </ul>
                         </li>
-                        <li ><a ng-class="{ activate: isActive('acc') }" href="#/accounting"><i class="icon-money"></i> {{ 'label.anchor.accounting' | translate }}</a></li>
-                        <li class="dropdown" id="reports-menu">
+                        <!-- <li ng-if="isAppUser"><a ng-class="{ activate: isActive('acc') }" href="#/accounting"><i class="icon-money"></i> {{ 'label.anchor.accounting' | translate }}</a></li> -->
+                        <!-- <li class="dropdown" id="reports-menu" ng-if="isAppUser">
                             <a class="dropdown-toggle" data-toggle="dropdown" ng-class="{ activate: isActive('rep') }" href="#"><i class="icon-bar-chart"></i> {{ 'label.anchor.reports' | translate }}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#/reports/all" has-permission='READ_REPORT'>{{ 'label.anchor.all' | translate }}</a></li>
@@ -197,14 +198,14 @@
                                 <li><a href="#/reports/accounting" has-permission='READ_REPORT'>{{ 'label.anchor.accounting' | translate }}</a></li>
                                 <li><a href="#/xbrl" has-permission='READ_REPORT'>{{ 'label.anchor.xbrl' | translate }}</a></li>
                             </ul>
-                        </li>
-                        <li class="dropdown" id="preview-menu">
+                        </li> -->
+                        <li class="dropdown" id="preview-menu"  has-permission='READ_ADMIN'>
                             <a class="dropdown-toggle" data-toggle="dropdown" ng-class="{ activate: isActive('admin') }" href="#"><i class="icon-wrench"></i> {{ 'label.anchor.admin' | translate }}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#/users" has-permission='READ_USER'>{{ 'label.anchor.users' | translate }}</a></li>
                                 <li><a href="#/organization">{{ 'label.anchor.organization' | translate }}</a></li>
                                 <li><a href="#/system">{{ 'label.anchor.system' | translate }}</a></li>
-                                <li><a href="#/products">{{ 'label.anchor.products' | translate }}</a></li>
+                                <!-- <li><a href="#/products">{{ 'label.anchor.products' | translate }}</a></li> -->
                                 <li><a href="#/templates" has-permission='READ_TEMPLATE'>{{ 'label.anchor.templates' | translate }}</a></li>
                             </ul>
                         </li>
