@@ -26,9 +26,10 @@
 				            	 column24 	    : scope.formData1.column24,
 				            	 column25 	    : scope.formData1.column25,
 				            	 column26 	    : scope.formData1.column26,
-				            	 column27 	    : scope.formData.column27,
+				            	 column27 	    : scope.formData1.column27,
 				            	 invoiceId 	    : scope.formData1.invoiceId,
-				            	 status			: scope.formData1.status
+				            	 status			: scope.formData1.status,
+				            	 locale			: scope.optlang.code
 			  	  												
 			  	  											  });
 						}
