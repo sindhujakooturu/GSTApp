@@ -2,7 +2,7 @@
     <ul class="breadcrumb">
         <li><a href="#/organization">{{'label.anchor.organization' | translate}}</a></li>
         <li><a href="#/sacdata">{{'label.anchor.sacdata' | translate}}</a></li>
-        <li class="active">{{'label.anchor.viewsacdata' | translate}</li>
+        <li class="active">{{'label.anchor.viewsacdata' | translate}}</li>
     </ul>
 
     <div class="well">
@@ -15,29 +15,33 @@
 		<div class="row">
 			<div class="col-md-6">
 		        <table class="table table-bordered table-striped">
+		        	<tr>
+		                <td>{{ 'label.heading.sacseqid' | translate }}</td>
+		                <td>{{sacdata.sacSeqId}}</td>
+		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.servicename' | translate }}</td>
-		                <td>{{sacdata.firstname}}</td>
+		                <td>{{sacdata.serviceName}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.description' | translate }}</td>
-		                <td>{{sacdata.lastname}}</td>
+		                <td>{{sacdata.description}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.sactaxcollection' | translate }}</td>
-		                <td>{{sacdata.officeName}}</td>
+		                <td>{{sacdata.sacTaxCollection}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.sacothreceipts' | translate }}</td>
-		                <td>{{sacdata.isLoanOfficer}}</td>
+		                <td>{{sacdata.sacOtherReciept}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.deductrefund' | translate }}</td>
-		                <td>{{sacdata.mobileNo}}</td>
+		                <td>{{sacdata.sacDeductRefund}}</td>
 		            </tr>
 		            <tr>
 		                <td>{{ 'label.heading.sacpenality' | translate }}</td>
-		                <td>{{sacdata.isActive}}</td>
+		                <td>{{sacdata.sacPenalty}}</td>
 		            </tr>
 		        </table>
 			</div>

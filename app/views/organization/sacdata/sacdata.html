@@ -10,6 +10,7 @@
     <table class="table">
         <thead>
         <tr class="graybg">
+        	<th>{{ 'label.heading.sacseqid' | translate }}</th>
             <th>{{ 'label.heading.servicename' | translate }}</th>
             <th>{{ 'label.heading.description' | translate }}</th>
             <th>{{ 'label.heading.sactaxcollection' | translate }}</th>
@@ -18,13 +19,16 @@
             <th>{{ 'label.heading.sacpenality' | translate }}</th>
         </tr>
         </thead>
-        <!-- <tbody>
-        <tr class="pointer-main" ng-repeat="employee in employees | filter:filterText">
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.displayName}}</td>
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.isLoanOfficer}}</td>
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.officeName}}</td>
-            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.isActive}}</td>
+        <tbody>
+        <tr class="pointer-main" ng-repeat="sac in sacdata | filter:filterText">
+            <td class="pointer" data-ng-click="routeTo(sac.id)">{{sac.sacSeqId}}</td>
+            <td class="pointer" data-ng-click="routeTo(sac.id)">{{sac.serviceName}}</td>
+            <td class="pointer" data-ng-click="routeTo(sac.id)">{{sac.description}}</td>
+            <td class="pointer" data-ng-click="routeTo(sac.id)">{{sac.sacTaxCollection}}</td>
+            <td class="pointer" data-ng-click="routeTo(sac.id)">{{sac.sacOtherReciept}}</td>
+            <td class="pointer" data-ng-click="routeTo(sac.id)">{{sac.sacDeductRefund}}</td>
+            <td class="pointer" data-ng-click="routeTo(sac.id)">{{sac.sacPenalty}}</td>
         </tr>
-        </tbody> -->
+        </tbody>
     </table>
 </div>

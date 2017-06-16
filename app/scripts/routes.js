@@ -962,7 +962,7 @@
             .when('/createsacdata', {
                 templateUrl: 'views/organization/sacdata/createsacdata.html'
             })
-            .when('/viewsacdata', {
+            .when('/viewsacdata/:id', {
                 templateUrl: 'views/organization/sacdata/viewsacdata.html'
             })
             .when('/editsacdata', {

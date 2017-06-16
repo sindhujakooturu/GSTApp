@@ -63,11 +63,23 @@
             };
 
             scope.getOfficeStaff = function(){
+            	
+            	for(var i in scope.availableRoles){
+					if(scope.availableRoles[i].name == "Trigital"){
+						var roles = [];
+						scope.availableRoles.push(roles);
+					}
+				}
+            	
                 resourceFactory.employeeResource.getAllEmployees({officeId:scope.formData.officeId},function (data) {
                     scope.staffs = data;
                 });
+                resourceFactory.companyResource.get({officeId:scope.formData.officeId},function (data) {
+                    scope.company = data;
+                });
             };
             
+
             scope.submit = function () {
                 for (var i in scope.selectedRoles) {
                     scope.formData.roles.push(scope.selectedRoles[i].id) ;

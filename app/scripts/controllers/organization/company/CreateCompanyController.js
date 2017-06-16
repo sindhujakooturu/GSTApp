@@ -1,12 +1,16 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
-		CreateCompanyController: function (scope, resourceFactory, location, $upload, $rootScope, API_VERSION) {
-            
+		CreateCompanyController: function (scope, resourceFactory, location) {
 			scope.formData = {};
 			
-			/*scope.onFileSelect = function($files) {
-	            scope.file = $files[0];
-	          };*/
+			resourceFactory.officeResource.getAllOffices(function (data) {
+				
+				scope.offices = angular.copy(data);
+				for(var i in scope.offices){
+					if(scope.offices[i].name == "Trigital")
+						scope.offices.splice(i ,1);
+				}
+			});
 			
             scope.submit = function () {
             	
