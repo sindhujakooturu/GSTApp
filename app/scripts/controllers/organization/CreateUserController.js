@@ -14,7 +14,9 @@
                 scope.offices = data.allowedOffices;
                 scope.availableRoles = data.availableRoles;
             });
-
+            
+            
+            
             scope.addRole = function () {
                 for (var i in this.available) {
                     for (var j in scope.availableRoles) {
@@ -65,7 +67,7 @@
                     scope.staffs = data;
                 });
             };
-
+            
             scope.submit = function () {
                 for (var i in scope.selectedRoles) {
                     scope.formData.roles.push(scope.selectedRoles[i].id) ;
