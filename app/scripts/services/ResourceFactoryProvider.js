@@ -660,7 +660,8 @@
                     }),
                     
                     testPostResource: defineResource(apiVer + "/mastertest", {}, {
-                        getByStatus: {method: 'GET', params:{}}
+                    	get: {method: 'GET', params: {}, isArray : true},
+                        getAll: {method: 'GET', params:{}}
                     }),
                     
                     

@@ -19,12 +19,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr class="pointer-main" ng-repeat="col in column | filter:filterText">
-            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column1}}</td>
-            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column2}}</td>
-            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column3}}</td>
-            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column4}}</td>
-            <td class="pointer" data-ng-click="routeTo(col.id)">{{col.column5}}</td>
+        <tr class="pointer-main" ng-repeat="testData in testDatas | filter:filterText">
+            <td class="pointer" data-ng-click="routeTo(testData.id)">{{testData.column1}}</td>
+            <td class="pointer" data-ng-click="routeTo(testData.id)">{{testData.column2}}</td>
+            <td class="pointer" data-ng-click="routeTo(testData.id)">{{testData.column3}}</td>
+            <td class="pointer" data-ng-click="routeTo(testData.id)">{{testData.column4}}</td>
+            <td class="pointer" data-ng-click="routeTo(testData.id)">{{testData.column5}}</td>
             <!-- <td>
              	<a href="#/createoutwarditems/{{outward.invoiceId}}" title="Outward Item"  data-popover-trigger="mouseenter">
                  		<i class="icon-plus-sign icon-white"></i>
