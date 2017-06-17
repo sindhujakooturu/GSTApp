@@ -116,6 +116,21 @@
 				 
 			</div>
 			<div class="form-group">
+				<label class="control-label col-sm-2" for="homePhone">{{'label.mobile' | translate}}</label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="mobile" name="mobile" data-ng-model="formData.mobile" class="form-control" data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" data-late-Validate/>
+ 					<span data-ng-show="createcompanyform.mobile.$dirty && createcompanyform.mobile.$invalid"><br>
+		  				<small class="error" data-ng-show="createcompanyform.mobile.$error.pattern">{{'label.prospect.error.mobileno' | translate}}</small>
+					</span>
+				 </div>
+				 
+				  <label class="control-label col-sm-2" for="pin"> {{'label.pin' | translate }} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+					<input type="text" id="pin" data-ng-model="formData.pin" class="form-control">
+				</div>
+				 
+			</div>
+			<!-- <div class="form-group">
 				<label class="control-label col-sm-2" for="mobile">{{'label.mobile' | translate}} <span class="required">*</span></label>
    					<div class="controls col-sm-3">
      					<input type="text" id="mobile" name="mobile" data-ng-model="formData.mobile" class="form-control"data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" data-ng-maxlength="15" data-ng-minlength="10" data-late-Validate/><br>
@@ -135,7 +150,7 @@
 					</span>	
 		        </div>
 				 
-			</div>
+			</div> -->
 			<div class="form-group ">
    				<label class="control-label col-sm-2" for="fax">{{'label.fax' | translate}} <span class="required">*</span></label>
    					<div class="controls col-sm-3">
@@ -145,10 +160,7 @@
 						</span>
 				 </div>
 				 
-				 <label class="control-label col-sm-2" for="gstnid">{{'label.gstnid' | translate}}</label>
-				<div class="controls col-sm-3" >
-					<input type="file" ng-file-select="onFileSelect($files)">
-				</div>
+				 
 				 
 			</div>
 			<div class="form-group ">
@@ -174,13 +186,7 @@
 						<input type="file" ng-file-select="onFileSelect($files)">
 					</div> -->
 			</div>
-			<div class="form-group ">
-   				<label class="control-label col-sm-2" for="gstnRegNo">{{'label.gstn' | translate}} <span class="required">*</span></label>
-   					<div class="controls col-sm-3">
-     					<input type="text" id="gstnRegNo" name="gstnRegNo" data-ng-model="formData.gstnRegNo" class="form-control">
-				 </div>
-				  
-			</div>
+			
 			
      </table>
      
@@ -189,9 +195,7 @@
   </fieldset>
   <div class="col-md-offset-5 paddedtop">
 		    <button id="cancel" type="reset" class="btn btn-warning" ng-click="cancel()">{{'label.button.cancel' | translate}}</button>
-		    <button id="save" type="submit" class="btn btn-primary">{{'label.button.save'
-		        | translate}}
-		    </button>
+		    <button id="save" type="submit" class="btn btn-primary">{{'label.button.save'| translate}}</button>
 		</div>
   
 	</form>

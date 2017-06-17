@@ -2,7 +2,7 @@
 	gst.controllers = _.extend(module, {
 		ViewSACDataController: function (scope, routeParams, resourceFactory) {
             scope.sacdata = {};
-            resourceFactory.sacdataResource.getid({Id: routeParams.id}, function (data) {
+            resourceFactory.sacdataResource.getId({sacdataId: routeParams.id}, function (data) {
                 scope.sacdata = data;
             });
         }

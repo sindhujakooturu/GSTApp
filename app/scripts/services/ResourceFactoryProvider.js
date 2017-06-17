@@ -637,6 +637,12 @@
                       	 getall: {method: 'GET', params: {}},
                            update: { method: 'PUT'}
                       }),
+                      
+                      supplierResource: defineResource(apiVer + "/supplier/:supplierId", {}, {
+                       	 get: {method: 'GET', params: {}, isArray : true},
+                       	 getall: {method: 'GET', params: {}},
+                            update: { method: 'PUT'}
+                       }),
                         
                     outwardinvResource: defineResource(apiVer + "/outwardinv/:outwardinvId", {}, {
                           	 get: {method: 'GET', params: {}, isArray : true},
@@ -675,9 +681,10 @@
                           update: { method: 'PUT'}
                      }),
 
-                     sacdataResource: defineResource(apiVer + "/sacdata/:id", {}, {
+                     sacdataResource: defineResource(apiVer + "/sacdata/:sacdataId", {sacdataId: '@sacdataId'}, {
                       	 getAll: {method: 'GET', params: {}, isArray : true},
-                      	getid: {method: 'GET', params: {}, isArray : true}
+                      	getId: {method: 'GET', params:{}},
+                      	update: { method: 'PUT'}
                       }),
                      
                     entityDatatableChecksResource: defineResource(apiVer + "/entityDatatableChecks/:entityDatatableCheckId/:additionalParam", {entityDatatableCheckId: '@entityDatatableCheckId', additionalParam: '@additionalParam'}, {

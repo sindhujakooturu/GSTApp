@@ -13,6 +13,12 @@
 	        <legend>{{'label.heading.editsacdata' | translate}}</legend>
 			
 			<table>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="sacSeqId">{{'label.heading.sacseqid' | translate}} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="sacSeqId" name="sacSeqId" data-ng-model="formData.sacSeqId" class="form-control">
+				 </div>
+         	</div>
          	
          	<div class="form-group">
 				<label class="control-label col-sm-2" for="serviceName">{{'label.heading.servicename' | translate}} <span class="required">*</span></label>

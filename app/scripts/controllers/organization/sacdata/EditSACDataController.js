@@ -1,40 +1,58 @@
 (function (module) {
 	gst.controllers = _.extend(module, {
-		EditSACDataController: function (scope, routeParams, resourceFactory, location, dateFilter) {
-            /*scope.offices = [];
-            scope.restrictDate = new Date();
-
-            resourceFactory.employeeResource.get({staffId: routeParams.id, template: 'true'}, function (data) {
-                scope.offices = data.allowedOffices;
-                scope.staffId = data.id;
-                if (data.joiningDate) {
-                    var editDate = dateFilter(data.joiningDate, scope.df);
-                    data.joiningDate = new Date(editDate);
-                }
+		EditSACDataController: function (scope, routeParams, resourceFactory, location) {
+			scope.sacdata = [];
+			
+			scope.formData = {};
+			
+            resourceFactory.sacdataResource.getId({sacdataId: routeParams.id}, function (data) {
+                
+                scope.sacdataId = data.id;
+                
                 scope.formData = {
-                    firstname: data.firstname,
-                    lastname: data.lastname,
-                    isLoanOfficer: data.isLoanOfficer,
-                    officeId: data.officeId,
-                    mobileNo: data.mobileNo,
-                    isActive: data.isActive,
-                    joiningDate: data.joiningDate
+                		sacSeqId: data.sacSeqId,
+                		serviceName: data.serviceName,
+                		description: data.description,
+                		sacTaxCollection: data.sacTaxCollection,
+                		sacOtherReciept: data.sacOtherReciept,
+                		sacDeductRefund: data.sacDeductRefund,
+                		sacPenalty: data.sacPenalty
                 };
 
             });
 
             scope.submit = function () {
-                this.formData.locale = scope.optlang.code;
-                var joiningDate = dateFilter(scope.formData.joiningDate, scope.df);
-                this.formData.dateFormat = scope.df;
-                this.formData.joiningDate = joiningDate;
-                resourceFactory.employeeResource.update({'staffId': routeParams.id}, this.formData, function (data) {
-                    location.path('/viewemployee/' + data.resourceId);
+                
+                resourceFactory.sacdataResource.update({'sacdataId': routeParams.id}, this.formData, function (data) {
+                   console.log(data);
+                	location.path('/viewsacdata/' + routeParams.id);
+                });
+            };
+			
+		/*	scope.sacdata = [];
+			scope.formData = {};
+            
+            	resourceFactory.sacdataResource.getId({sacdataId: routeParams.id}, function (data) {
+            		
+                     scope.sacdataId = data.id;
+                
+                     scope.formData = data;
+                
+                
+            });
+
+            scope.submit = function () {
+            	
+            	
+                delete this.formData.id;
+                
+                resourceFactory.sacdataResource.update({'sacdataId': routeParams.id}, this.formData, function (data) {
+                    location.path('/viewsacdata/' + data.id);
                 });
             };*/
         }
     });
-	gst.ng.application.controller('EditSACDataController', ['$scope', '$routeParams', 'ResourceFactory', '$location', 'dateFilter', gst.controllers.EditSACDataController]).run(function ($log) {
+	gst.ng.application.controller('EditSACDataController', ['$scope', '$routeParams', 'ResourceFactory', '$location', gst.controllers.EditSACDataController]).run(function ($log) {
         $log.info("EditSACDataController initialized");
     });
 }(gst.controllers || {}));

@@ -938,10 +938,10 @@
             .when('/createsupplier', {
                 templateUrl: 'views/organization/supplier/createsupplier.html'
             })
-            .when('/viewsupplier', {
+            .when('/viewsupplier/:id', {
                 templateUrl: 'views/organization/supplier/viewsupplier.html'
             })
-            .when('/editsupplier', {
+            .when('/editsupplier/:id', {
                 templateUrl: 'views/organization/supplier/editsupplier.html'
             })
             .when('/company', {
@@ -965,7 +965,7 @@
             .when('/viewsacdata/:id', {
                 templateUrl: 'views/organization/sacdata/viewsacdata.html'
             })
-            .when('/editsacdata', {
+            .when('/editsacdata/:id', {
                 templateUrl: 'views/organization/sacdata/editsacdata.html'
             })
             .when('/gstr1processdata', {

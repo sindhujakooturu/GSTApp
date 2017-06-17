@@ -12,12 +12,14 @@
             };
             resourceFactory.userTemplateResource.get(function (data) {
                 scope.offices = data.allowedOffices;
-                scope.availableRoles = data.availableRoles;
+                scope.availableRoles = angular.copy(data.availableRoles);
+                scope.availableRoles1 = angular.copy(data.availableRoles);
             });
             
             
             
             scope.addRole = function () {
+            	console.log(scope.availableRoles);
                 for (var i in this.available) {
                     for (var j in scope.availableRoles) {
                         if (scope.availableRoles[j].id == this.available[i]) {
@@ -39,6 +41,7 @@
                     }
                 }
             };
+            
             scope.removeRole = function () {
                 for (var i in this.selected) {
                     for (var j in scope.selectedRoles) {
@@ -61,25 +64,48 @@
                     }
                 }
             };
-
-            scope.getOfficeStaff = function(){
-            	
-            	for(var i in scope.availableRoles){
-					if(scope.availableRoles[i].name == "Trigital"){
-						var roles = [];
-						scope.availableRoles.push(roles);
-					}
-				}
-            	
+            
+            scope.actionOnRoles = function(){
+            	scope.availableRoles = angular.copy(scope.availableRoles1);
+            	for(var i in scope.offices){
+            		if(officeId == scope.offices[i].id && scope.offices[i].name == "Trigital"){
+            			for(var i in scope.availableRoles){
+            				if(scope.availableRoles[i].name != "Super user"){
+            					scope.availableRoles.splice(i, 1);
+            				}
+            			}
+            			break;
+            		}else{
+            			for(var i in scope.availableRoles){
+            				if(scope.availableRoles[i].name == "Super user"){
+            					scope.availableRoles.splice(i, 1);
+            				}
+            			}
+            		}
+            	}
+            };
+            
+            scope.getOfficeStaff = function(officeId){
+            	//scope.actionOnRoles(officeId);
+            	/*
                 resourceFactory.employeeResource.getAllEmployees({officeId:scope.formData.officeId},function (data) {
                     scope.staffs = data;
-                });
+                });*/
                 resourceFactory.companyResource.get({officeId:scope.formData.officeId},function (data) {
                     scope.company = data;
                 });
             };
             
 
+            scope.changeOfficeFun =function(officeId){
+            	console.log("hiiii");
+            	scope.availableRoles = scope.availableRoles1;
+            	for(var i in scope.offices)
+            	if(officeId == scope.offices[i].id && scope.offices[i].name == "Trigital"){}
+            	
+            }
+            
+            
             scope.submit = function () {
                 for (var i in scope.selectedRoles) {
                     scope.formData.roles.push(scope.selectedRoles[i].id) ;
