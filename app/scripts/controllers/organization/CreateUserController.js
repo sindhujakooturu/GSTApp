@@ -87,9 +87,9 @@
             	scope.company = [];
             	scope.selectedRoles = [];
             	scope.actionOnRoles(officeId);
+            	
             	if(officeId == 1){
-            		scope.isTrigitalOffice = true;
-            		delete scope.formdata.companyId;
+            		scope.isTrigitalOffice = true;delete scope.formData.companyId;
             	}else{
             		scope.isTrigitalOffice = false
             	}
@@ -101,6 +101,7 @@
             };
             
            scope.companyChangFun = function(){
+        	   scope.selectedRoles = [];
         	   scope.isCompanySelected = true;
             };
 
