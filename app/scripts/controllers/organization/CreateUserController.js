@@ -10,6 +10,7 @@
                 sendPasswordToEmail: true,
                 roles: []
             };
+            scope.isCompanySelected = false;
             resourceFactory.userTemplateResource.get(function (data) {
                 scope.offices = data.allowedOffices;
                 scope.availableRoles = angular.copy(data.availableRoles);
@@ -64,8 +65,8 @@
                     }
                 }
             };
-            
-            scope.actionOnRoles = function(){
+
+            scope.actionOnRoles = function(officeId){
             	scope.availableRoles = angular.copy(scope.availableRoles1);
             	for(var i in scope.offices){
             		if(officeId == scope.offices[i].id && scope.offices[i].name == "Trigital"){
@@ -86,16 +87,28 @@
             };
             
             scope.getOfficeStaff = function(officeId){
-            	//scope.actionOnRoles(officeId);
-            	/*
-                resourceFactory.employeeResource.getAllEmployees({officeId:scope.formData.officeId},function (data) {
-                    scope.staffs = data;
-                });*/
-                resourceFactory.companyResource.get({officeId:scope.formData.officeId},function (data) {
-                    scope.company = data;
-                });
+
+            	scope.isCompanySelected = false;
+            	scope.company = [];
+            	scope.selectedRoles = [];
+            	scope.actionOnRoles(officeId);
+            	
+            	if(officeId == 1){
+            		scope.isTrigitalOffice = true;delete scope.formData.companyId;
+            	}else{
+            		scope.isTrigitalOffice = false
+            	}
+            	if(scope.isTrigitalOffice == false){
+            		resourceFactory.companyByUserResource.get({officeId:scope.formData.officeId},function (data) {
+            			scope.company = data;
+            		});
+            	}
             };
             
+           scope.companyChangFun = function(){
+        	   scope.selectedRoles = [];
+        	   scope.isCompanySelected = true;
+            };
 
             scope.changeOfficeFun =function(officeId){
             	console.log("hiiii");

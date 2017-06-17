@@ -13,7 +13,7 @@
 			<table>
          	 <!-- <legend class="heading1">{{'label.heading.companyinfo' | translate}}</legend> -->
          	 <div class="form-group">
-         	 <label class="control-label col-sm-2" for="companyName">{{'label.office' | translate}} <span class="required">*</span></label>
+         	 <label class="control-label col-sm-2" for="officeName">{{'label.office' | translate}} <span class="required">*</span></label>
          	 	<div class="col-sm-3">
 					<div ng-show="forceOffice == null">
 						<select chosen="offices" id="officeId" ng-model="formData.officeId"  class="form-control"  ng-options="office.id as office.name for office in offices" value="{{office.id}}"
@@ -115,6 +115,7 @@
 				</div>
 				 
 			</div>
+<<<<<<< HEAD
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="homePhone">{{'label.mobile' | translate}}</label>
 				<div class="controls col-sm-3">
@@ -130,6 +131,8 @@
 				</div>
 				 
 			</div>
+=======
+>>>>>>> upstream/master
 			<!-- <div class="form-group">
 				<label class="control-label col-sm-2" for="mobile">{{'label.mobile' | translate}} <span class="required">*</span></label>
    					<div class="controls col-sm-3">
@@ -151,6 +154,24 @@
 		        </div>
 				 
 			</div> -->
+<<<<<<< HEAD
+=======
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="homePhone">{{'label.mobile' | translate}}</label>
+				<div class="controls col-sm-3">
+ 					<input type="text" id="mobile" name="mobile" data-ng-model="formData.mobile" class="form-control" data-ng-pattern="/^(?!0+$)(?!1+$)(?!2+$)(?!3+$)(?!4+$)(?!5+$)(?!6+$)(?!7+$)(?!8+$)(?!9+$)\d{1,15}$/" data-late-Validate/>
+ 					<span data-ng-show="createcompanyform.mobile.$dirty && createcompanyform.mobile.$invalid"><br>
+		  				<small class="error" data-ng-show="createcompanyform.mobile.$error.pattern">{{'label.prospect.error.mobileno' | translate}}</small>
+					</span>
+				 </div>
+				 
+				  <label class="control-label col-sm-2" for="pin"> {{'label.pin' | translate }} <span class="required">*</span></label>
+				<div class="controls col-sm-3">
+					<input type="text" id="pin" data-ng-model="formData.pin" class="form-control">
+				</div>
+				 
+			</div>
+>>>>>>> upstream/master
 			<div class="form-group ">
    				<label class="control-label col-sm-2" for="fax">{{'label.fax' | translate}} <span class="required">*</span></label>
    					<div class="controls col-sm-3">
@@ -159,9 +180,12 @@
 			  				<small class="error" data-ng-show="createcompanyform.fax.$error.pattern">{{'label.prospect.error.fax' | translate}}</small>
 						</span>
 				 </div>
+<<<<<<< HEAD
 				 
 				 
 				 
+=======
+>>>>>>> upstream/master
 			</div>
 			<div class="form-group ">
    				<label class="control-label col-sm-2" for="email">{{'label.email' | translate}} <span class="required">*</span></label>
@@ -186,7 +210,10 @@
 						<input type="file" ng-file-select="onFileSelect($files)">
 					</div> -->
 			</div>
+<<<<<<< HEAD
 			
+=======
+>>>>>>> upstream/master
 			
      </table>
      
