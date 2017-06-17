@@ -13,7 +13,6 @@
 			});
 			
             scope.submit = function () {
-            	
             	/*$upload.upload({
                     url: $rootScope.hostUrl+ API_VERSION +'/documents', 
                     data: scope.formData,

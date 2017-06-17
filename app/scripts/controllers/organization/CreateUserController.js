@@ -10,9 +10,11 @@
                 sendPasswordToEmail: true,
                 roles: []
             };
+            scope.isCompanySelected = false;
             resourceFactory.userTemplateResource.get(function (data) {
                 scope.offices = data.allowedOffices;
-                scope.availableRoles = data.availableRoles;
+                scope.availableRoles = angular.copy(data.availableRoles);
+                scope.availableRoles1 = angular.copy(data.availableRoles);
             });
 
             scope.addRole = function () {
@@ -60,28 +62,48 @@
                 }
             };
 
-            scope.getOfficeStaff = function(){
-            	
-            	for(var i in scope.availableRoles){
-					if(scope.availableRoles[i].name == "Trigital"){
-						var roles = [];
-						scope.availableRoles.push(roles);
-					}
-				}
-            	
-                resourceFactory.employeeResource.getAllEmployees({officeId:scope.formData.officeId},function (data) {
-                    scope.staffs = data;
-                });
-                resourceFactory.companyResource.get({officeId:scope.formData.officeId},function (data) {
-                    scope.company = data;
-                });
+            scope.actionOnRoles = function(officeId){
+            	scope.availableRoles = angular.copy(scope.availableRoles1);
+            	for(var i in scope.offices){
+            		if(officeId == scope.offices[i].id && scope.offices[i].name == "Trigital"){
+            			for(var i in scope.availableRoles){
+            				if(scope.availableRoles[i].name != "Super user"){
+            					scope.availableRoles.splice(i, 1);
+            				}
+            			}
+            			break;
+            		}else{
+            			for(var i in scope.availableRoles){
+            				if(scope.availableRoles[i].name == "Super user"){
+            					scope.availableRoles.splice(i, 1);
+            				}
+            			}
+            		}
+            	}
             };
             
-            /*scope.getCompany = function(){
-                resourceFactory.companyResource.get({officeId:scope.formData.officeId},function (data) {
-                    scope.company = data;
-                });
-            };*/
+            scope.getOfficeStaff = function(officeId){
+            	scope.isCompanySelected = false;
+            	scope.company = [];
+            	scope.selectedRoles = [];
+            	scope.actionOnRoles(officeId);
+            	
+            	if(officeId == 1){
+            		scope.isTrigitalOffice = true;delete scope.formData.companyId;
+            	}else{
+            		scope.isTrigitalOffice = false
+            	}
+            	if(scope.isTrigitalOffice == false){
+            		resourceFactory.companyByUserResource.get({officeId:scope.formData.officeId},function (data) {
+            			scope.company = data;
+            		});
+            	}
+            };
+            
+           scope.companyChangFun = function(){
+        	   scope.selectedRoles = [];
+        	   scope.isCompanySelected = true;
+            };
 
             scope.submit = function () {
                 for (var i in scope.selectedRoles) {
